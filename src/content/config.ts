@@ -5,11 +5,17 @@ const commonSchema = z.object({
   title: z.string(),
   description: z.string(),
   publishDate: z.date(),
+  updatedDate: z.date().optional(), // Track content freshness
   category: z.string(),
   tags: z.array(z.string()).default([]),
   featured: z.boolean().default(false),
+  draft: z.boolean().default(false), // Content staging workflow
+  // SEO
   metaTitle: z.string().optional(),
   metaDescription: z.string().optional(),
+  canonicalUrl: z.string().optional(), // SEO canonical link control
+  // Content interlinking
+  relatedArticles: z.array(z.string()).default([]), // Cross-reference slugs
 });
 
 // Learn collection - tutorials, guides, courses, exam prep
@@ -23,8 +29,8 @@ const learnCollection = defineCollection({
   }),
 });
 
-// Career collection - pathways, roles, salaries, companies
-const careerCollection = defineCollection({
+// Careers collection - pathways, roles, salaries, companies
+const careersCollection = defineCollection({
   type: 'content',
   schema: commonSchema.extend({
     experience: z.enum(['entry', 'mid', 'senior', 'executive']).optional(),
@@ -87,7 +93,7 @@ const encyclopediaCollection = defineCollection({
 // Export all collections
 export const collections = {
   'learn': learnCollection,
-  'career': careerCollection,
+  'careers': careersCollection,
   'tools': toolsCollection,
   'rights': rightsCollection,
   'money': moneyCollection,

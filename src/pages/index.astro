@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 
 // Get sample entries from each collection
 const learnEntries = await getCollection('learn');
-const careerEntries = await getCollection('career');
+const careersEntries = await getCollection('careers');
 const toolsEntries = await getCollection('tools');
 const rightsEntries = await getCollection('rights');
 const moneyEntries = await getCollection('money');
@@ -32,10 +32,10 @@ const encyclopediaEntries = await getCollection('encyclopedia');
     ))}
   </ul>
   
-  <h3>Career ({careerEntries.length} entries)</h3>
+  <h3>Careers ({careersEntries.length} entries)</h3>
   <ul>
-    {careerEntries.map(entry => (
-      <li><a href={`/career/${entry.slug}`}>{entry.data.title}</a></li>
+    {careersEntries.map(entry => (
+      <li><a href={`/careers/${entry.slug}`}>{entry.data.title}</a></li>
     ))}
   </ul>
   
