@@ -1,0 +1,84 @@
+---
+import { getCollection } from 'astro:content';
+
+interface Props {
+  title: string;
+  intro?: string;
+  collection: 'learn' | 'careers' | 'money' | 'rights' | 'tools';
+  filterFn?: (item: any) => boolean;
+}
+
+const { title, intro, collection, filterFn } = Astro.props;
+
+const items = await getCollection(collection);
+const filtered = filterFn ? items.filter(filterFn) : items;
+const sorted = filtered.filter(p => !p.data.draft).sort((a, b) => 
+  (b.data.pubDate?.valueOf() || 0) - (a.data.pubDate?.valueOf() || 0)
+);
+---
+
+<div class="category-index">
+  <h1 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">{title}</h1>
+  {intro && <p class="intro text-lg text-gray-600 dark:text-gray-300 mb-10 max-w-3xl leading-relaxed">{intro}</p>}
+  
+  {sorted.length > 0 ? (
+    <div class="articles-list">
+      {sorted.map(post => (
+        <a href={`/${collection}/${post.slug}`} class="article-item group border-2 border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 bg-white dark:bg-gray-900 rounded-xl p-6 transition-all hover:shadow-xl no-underline flex flex-col h-full">
+          <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+            {post.data.title}
+          </h3>
+          {post.data.description && (
+            <p class="description text-base text-gray-600 dark:text-gray-300 mb-4 flex-grow leading-relaxed">{post.data.description}</p>
+          )}
+          <div class="meta flex items-center justify-between text-sm text-gray-500 dark:text-gray-400 pt-4 border-t border-gray-100 dark:border-gray-800 mt-auto">
+            <span class="date">{post.data.pubDate?.toLocaleDateString()}</span>
+            {post.data.readTime && <span class="readtime font-medium">{post.data.readTime} min read</span>}
+          </div>
+        </a>
+      ))}
+    </div>
+  ) : (
+    <p class="text-gray-600 dark:text-gray-400">No articles found in this section yet.</p>
+  )}
+</div>
+
+<style>
+  .category-index h1 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  
+  .articles-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 2rem;
+  }
+  
+  .article-item {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .article-item:hover {
+    border-color: #3b82f6;
+  }
+  
+  .article-item h3 {
+    margin: 0 0 0.75rem 0;
+  }
+  
+  .description {
+    flex-grow: 1;
+    margin: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .articles-list {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+</style>

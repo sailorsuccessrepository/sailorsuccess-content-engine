@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import Layout from '../../ui/layouts/Layout.astro';
 
 export async function getStaticPaths() {
   const encyclopediaEntries = await getCollection('encyclopedia');
@@ -13,19 +14,6 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{entry.data.term} - Sailor Success Encyclopedia</title>
-  <meta name="description" content={entry.data.description}>
-</head>
-<body>
-  <h1>ROUTING ENGINE - NO UI</h1>
-  <h2>{entry.data.term}</h2>
-  <p>Definition: {entry.data.definition}</p>
+<Layout title={entry.data.title} description={entry.data.description}>
   <Content />
-  <p><em>UI will be applied when Red-Glass frozen baseline is integrated</em></p>
-</body>
-</html>
+</Layout>

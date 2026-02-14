@@ -1,13 +1,11 @@
 import { defineConfig } from 'astro/config';
+import tailwind from '@astrojs/tailwind';
 
-// https://astro.build/config
 export default defineConfig({
   site: 'https://sailorsuccess.online',
+  integrations: [tailwind()],
   output: 'static',
-  
-  // Content collections enabled
-  // No integrations (no Tailwind, no MDX plugins)
-  // This is a CONTENT + ROUTING engine only
-  
-  // Dynamic routing will be handled in src/pages/
+  build: {
+    format: 'directory'
+  }
 });

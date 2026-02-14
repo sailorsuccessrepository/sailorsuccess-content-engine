@@ -1,81 +1,103 @@
 ---
+import Layout from '../ui/layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
-// Get sample entries from each collection
-const learnEntries = await getCollection('learn');
-const careersEntries = await getCollection('careers');
-const toolsEntries = await getCollection('tools');
-const rightsEntries = await getCollection('rights');
-const moneyEntries = await getCollection('money');
-const blogEntries = await getCollection('blog');
-const encyclopediaEntries = await getCollection('encyclopedia');
+// Get all articles from collections
+const learn = await getCollection('learn');
+const careers = await getCollection('careers');
+const money = await getCollection('money');
+const rights = await getCollection('rights');
+const tools = await getCollection('tools');
+const blog = await getCollection('blog');
+
+const allArticles = [...learn, ...careers, ...money, ...rights, ...tools, ...blog]
+  .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
+  .slice(0, 9);
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sailor Success - Content & Routing Engine</title>
-</head>
-<body>
-  <h1>CONTENT + ROUTING ENGINE</h1>
-  <p><strong>NO UI IMPLEMENTATION</strong></p>
-  <p>This is a routing engine demonstrating dynamic content collections.</p>
-  
-  <h2>Collections</h2>
-  
-  <h3>Learn ({learnEntries.length} entries)</h3>
-  <ul>
-    {learnEntries.map(entry => (
-      <li><a href={`/learn/${entry.slug}`}>{entry.data.title}</a></li>
-    ))}
-  </ul>
-  
-  <h3>Careers ({careersEntries.length} entries)</h3>
-  <ul>
-    {careersEntries.map(entry => (
-      <li><a href={`/careers/${entry.slug}`}>{entry.data.title}</a></li>
-    ))}
-  </ul>
-  
-  <h3>Tools ({toolsEntries.length} entries)</h3>
-  <ul>
-    {toolsEntries.map(entry => (
-      <li><a href={`/tools/${entry.slug}`}>{entry.data.title}</a></li>
-    ))}
-  </ul>
-  
-  <h3>Rights ({rightsEntries.length} entries)</h3>
-  <ul>
-    {rightsEntries.map(entry => (
-      <li><a href={`/rights/${entry.slug}`}>{entry.data.title}</a></li>
-    ))}
-  </ul>
-  
-  <h3>Money ({moneyEntries.length} entries)</h3>
-  <ul>
-    {moneyEntries.map(entry => (
-      <li><a href={`/money/${entry.slug}`}>{entry.data.title}</a></li>
-    ))}
-  </ul>
-  
-  <h3>Blog ({blogEntries.length} entries)</h3>
-  <ul>
-    {blogEntries.map(entry => (
-      <li><a href={`/blog/${entry.slug}`}>{entry.data.title}</a></li>
-    ))}
-  </ul>
-  
-  <h3>Encyclopedia ({encyclopediaEntries.length} entries)</h3>
-  <ul>
-    {encyclopediaEntries.map(entry => (
-      <li><a href={`/encyclopedia/${entry.slug}`}>{entry.data.title}</a></li>
-    ))}
-  </ul>
-  
-  <hr>
-  <p><em>UI will be applied when Red-Glass frozen baseline is integrated</em></p>
-  <p><em>This repository contains ONLY content collections and routing logic</em></p>
-</body>
-</html>
+<Layout 
+  title="Sailor Success - Complete Merchant Navy Guide 2026"
+  description="Everything you need to join and succeed in the Merchant Navy. DNS courses, GME admission, shipping jobs, salaries, and seafarer rights."
+>
+  <main class="max-w-7xl mx-auto px-4 py-12">
+    <!-- Hero Section -->
+    <section class="text-center mb-16">
+      <h1 class="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+        Sailor Success
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-700 mb-4">
+        Complete Merchant Navy Career Guide
+      </p>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        From DNS/GME admission to shipping company jobs, salaries, and seafarer rights - everything you need to succeed at sea.
+      </p>
+    </section>
+
+    <!-- Category Cards -->
+    <section class="mb-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <a href="/learn" class="group p-8 bg-white border-2 border-gray-200 rounded-xl hover:border-blue-500 hover:shadow-xl transition-all">
+          <div class="text-4xl mb-4">📚</div>
+          <h2 class="text-2xl font-bold mb-2 group-hover:text-blue-600">Learn</h2>
+          <p class="text-gray-600">DNS, GME, courses & exams</p>
+        </a>
+        
+        <a href="/careers" class="group p-8 bg-white border-2 border-gray-200 rounded-xl hover:border-blue-500 hover:shadow-xl transition-all">
+          <div class="text-4xl mb-4">🚢</div>
+          <h2 class="text-2xl font-bold mb-2 group-hover:text-blue-600">Careers</h2>
+          <p class="text-gray-600">Jobs, companies & ranks</p>
+        </a>
+        
+        <a href="/money" class="group p-8 bg-white border-2 border-gray-200 rounded-xl hover:border-blue-500 hover:shadow-xl transition-all">
+          <div class="text-4xl mb-4">💰</div>
+          <h2 class="text-2xl font-bold mb-2 group-hover:text-blue-600">Money</h2>
+          <p class="text-gray-600">Salaries, taxes & finances</p>
+        </a>
+        
+        <a href="/rights" class="group p-8 bg-white border-2 border-gray-200 rounded-xl hover:border-blue-500 hover:shadow-xl transition-all">
+          <div class="text-4xl mb-4">⚖️</div>
+          <h2 class="text-2xl font-bold mb-2 group-hover:text-blue-600">Rights</h2>
+          <p class="text-gray-600">Legal, safety & welfare</p>
+        </a>
+        
+        <a href="/tools" class="group p-8 bg-white border-2 border-gray-200 rounded-xl hover:border-blue-500 hover:shadow-xl transition-all">
+          <div class="text-4xl mb-4">🔧</div>
+          <h2 class="text-2xl font-bold mb-2 group-hover:text-blue-600">Tools</h2>
+          <p class="text-gray-600">Calculators & resources</p>
+        </a>
+
+        <a href="/finance" class="group p-8 bg-white border-2 border-gray-200 rounded-xl hover:border-blue-500 hover:shadow-xl transition-all">
+          <div class="text-4xl mb-4">💳</div>
+          <h2 class="text-2xl font-bold mb-2 group-hover:text-blue-600">Finance</h2>
+          <p class="text-gray-600">Banking & investments</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Latest Articles -->
+    <section>
+      <h2 class="text-3xl font-bold mb-8">Latest Articles</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {allArticles.map(article => (
+          <a 
+            href={`/${article.collection}/${article.slug}`}
+            class="group bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-blue-500 hover:shadow-xl transition-all"
+          >
+            <div class="text-sm text-blue-600 font-semibold mb-2 uppercase">
+              {article.collection}
+            </div>
+            <h3 class="text-xl font-bold mb-3 group-hover:text-blue-600 line-clamp-2">
+              {article.data.title}
+            </h3>
+            <p class="text-gray-600 mb-4 line-clamp-2">
+              {article.data.description}
+            </p>
+            <div class="text-sm text-gray-500">
+              {article.data.category}
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+  </main>
+</Layout>
