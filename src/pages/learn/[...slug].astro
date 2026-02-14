@@ -1,0 +1,40 @@
+---
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const learnEntries = await getCollection('learn');
+  return learnEntries.map(entry => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<!-- 
+  ROUTING ENGINE ONLY
+  No UI implementation
+  This page demonstrates dynamic routing from content collections
+  
+  UI will be plugged in later from frozen Red-Glass baseline
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{entry.data.title} - Sailor Success Learn</title>
+  <meta name="description" content={entry.data.description}>
+</head>
+<body>
+  <h1>ROUTING ENGINE - NO UI</h1>
+  <h2>{entry.data.title}</h2>
+  <p>Category: {entry.data.category}</p>
+  <p>Published: {entry.data.publishDate.toISOString()}</p>
+  <Content />
+  <p><em>UI will be applied when Red-Glass frozen baseline is integrated</em></p>
+</body>
+</html>

@@ -1,0 +1,81 @@
+---
+import { getCollection } from 'astro:content';
+
+// Get sample entries from each collection
+const learnEntries = await getCollection('learn');
+const careerEntries = await getCollection('career');
+const toolsEntries = await getCollection('tools');
+const rightsEntries = await getCollection('rights');
+const moneyEntries = await getCollection('money');
+const blogEntries = await getCollection('blog');
+const encyclopediaEntries = await getCollection('encyclopedia');
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sailor Success - Content & Routing Engine</title>
+</head>
+<body>
+  <h1>CONTENT + ROUTING ENGINE</h1>
+  <p><strong>NO UI IMPLEMENTATION</strong></p>
+  <p>This is a routing engine demonstrating dynamic content collections.</p>
+  
+  <h2>Collections</h2>
+  
+  <h3>Learn ({learnEntries.length} entries)</h3>
+  <ul>
+    {learnEntries.map(entry => (
+      <li><a href={`/learn/${entry.slug}`}>{entry.data.title}</a></li>
+    ))}
+  </ul>
+  
+  <h3>Career ({careerEntries.length} entries)</h3>
+  <ul>
+    {careerEntries.map(entry => (
+      <li><a href={`/career/${entry.slug}`}>{entry.data.title}</a></li>
+    ))}
+  </ul>
+  
+  <h3>Tools ({toolsEntries.length} entries)</h3>
+  <ul>
+    {toolsEntries.map(entry => (
+      <li><a href={`/tools/${entry.slug}`}>{entry.data.title}</a></li>
+    ))}
+  </ul>
+  
+  <h3>Rights ({rightsEntries.length} entries)</h3>
+  <ul>
+    {rightsEntries.map(entry => (
+      <li><a href={`/rights/${entry.slug}`}>{entry.data.title}</a></li>
+    ))}
+  </ul>
+  
+  <h3>Money ({moneyEntries.length} entries)</h3>
+  <ul>
+    {moneyEntries.map(entry => (
+      <li><a href={`/money/${entry.slug}`}>{entry.data.title}</a></li>
+    ))}
+  </ul>
+  
+  <h3>Blog ({blogEntries.length} entries)</h3>
+  <ul>
+    {blogEntries.map(entry => (
+      <li><a href={`/blog/${entry.slug}`}>{entry.data.title}</a></li>
+    ))}
+  </ul>
+  
+  <h3>Encyclopedia ({encyclopediaEntries.length} entries)</h3>
+  <ul>
+    {encyclopediaEntries.map(entry => (
+      <li><a href={`/encyclopedia/${entry.slug}`}>{entry.data.title}</a></li>
+    ))}
+  </ul>
+  
+  <hr>
+  <p><em>UI will be applied when Red-Glass frozen baseline is integrated</em></p>
+  <p><em>This repository contains ONLY content collections and routing logic</em></p>
+</body>
+</html>
