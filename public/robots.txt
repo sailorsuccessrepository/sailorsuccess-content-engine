@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sailorsuccess.online/sitemap-index.xml
