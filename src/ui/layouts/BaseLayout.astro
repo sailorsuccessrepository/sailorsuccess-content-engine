@@ -79,7 +79,12 @@ const fullTitle = title === 'Sailor Success' ? title : `${title} | Sailor Succes
               <span class="font-bold text-white text-lg">Sailor<span class="text-red-500">Success</span></span>
             </a>
             <p class="text-gray-500 text-sm leading-relaxed mb-4">Your complete maritime career guide. Free knowledge for every seafarer worldwide.</p>
-            <a href="https://sailorsuccess.graphy.com/talk/mentor" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-red-600/20 hover:bg-red-600/30 border border-red-500/30 text-red-400 text-sm font-medium rounded-lg transition-colors">
+            <a
+              href="https://sailorsuccess.graphy.com/talk/mentor"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 px-4 py-2 bg-red-600/20 hover:bg-red-600/30 border border-red-500/30 text-red-400 text-sm font-medium rounded-lg transition-colors"
+            >
               <span>🤖</span> Try SailorGPT
             </a>
           </div>
@@ -103,7 +108,7 @@ const fullTitle = title === 'Sailor Success' ? title : `${title} | Sailor Succes
               <li><a href="/tools" class="text-gray-400 hover:text-red-400 text-sm transition-colors">Tools</a></li>
               <li><a href="/money" class="text-gray-400 hover:text-red-400 text-sm transition-colors">Money</a></li>
               <li><a href="/finance" class="text-gray-400 hover:text-red-400 text-sm transition-colors">Finance</a></li>
-              <li><a href="https://sailorsuccess.graphy.com/talk/mentor" target="_blank" rel="noopener" class="text-gray-400 hover:text-red-400 text-sm transition-colors">SailorGPT</a></li>
+              <li><a href="https://sailorsuccess.graphy.com/store" target="_blank" rel="noopener" class="text-gray-400 hover:text-red-400 text-sm transition-colors">Courses</a></li>
             </ul>
           </div>
 
@@ -126,8 +131,38 @@ const fullTitle = title === 'Sailor Success' ? title : `${title} | Sailor Succes
       </div>
     </footer>
 
+    <!-- Floating CTA Stack: Ask SailorGPT + Talk to Chief -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3 items-end">
+      <!-- Ask SailorGPT -->
+      <a
+        href="https://sailorsuccess.graphy.com/talk/mentor"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex items-center gap-2 px-4 py-3 bg-gray-900/90 hover:bg-gray-800/90 backdrop-blur-xl border border-red-500/30 hover:border-red-500/60 text-white text-sm font-semibold rounded-2xl shadow-lg shadow-black/40 transition-all duration-300 hover:-translate-y-0.5 group"
+        title="Ask SailorGPT"
+      >
+        <span class="text-lg">🌐</span>
+        <span class="text-gray-100 group-hover:text-white">Ask SailorGPT</span>
+        <span class="absolute -top-1 -right-1 flex h-4 w-4">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-60"></span>
+          <span class="relative inline-flex rounded-full h-4 w-4 bg-red-600 text-white text-[9px] font-bold items-center justify-center">AI</span>
+        </span>
+      </a>
+
+      <!-- Talk to Chief (WhatsApp) -->
+      <a
+        href="https://wa.me/919958110235?text=help%20me%20chief"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex items-center gap-2 px-4 py-3 bg-green-600 hover:bg-green-500 text-white text-sm font-semibold rounded-2xl shadow-lg shadow-green-900/40 transition-all duration-300 hover:-translate-y-0.5"
+        title="Talk to Chief on WhatsApp"
+      >
+        <span class="text-lg">💬</span>
+        <span>Talk to Chief</span>
+      </a>
+    </div>
+
     <!-- Search + Enhancement Script -->
     <script src="/ss-enhance.js" defer></script>
-
   </body>
 </html>
