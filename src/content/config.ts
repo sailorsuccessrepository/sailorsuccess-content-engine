@@ -4,8 +4,9 @@ import { defineCollection, z } from 'astro:content';
 const commonSchema = z.object({
   title: z.string(),
   description: z.string(),
-  publishDate: z.date(),
-  updatedDate: z.date().optional(), // Track content freshness
+  publishDate: z.coerce.date().optional(), // Accept both publishDate and pubDate
+  pubDate: z.coerce.date().optional(), // Alias for publishDate
+  updatedDate: z.coerce.date().optional(), // Track content freshness
   category: z.string(),
   tags: z.array(z.string()).default([]),
   featured: z.boolean().default(false),
@@ -63,7 +64,7 @@ const rightsCollection = defineCollection({
   schema: commonSchema.extend({
     legalArea: z.enum(['contracts', 'wages', 'safety', 'repatriation', 'mental-health', 'general']).optional(),
     jurisdiction: z.string().optional(),
-    lastUpdated: z.date().optional(),
+    lastUpdated: z.coerce.date().optional(),
   }),
 });
 
@@ -80,7 +81,7 @@ const moneyCollection = defineCollection({
 const blogCollection = defineCollection({
   type: 'content',
   schema: commonSchema.extend({
-    updated: z.date().optional(),
+    updated: z.coerce.date().optional(),
   }),
 });
 
@@ -88,8 +89,8 @@ const blogCollection = defineCollection({
 const encyclopediaCollection = defineCollection({
   type: 'content',
   schema: commonSchema.extend({
-    term: z.string(),
-    definition: z.string(),
+    term: z.string().optional(),
+    definition: z.string().optional(),
     relatedTerms: z.array(z.string()).default([]),
     abbreviation: z.string().optional(),
   }),
