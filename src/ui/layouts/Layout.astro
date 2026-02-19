@@ -1,4 +1,6 @@
 ---
+import Header from '../components/Header.astro';
+
 export interface Props {
   title: string;
   description: string;
@@ -12,24 +14,25 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    
+
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SRLHMVN1J3"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <!-- Favicons -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    
+    <meta name="theme-color" content="#dc2626" />
+
     <!-- Primary Meta Tags -->
     <title>{title} | Sailor Success</title>
     <meta name="title" content={`${title} | Sailor Success`} />
     <meta name="description" content={description} />
     <meta name="author" content="Sailor Success" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Sailor Success" />
@@ -40,7 +43,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="en_IN" />
-    
+
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@sailorsuccess" />
@@ -48,745 +51,157 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta name="twitter:title" content={`${title} | Sailor Success`} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content="https://sailorsuccess.online/images/og-default.jpg" />
-    
+
     <!-- Canonical -->
     <link rel="canonical" href={canonicalURL} />
-    
-    <!-- Premium Fonts -->
+
+    <!-- Fonts: Inter + Source Serif -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet" />
   </head>
-  <body>
-    <!-- HEADER with Glass Effect -->
-    <header class="site-header">
-      <nav class="container">
-        <a href="/" class="logo">
-          <img src="/images/logo.png" alt="Sailor Success - Empowering Seafarers" class="logo-img" width="180" height="48" />
-        </a>
-        <ul class="nav-links" id="nav-links">
-          <li><a href="/learn/">Learn</a></li>
-          <li><a href="/careers/">Careers</a></li>
-          <li><a href="/money/">Money</a></li>
-          <li><a href="/rights/">Rights</a></li>
-          <li><a href="/tools/">Tools</a></li>
-          <li><a href="/encyclopedia/">Encyclopedia</a></li>
-          <li><a href="/blog/">Blog</a></li>
-          <li><a href="/about/">About</a></li>
-          <li><a href="/contact/">Contact</a></li>
-          <li class="nav-dropdown">
-            <a href="https://sailorsuccess.graphy.com/talk/mentor" class="nav-cta" target="_blank" rel="noopener">
+
+  <body class="bg-gray-950 text-gray-100 antialiased" style="font-family: 'Inter', sans-serif;">
+
+    <!-- NEW: Astro Header Component with Hamburger Menu -->
+    <Header />
+
+    <!-- Page Content -->
+    <slot />
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="/" class="footer-logo">
+            <img src="/images/logo.png" alt="Sailor Success" class="footer-logo-img" width="140" height="40" onerror="this.style.display='none'" />
+          </a>
+          <p class="footer-tagline">Empowering seafarers worldwide with knowledge, tools and career guidance.</p>
+          <div class="footer-social">
+            <a href="https://sailorsuccess.graphy.com/talk/mentor" target="_blank" rel="noopener" class="sailorgpt-footer-btn">
               🤖 SailorGPT
             </a>
-            <div class="dropdown-menu">
-              <a href="https://sailorsuccess.graphy.com/talk/mentor" target="_blank" rel="noopener">
-                <span class="dropdown-icon">🤖</span>
-                <span class="dropdown-text">
-                  <strong>Ask SailorGPT</strong>
-                  <small>AI Mentor - Instant Answers</small>
-                </span>
-              </a>
-              <a href="https://wa.me/919958110235?text=Hi%2C%20I%20need%20guidance" target="_blank" rel="noopener">
-                <span class="dropdown-icon">💬</span>
-                <span class="dropdown-text">
-                  <strong>Talk to Chief</strong>
-                  <small>WhatsApp - Human Support</small>
-                </span>
-              </a>
-            </div>
-          </li>
-        </ul>
-        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">
-          <svg class="menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M3 12h18M3 6h18M3 18h18"></path>
-          </svg>
-          <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;">
-            <path d="M18 6L6 18M6 6l12 12"></path>
-          </svg>
-        </button>
-      </nav>
-      
-      <!-- Mobile Menu Dropdown -->
-      <div class="mobile-menu" id="mobile-menu">
-        <ul class="mobile-nav-links">
-          <li><a href="/learn/">📚 Learn</a></li>
-          <li><a href="/careers/">🧭 Careers</a></li>
-          <li><a href="/money/">💰 Money</a></li>
-          <li><a href="/rights/">⚖️ Rights</a></li>
-          <li><a href="/tools/">🔧 Tools</a></li>
-          <li><a href="/encyclopedia/">📖 Encyclopedia</a></li>
-          <li><a href="/blog/">📝 Blog</a></li>
-          <li><a href="/resources/">🗂️ Resources</a></li>
-          <li><a href="/about/">ℹ️ About</a></li>
-          <li><a href="/contact/">✉️ Contact</a></li>
-        </ul>
-        <div class="mobile-cta-group">
-          <a href="https://sailorsuccess.graphy.com/talk/mentor" class="mobile-cta mobile-cta-primary" target="_blank" rel="noopener">
-            🤖 Ask SailorGPT
-          </a>
-          <a href="https://wa.me/919958110235?text=Hi%2C%20I%20need%20guidance" class="mobile-cta mobile-cta-secondary" target="_blank" rel="noopener">
-            💬 Talk to Chief
-          </a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Knowledge</h4>
+            <ul>
+              <li><a href="/learn">Learn</a></li>
+              <li><a href="/careers">Careers</a></li>
+              <li><a href="/rights">Rights</a></li>
+              <li><a href="/encyclopedia">Encyclopedia</a></li>
+              <li><a href="/blog">Blog</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="/tools">Tools</a></li>
+              <li><a href="/money">Money</a></li>
+              <li><a href="/finance">Finance</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="/about">About</a></li>
+              <li><a href="/contact">Contact</a></li>
+              <li><a href="/contributors">Our Contributors</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-    </header>
-    
-    <main>
-      <slot />
-      </main>
-  
-  <!-- FOOTER -->
-  <footer class="site-footer"> <div class="container"> <div class="footer-grid"> <div class="footer-brand"> <a href="/" class="footer-logo"> <img src="/images/logo.png" alt="Sailor Success" width="160" height="42"> </a> <p class="footer-tagline">
-India's most trusted maritime knowledge base. Real guidance from 120+ years of collective seafaring experience. No coaching mafia.
-</p> <div class="social-links"> <a href="https://wa.me/919958110235" aria-label="WhatsApp" class="social-whatsapp" target="_blank" rel="noopener"> <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path></svg> </a> <a href="https://www.instagram.com/sailorsuccess" aria-label="Instagram" target="_blank" rel="noopener"> <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg> </a> <a href="https://www.youtube.com/@sailorsuccess-original" aria-label="YouTube" target="_blank" rel="noopener"> <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg> </a> <a href="https://t.me/sailorsuccess" aria-label="Telegram" target="_blank" rel="noopener"> <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"></path></svg> </a> </div> </div> <div class="footer-section"> <h4>Knowledge</h4> <ul> <li><a href="/learn/">Technical Learning</a></li> <li><a href="/careers/">Career Guides</a></li> <li><a href="/learn/imu-cet-preparation-guide/">IMU CET Guide</a></li> <li><a href="/careers/how-to-join-merchant-navy-india/">Join Merchant Navy</a></li> </ul> </div> <div class="footer-section"> <h4>Resources</h4> <ul> <li><a href="/money/">Financial Planning</a></li> <li><a href="/rights/">Legal & Rights</a></li> <li><a href="/tools/">Tools & Calculators</a></li> <li><a href="/sailorgpt/">SailorGPT AI</a></li> </ul> </div> <div class="footer-section"> <h4>Need Help?</h4> <ul> <li><a href="https://sailorsuccess.graphy.com/talk/mentor" target="_blank" rel="noopener">🤖 Ask SailorGPT</a></li> <li><a href="https://wa.me/919958110235?text=Hi%2C%20I%20need%20guidance" target="_blank" rel="noopener">💬 Talk to Chief</a></li> <li><a href="mailto:helpme@sailorsuccess.online">✉️ Email Support</a></li> </ul> </div> <div class="footer-section footer-emergency"> <h4>🆘 Official Seafarer Support</h4> <div class="emergency-box"> <p><strong>DGS 24/7 Grievance Redressal</strong></p> <p>📞 <a href="tel:9004048406">9004048406</a></p> <p>✉️ <a href="mailto:support.dgs@gov.in">support.dgs@gov.in</a></p> <small>For active & retired seafarers, families, and shipping companies</small> </div> </div> </div> <div class="footer-bottom"> <p>© 2026 Sailor Success Educational Services. Built by seafarers, for seafarers.</p> <p class="footer-links"> <a href="/about/">About</a> <a href="/contact/">Contact</a> <a href="/privacy/">Privacy</a> <a href="/terms/">Terms</a> </p> </div> </div> </footer>
-  
-  <!-- Mobile Menu Toggle Script --> <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const mobileBtn = document.getElementById('mobile-menu-btn');
-      const mobileMenu = document.getElementById('mobile-menu');
-      const menuIcon = mobileBtn?.querySelector('.menu-icon');
-      const closeIcon = mobileBtn?.querySelector('.close-icon');
-      
-      if (mobileBtn && mobileMenu) {
-        mobileBtn.addEventListener('click', function() {
-          const isOpen = mobileMenu.classList.toggle('active');
-          mobileBtn.setAttribute('aria-expanded', isOpen);
-          if (menuIcon) menuIcon.style.display = isOpen ? 'none' : 'block';
-          if (closeIcon) closeIcon.style.display = isOpen ? 'block' : 'none';
-        });
-        
-        // Close menu when clicking a link
-        mobileMenu.querySelectorAll('a').forEach(function(link) {
-          link.addEventListener('click', function() {
-            mobileMenu.classList.remove('active');
-            mobileBtn.setAttribute('aria-expanded', 'false');
-            if (menuIcon) menuIcon.style.display = 'block';
-            if (closeIcon) closeIcon.style.display = 'none';
-          });
-        });
-      }
-    });
-  </script>
-  <!-- Floating CTA Stack --><div class="floating-cta-stack"> <!-- Primary: SailorGPT AI Mentor --> <a href="https://sailorsuccess.graphy.com/talk/mentor" class="floating-btn floating-sailorgpt" aria-label="Ask SailorGPT AI Mentor" target="_blank" rel="noopener"> <div class="btn-icon"> <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"> <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"></path> </svg> </div> <span class="btn-label">Ask SailorGPT</span> <span class="btn-badge">AI</span> </a> <!-- Secondary: Talk to Chief (WhatsApp) --> <a href="https://wa.me/919958110235?text=Hi%20Chief%2C%20I%20need%20guidance" class="floating-btn floating-whatsapp" aria-label="Talk to Chief on WhatsApp" target="_blank" rel="noopener"> <div class="btn-icon"> <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"> <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path> </svg> </div> <span class="btn-label">Talk to Chief</span> </a> </div>
-  
-  <!-- Lead Magnet Popup Modal --><div id="lead-popup" class="popup-overlay" aria-hidden="true"> <div class="popup-container"> <button class="popup-close" aria-label="Close popup" onclick="closeLeadPopup()"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <line x1="18" y1="6" x2="6" y2="18"></line> <line x1="6" y1="6" x2="18" y2="18"></line> </svg> </button> <div class="popup-content"> <div class="popup-header"> <span class="popup-badge">🤖 Free AI Mentor</span> <h2>Get Your Maritime Career Sorted</h2> <p>SailorGPT answers your Merchant Navy questions 24/7. IMU CET prep, sponsorship guidance, career planning—all free to try.</p> </div> <form class='popup-form' id='lead-form' method='POST' name='sailorgpt-leads'> <input type="hidden" name="form-name" value="sailorgpt-leads"> <input type="hidden" name="bot-field"> <input type="hidden" id="popup-source" name="source" value="website_popup"> <input type="hidden" id="popup-page" name="page" value=""> <div class="form-row"> <div class="form-group"> <label for="popup-name">Full Name</label> <input type="text" id="popup-name" name="name" placeholder="Enter your name" required> </div> <div class="form-group"> <label for="popup-whatsapp">WhatsApp Number</label> <input type="tel" id="popup-whatsapp" name="whatsapp" placeholder="+91 XXXXX XXXXX" required pattern="[0-9+s]{10,15}"> </div> </div> <div class="form-group"> <label for="popup-role">I am a...</label> <select id="popup-role" name="role" required> <option value="">Select your stage</option> <option value="Student (Class 8-12)">Student (Class 8-12)</option> <option value="IMU CET Aspirant">IMU CET Aspirant</option> <option value="Cadet / Trainee">Cadet / Trainee</option> <option value="Junior Officer">Junior Officer</option> <option value="Rating">Rating</option> <option value="Experienced Seafarer">Experienced Seafarer</option> <option value="Parent / Guardian">Parent / Guardian</option> <option value="Just Exploring">Just Exploring</option> </select> </div> <button type="submit" class="popup-submit"> <span class="btn-text">Chat with SailorGPT Free →</span> <span class="btn-loading" style="display:none;">Connecting...</span> </button> <p class="popup-privacy">🔒 We respect your privacy. No spam, ever.</p> </form> <div id="popup-success" class="popup-success" style="display:none;"> <div class="success-icon">✓</div> <h3>You're In!</h3> <p>Redirecting you to SailorGPT...</p> </div> </div> <div class="popup-features"> <div class="feature-item"> <span>⚓</span> <span>Built for Indian Seafarers</span> </div> <div class="feature-item"> <span>📚</span> <span>IMU CET + DG Shipping Ready</span> </div> <div class="feature-item"> <span>💬</span> <span>Instant Answers 24/7</span> </div> </div> </div> </div>  <script>
-  // Popup Management
-  let popupShown = false;
-  
-  function showLeadPopup() {
-    if (popupShown) return;
-    
-    // Check if user already submitted or dismissed recently
-    const lastDismissed = localStorage.getItem('ss_popup_dismissed');
-    const lastSubmitted = localStorage.getItem('ss_lead_submitted');
-    
-    if (lastSubmitted) return; // Never show again if submitted
-    
-    if (lastDismissed) {
-      const dismissedTime = parseInt(lastDismissed);
-      const hoursSinceDismissed = (Date.now() - dismissedTime) / (1000 * 60 * 60);
-      if (hoursSinceDismissed < 24) return; // Wait 24 hours after dismiss
-    }
-    
-    const popup = document.getElementById('lead-popup');
-    if (popup) {
-      popup.classList.add('active');
-      popup.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
-      popupShown = true;
-    }
-  }
-  
-  function closeLeadPopup() {
-    const popup = document.getElementById('lead-popup');
-    if (popup) {
-      popup.classList.remove('active');
-      popup.setAttribute('aria-hidden', 'true');
-      document.body.style.overflow = '';
-      localStorage.setItem('ss_popup_dismissed', Date.now().toString());
-    }
-  }
-  
-  // Show popup after 10 seconds
-  document.addEventListener('DOMContentLoaded', function() {
-    setTimeout(showLeadPopup, 10000);
-    
-    // Close on overlay click
-    const popup = document.getElementById('lead-popup');
-    if (popup) {
-      popup.addEventListener('click', function(e) {
-        if (e.target === popup) {
-          closeLeadPopup();
-        }
-      });
-    }
-    
-    // Close on Escape key
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') {
-        closeLeadPopup();
-      }
-    });
-    
-    // Form submission
-    const form = document.getElementById('lead-form');
-    if (form) {
-      form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const name = document.getElementById('popup-name').value;
-        const whatsapp = document.getElementById('popup-whatsapp').value;
-        const role = document.getElementById('popup-role').value;
-        
-        // Show loading
-        const btnText = form.querySelector('.btn-text');
-        const btnLoading = form.querySelector('.btn-loading');
-        btnText.style.display = 'none';
-        btnLoading.style.display = 'inline';
-        
-        // Store lead data
-        const leadData = {
-          name: name,
-          whatsapp: whatsapp,
-          role: role,
-          source: 'website_popup',
-          page: window.location.pathname,
-          timestamp: new Date().toISOString()
-        };
-        
-        // Store locally
-        localStorage.setItem('ss_lead_submitted', 'true');
-        localStorage.setItem('ss_lead_data', JSON.stringify(leadData));
-        
-        // Send to webhook (Interakt/Make.com)
-        fetch('https://hook.eu2.make.com/YOUR_WEBHOOK_ID', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(leadData)
-        }).catch(() => {});
-        
-        // Show success
-        setTimeout(function() {
-          form.style.display = 'none';
-          document.getElementById('popup-success').style.display = 'block';
-          
-          // Redirect to SailorGPT on Graphy
-          setTimeout(function() {
-            window.location.href = 'https://sailorsuccess.graphy.com/talk/mentor';
-          }, 1500);
-        }, 500);
-      });
-    }
-  });
-</script>
+      <div class="footer-bottom">
+        <p>&copy; {new Date().getFullYear()} Sailor Success. All rights reserved.</p>
+        <p>Made with ❤️ for seafarers worldwide</p>
+      </div>
+    </footer>
 
-<style>
-  /* ========== FOOTER STYLES ========== */
-  .site-footer {
-    background: var(--navy);
-    color: var(--text-inverse);
-    padding: 4rem 0 2rem;
-    margin-top: 6rem;
-  }
-  
-  .footer-grid {
-    display: grid;
-    grid-template-columns: 2fr repeat(4, 1fr);
-    gap: 3rem;
-    margin-bottom: 3rem;
-  }
-  
-  .footer-brand {
-    grid-column: 1;
-  }
-  
-  .footer-logo {
-    display: inline-block;
-    margin-bottom: 1rem;
-  }
-  
-  .footer-tagline {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 0.9375rem;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-  }
-  
-  .social-links {
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .social-links a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
-    color: #FFFFFF;
-    transition: all 0.2s ease;
-  }
-  
-  .social-links a:hover {
-    background: var(--red);
-    transform: translateY(-2px);
-  }
-  
-  .social-whatsapp:hover {
-    background: #25D366 !important;
-  }
-  
-  .footer-section h4 {
-    font-family: var(--font-heading);
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: #FFFFFF;
-  }
-  
-  .footer-section ul {
-    list-style: none;
-  }
-  
-  .footer-section li {
-    margin-bottom: 0.75rem;
-  }
-  
-  .footer-section a {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 0.9375rem;
-    transition: color 0.15s ease;
-  }
-  
-  .footer-section a:hover {
-    color: #FFFFFF;
-  }
-  
-  .footer-emergency {
-    grid-column: 5;
-  }
-  
-  .emergency-box {
-    background: rgba(196, 30, 58, 0.15);
-    border: 1px solid rgba(196, 30, 58, 0.3);
-    border-radius: var(--radius-md);
-    padding: 1.25rem;
-  }
-  
-  .emergency-box p {
-    margin-bottom: 0.5rem;
-    font-size: 0.9375rem;
-  }
-  
-  .emergency-box strong {
-    color: #FFFFFF;
-    font-weight: 600;
-  }
-  
-  .emergency-box a {
-    color: #FFFFFF !important;
-    font-weight: 500;
-  }
-  
-  .emergency-box small {
-    display: block;
-    margin-top: 0.5rem;
-    font-size: 0.8125rem;
-    color: rgba(255, 255, 255, 0.6);
-    line-height: 1.4;
-  }
-  
-  .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  
-  .footer-bottom p {
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 0.875rem;
-  }
-  
-  .footer-links {
-    display: flex;
-    gap: 2rem;
-  }
-  
-  .footer-links a {
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 0.875rem;
-  }
-  
-  .footer-links a:hover {
-    color: #FFFFFF;
-  }
-  
-  /* ========== FLOATING CTA STYLES ========== */
-  .floating-cta-stack {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    z-index: 900;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-  
-  .floating-btn {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.875rem 1.25rem;
-    border-radius: 999px;
-    font-weight: 600;
-    font-size: 0.9375rem;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-    transition: all 0.2s ease;
-    text-decoration: none;
-    position: relative;
-  }
-  
-  .floating-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
-  }
-  
-  .floating-sailorgpt {
-    background: var(--red);
-    color: #FFFFFF;
-  }
-  
-  .floating-sailorgpt:hover {
-    background: var(--red-hover);
-  }
-  
-  .floating-whatsapp {
-    background: #25D366;
-    color: #FFFFFF;
-  }
-  
-  .floating-whatsapp:hover {
-    background: #20BA5A;
-  }
-  
-  .btn-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 24px;
-    height: 24px;
-  }
-  
-  .btn-label {
-    white-space: nowrap;
-  }
-  
-  .btn-badge {
-    position: absolute;
-    top: -4px;
-    right: -4px;
-    background: #FFD700;
-    color: var(--navy);
-    font-size: 0.625rem;
-    font-weight: 700;
-    padding: 0.125rem 0.375rem;
-    border-radius: 4px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  }
-  
-  /* ========== POPUP STYLES ========== */
-  .popup-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(10, 37, 64, 0.8);
-    backdrop-filter: blur(4px);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-    padding: 1rem;
-  }
-  
-  .popup-overlay.active {
-    display: flex;
-    animation: fadeIn 0.2s ease;
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  .popup-container {
-    background: #FFFFFF;
-    border-radius: var(--radius-lg);
-    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.25);
-    max-width: 600px;
-    width: 100%;
-    max-height: 90vh;
-    overflow-y: auto;
-    position: relative;
-    animation: slideUp 0.3s ease;
-  }
-  
-  @keyframes slideUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .popup-close {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: rgba(0, 0, 0, 0.05);
-    border: none;
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    color: var(--text-secondary);
-    transition: all 0.15s ease;
-  }
-  
-  .popup-close:hover {
-    background: rgba(0, 0, 0, 0.1);
-    color: var(--text-primary);
-  }
-  
-  .popup-content {
-    padding: 2.5rem 2rem 2rem;
-  }
-  
-  .popup-header {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  
-  .popup-badge {
-    display: inline-block;
-    background: rgba(196, 30, 58, 0.1);
-    color: var(--red);
-    font-size: 0.8125rem;
-    font-weight: 600;
-    padding: 0.375rem 0.875rem;
-    border-radius: 999px;
-    margin-bottom: 1rem;
-  }
-  
-  .popup-header h2 {
-    font-family: var(--font-heading);
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: var(--navy);
-    margin-bottom: 0.75rem;
-  }
-  
-  .popup-header p {
-    color: var(--text-secondary);
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-  
-  .popup-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-  }
-  
-  .form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
-  
-  .form-group {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .form-group label {
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: var(--text-primary);
-    margin-bottom: 0.5rem;
-  }
-  
-  .form-group input,
-  .form-group select {
-    padding: 0.875rem 1rem;
-    border: 1px solid var(--border-strong);
-    border-radius: var(--radius-sm);
-    font-size: 1rem;
-    font-family: var(--font-body);
-    color: var(--text-primary);
-    transition: all 0.15s ease;
-  }
-  
-  .form-group input:focus,
-  .form-group select:focus {
-    outline: none;
-    border-color: var(--red);
-    box-shadow: 0 0 0 3px rgba(196, 30, 58, 0.1);
-  }
-  
-  .popup-submit {
-    background: var(--red);
-    color: #FFFFFF;
-    border: none;
-    padding: 1rem 2rem;
-    border-radius: var(--radius-md);
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
-  
-  .popup-submit:hover {
-    background: var(--red-hover);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 16px rgba(196, 30, 58, 0.3);
-  }
-  
-  .popup-privacy {
-    text-align: center;
-    font-size: 0.8125rem;
-    color: var(--text-tertiary);
-    margin-top: 1rem;
-  }
-  
-  .popup-features {
-    display: flex;
-    justify-content: space-around;
-    gap: 1rem;
-    padding: 1.5rem 2rem 2rem;
-    border-top: 1px solid var(--border-subtle);
-    background: var(--bg-subtle);
-    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
-  }
-  
-  .feature-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 0.5rem;
-  }
-  
-  .feature-item span:first-child {
-    font-size: 1.5rem;
-  }
-  
-  .feature-item span:last-child {
-    font-size: 0.75rem;
-    color: var(--text-secondary);
-    font-weight: 500;
-  }
-  
-  .popup-success {
-    text-align: center;
-    padding: 2rem;
-  }
-  
-  .success-icon {
-    width: 64px;
-    height: 64px;
-    background: #10B981;
-    color: #FFFFFF;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    font-weight: 700;
-    margin: 0 auto 1rem;
-  }
-  
-  .popup-success h3 {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    color: var(--navy);
-    margin-bottom: 0.5rem;
-  }
-  
-  .popup-success p {
-    color: var(--text-secondary);
-  }
-  
-  /* Responsive */
-  @media (max-width: 1024px) {
-    .footer-grid {
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-    }
-    
-    .footer-brand {
-      grid-column: 1 / -1;
-    }
-    
-    .footer-emergency {
-      grid-column: auto;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .site-footer {
-      padding: 3rem 0 2rem;
-      margin-top: 4rem;
-    }
-    
-    .footer-grid {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-    
-    .footer-bottom {
-      flex-direction: column;
-      text-align: center;
-    }
-    
-    .floating-cta-stack {
-      bottom: 1rem;
-      right: 1rem;
-    }
-    
-    .floating-btn {
-      padding: 0.75rem 1rem;
-      font-size: 0.875rem;
-    }
-    
-    .btn-label {
-      display: none;
-    }
-    
-    .floating-btn .btn-icon {
-      margin: 0;
-    }
-    
-    .popup-content {
-      padding: 2rem 1.5rem;
-    }
-    
-    .form-row {
-      grid-template-columns: 1fr;
-    }
-  }
-</style>
+    <!-- Floating CTA Stack -->
+    <div class="floating-cta-stack" id="floating-cta-stack">
+      <a href="https://sailorsuccess.graphy.com/talk/mentor" target="_blank" rel="noopener" class="floating-btn sailorgpt-btn" title="Chat with SailorGPT">
+        <span class="btn-icon">🤖</span>
+        <span class="btn-label">SailorGPT</span>
+      </a>
+      <button class="floating-btn whatsapp-btn" id="lead-capture-btn" title="Get Free Guide on WhatsApp">
+        <span class="btn-icon">📱</span>
+        <span class="btn-label">Free Guide</span>
+      </button>
+    </div>
+
+    <!-- Lead Capture Popup -->
+    <div class="popup-overlay" id="popup-overlay">
+      <div class="popup-container">
+        <button class="popup-close" id="popup-close" aria-label="Close">&times;</button>
+        <div class="popup-header">
+          <div class="popup-icon">🚢</div>
+          <h3>Get Your Free Maritime Guide</h3>
+          <p>Join 10,000+ seafarers getting weekly career tips</p>
+        </div>
+        <form class="popup-form" id="lead-form">
+          <div class="form-row">
+            <input type="text" id="lead-name" name="name" placeholder="Your Name" required />
+            <input type="tel" id="lead-whatsapp" name="whatsapp" placeholder="WhatsApp Number" required />
+          </div>
+          <select id="lead-role" name="role" required>
+            <option value="">Select Your Role</option>
+            <option value="cadet">Cadet / Trainee</option>
+            <option value="officer">Officer (Deck/Engine)</option>
+            <option value="master">Master / Chief Engineer</option>
+            <option value="shore">Shore-based Maritime</option>
+            <option value="aspiring">Aspiring Seafarer</option>
+          </select>
+          <button type="submit" class="popup-submit">Send Me the Free Guide 🚀</button>
+        </form>
+        <p class="popup-disclaimer">🔒 No spam. Unsubscribe anytime.</p>
+      </div>
+    </div>
+
+    <!-- Search Enhancement + UI Script -->
+    <script src="/ss-enhance.js" defer></script>
+
+    <!-- Lead Capture Script -->
+    <script>
+      const WEBHOOK_URL = 'https://hook.eu2.make.com/YOURWEBHOOKID'; // Replace with real Make.com URL when ready
+
+      const leadBtn = document.getElementById('lead-capture-btn');
+      const overlay = document.getElementById('popup-overlay');
+      const closeBtn = document.getElementById('popup-close');
+      const form = document.getElementById('lead-form');
+
+      if (leadBtn && overlay) {
+        leadBtn.addEventListener('click', () => overlay.classList.add('active'));
+        closeBtn?.addEventListener('click', () => overlay.classList.remove('active'));
+        overlay.addEventListener('click', (e) => {
+          if (e.target === overlay) overlay.classList.remove('active');
+        });
+      }
+
+      if (form) {
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          const data = {
+            name: (document.getElementById('lead-name') as HTMLInputElement)?.value,
+            whatsapp: (document.getElementById('lead-whatsapp') as HTMLInputElement)?.value,
+            role: (document.getElementById('lead-role') as HTMLSelectElement)?.value,
+            page: window.location.href,
+            timestamp: new Date().toISOString()
+          };
+          try {
+            await fetch(WEBHOOK_URL, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(data)
+            });
+            overlay?.classList.remove('active');
+            alert('✅ Guide sent to your WhatsApp!');
+          } catch (err) {
+            alert('✅ Received! Check WhatsApp shortly.');
+          }
+        });
+      }
+    </script>
+
+  </body>
+</html>
