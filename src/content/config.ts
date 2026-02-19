@@ -16,6 +16,11 @@ const commonSchema = z.object({
   canonicalUrl: z.string().optional(), // SEO canonical link control
   // Content interlinking
   relatedArticles: z.array(z.string()).default([]), // Cross-reference slugs
+    author: z.string().optional(), // Article author
+    subcategory: z.string().optional(), // Optional sub-category
+  readTime: z.string().optional(), // e.g. '8 min read'
+  image: z.string().optional(), // Featured image URL
+  heroImage: z.string().optional(), // Hero image URL
 });
 
 // Learn collection - tutorials, guides, courses, exam prep
