@@ -1,0 +1,165 @@
+---
+/**
+ * Global Merchant Navy Fit Quiz Component
+ * 20 Questions covering Psychological, Emotional, Physiological, Social, and Relationship sectors.
+ */
+---
+
+<div id="fit-quiz-container" class="my-12 max-w-2xl mx-auto p-8 rounded-[2rem] bg-gray-900/60 backdrop-blur-2xl border border-red-500/20 shadow-2xl shadow-red-900/10">
+  <div class="flex justify-between items-center mb-8">
+    <div>
+      <h3 class="text-2xl font-bold text-white mb-1">Merchant Navy Fit Quiz</h3>
+      <p class="text-sm text-gray-400">Evaluate your alignment with life at sea</p>
+    </div>
+    <div id="quiz-badge" class="px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 text-xs font-bold uppercase tracking-widest">
+      Question 1/20
+    </div>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="w-full h-1.5 bg-white/5 rounded-full mb-10 overflow-hidden">
+    <div id="quiz-progress" class="h-full bg-gradient-to-r from-red-600 to-rose-500 transition-all duration-500" style="width: 5%"></div>
+  </div>
+
+  <!-- Question Content -->
+  <div id="quiz-question-box" class="min-h-[120px]">
+    <p id="quiz-question-text" class="text-lg md:text-xl text-gray-200 leading-relaxed font-medium mb-8">
+      Loading assessment...
+    </p>
+  </div>
+
+  <!-- Options -->
+  <div id="quiz-options" class="grid gap-4 mb-10">
+    <!-- Options will be injected here -->
+  </div>
+
+  <!-- Navigation / Results -->
+  <div id="quiz-footer" class="flex justify-between items-center">
+    <span class="text-xs text-gray-500 italic">Be honest. No right or wrong answers.</span>
+    <button id="quiz-next-btn" class="hidden px-8 py-3 bg-red-600 hover:bg-red-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-red-900/20">
+      Next Question
+    </button>
+  </div>
+
+  <div id="quiz-results" class="hidden text-center py-6">
+    <div id="result-icon" class="text-6xl mb-6">🚢</div>
+    <h4 id="result-title" class="text-2xl font-bold text-white mb-4">Assessment Complete</h4>
+    <p id="result-text" class="text-gray-400 leading-relaxed mb-8"></p>
+    <div class="flex justify-center gap-4">
+      <button onclick="location.reload()" class="px-6 py-3 bg-white/5 hover:bg-white/10 text-white font-medium rounded-xl border border-white/10 transition-all">
+        Restart
+      </button>
+      <a href="/contact" class="px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-red-900/20">
+        Discuss Results
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  const questions = [
+    { text: "I can stay calm and professional even when a senior officer speaks firmly under high pressure.", sector: "Psychological" },
+    { text: "I am comfortable spending 4-6 months away from home without daily physical contact with family.", sector: "Emotional" },
+    { text: "I can work effectively in multicultural teams where English is the primary language.", sector: "Social" },
+    { text: "I thrive in a structured environment with strict watches (4h on / 8h off) and uniform regulations.", sector: "Psychological" },
+    { text: "I am prepared for physical labor in extreme environments like hot engine rooms or cold decks.", sector: "Physiological" },
+    { text: "I understand that my lifestyle (sleep, diet, fitness) directly impacts the safety of the entire vessel.", sector: "Physiological" },
+    { text: "I can manage major life events (birthdays, festivals) while being thousands of miles away at sea.", sector: "Relationship" },
+    { text: "I am willing to share living spaces and socialize with the same 20-25 people for months.", sector: "Social" },
+    { text: "I can handle the feeling of 'missing out' on trends or events happening on land.", sector: "Emotional" },
+    { text: "I am capable of recovering quickly from technical failures or stressful operational situations.", sector: "Psychological" },
+    { text: "I believe that following safety protocols is more important than finishing a job quickly.", sector: "Psychological" },
+    { text: "My family/partner is supportive of this career and understands the long periods of absence.", sector: "Relationship" },
+    { text: "I view my salary as a tool for long-term wealth, not just for immediate lifestyle upgrades.", sector: "Social" },
+    { text: "I am eager to learn about maritime laws, technical systems, and international regulations.", sector: "Psychological" },
+    { text: "I will never compromise on vessel security or cargo integrity, regardless of the pressure.", sector: "Psychological" },
+    { text: "I can maintain a high standard of personal grooming and cabin cleanliness without supervision.", sector: "Physiological" },
+    { text: "I am prepared to work even when the vessel is experiencing heavy rolling and pitching.", sector: "Physiological" },
+    { text: "I am committed to a zero-tolerance policy for drugs and strictly follow alcohol policies.", sector: "Social" },
+    { text: "I prefer resolving interpersonal conflicts through professional dialogue rather than avoidance.", sector: "Social" },
+    { text: "I want to be part of an industry that moves 90% of global trade and requires elite professionalism.", sector: "Emotional" }
+  ];
+
+  const options = [
+    { label: "Strongly Agree", score: 2 },
+    { label: "Agree", score: 1.5 },
+    { label: "Neutral / Unsure", score: 1 },
+    { label: "Disagree", score: 0.5 },
+    { label: "Strongly Disagree", score: 0 }
+  ];
+
+  let currentIdx = 0;
+  let scores = [];
+
+  const container = document.getElementById('fit-quiz-container');
+  const questionText = document.getElementById('quiz-question-text');
+  const optionsBox = document.getElementById('quiz-options');
+  const badge = document.getElementById('quiz-badge');
+  const progress = document.getElementById('quiz-progress');
+  const nextBtn = document.getElementById('quiz-next-btn');
+  const questionBox = document.getElementById('quiz-question-box');
+  const resultsBox = document.getElementById('quiz-results');
+  const footer = document.getElementById('quiz-footer');
+
+  function renderQuestion() {
+    const q = questions[currentIdx];
+    badge.innerText = `Question ${currentIdx + 1}/${questions.length} • ${q.sector}`;
+    progress.style.width = `${((currentIdx + 1) / questions.length) * 100}%`;
+    questionText.innerText = q.text;
+    
+    optionsBox.innerHTML = '';
+    options.forEach((opt, i) => {
+      const btn = document.createElement('button');
+      btn.className = "w-full text-left px-6 py-4 rounded-xl bg-white/5 border border-white/10 text-gray-300 hover:bg-red-500/10 hover:border-red-500/30 transition-all duration-200 group flex justify-between items-center";
+      btn.innerHTML = `<span>${opt.label}</span><span class="opacity-0 group-hover:opacity-100 transition-opacity">→</span>`;
+      btn.onclick = () => selectOption(opt.score);
+      optionsBox.appendChild(btn);
+    });
+  }
+
+  function selectOption(score) {
+    scores[currentIdx] = score;
+    if (currentIdx < questions.length - 1) {
+      currentIdx++;
+      renderQuestion();
+    } else {
+      showResults();
+    }
+  }
+
+  function showResults() {
+    const total = scores.reduce((a, b) => a + b, 0);
+    const max = questions.length * 2;
+    const percentage = (total / max) * 100;
+
+    questionBox.classList.add('hidden');
+    optionsBox.classList.add('hidden');
+    footer.classList.add('hidden');
+    resultsBox.classList.remove('hidden');
+
+    const title = document.getElementById('result-title');
+    const text = document.getElementById('result-text');
+    const icon = document.getElementById('result-icon');
+
+    if (percentage >= 85) {
+      icon.innerText = "⚓";
+      title.innerText = "Elite Alignment Found";
+      text.innerText = "Your mindset, social expectations, and physiological readiness match the top 5% of successful maritime professionals. You are ready for the IMU CET push.";
+    } else if (percentage >= 65) {
+      icon.innerText = "🚢";
+      title.innerText = "Strong Candidate";
+      text.innerText = "You have a solid foundation for a sea career. Some areas like separation or routine might need mental preparation, but you are well-aligned for training.";
+    } else if (percentage >= 40) {
+      icon.innerText = "🌊";
+      title.innerText = "Cautious Path Recommended";
+      text.innerText = "You have some alignment, but the realities of sea life might feel restrictive or stressful. We recommend reading our IMU CET Reality Guide before investing in courses.";
+    } else {
+      icon.innerText = "🛑";
+      title.innerText = "Reflection Needed";
+      text.innerText = "Your current lifestyle and expectations differ significantly from the merchant navy reality. This career is 24/7 commitment. Please talk to us before proceeding.";
+    }
+  }
+
+  // Init
+  renderQuestion();
+</script>
