@@ -13,12 +13,14 @@ const commonSchema = z.object({
   // SEO
   metaTitle: z.string().optional(),
   metaDescription: z.string().optional(),
+  seoTitle: z.string().optional(), // Alias for metaTitle
+  seoDescription: z.string().optional(), // Alias for metaDescription
   canonicalUrl: z.string().optional(), // SEO canonical link control
   // Content interlinking
   relatedArticles: z.array(z.string()).default([]), // Cross-reference slugs
-    author: z.string().optional(), // Article author
-    subcategory: z.string().optional(), // Optional sub-category
-  readTime: z.string().optional(), // e.g. '8 min read'
+  author: z.string().optional(), // Article author
+  subcategory: z.string().optional(), // Optional sub-category
+  readTime: z.union([z.string(), z.number()]).optional(), // e.g. '8 min read' or 15
   image: z.string().optional(), // Featured image URL
   heroImage: z.string().optional(), // Hero image URL
 });
@@ -78,8 +80,6 @@ const moneyCollection = defineCollection({
 const blogCollection = defineCollection({
   type: 'content',
   schema: commonSchema.extend({
-    author: z.string().default('Sailor Success Team'),
-    readTime: z.string().optional(),
     updated: z.date().optional(),
   }),
 });
