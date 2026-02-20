@@ -1,6 +1,9 @@
 # Netlify Redirects for Sailor Success Encyclopedia
 # This file fixes 404 errors on Astro content collection routes
 
+# Proxy ss-enhance.js from live site (UI enhancement script)
+/ss-enhance.js  https://sailorsuccess.online/ss-enhance.js  200
+
 # Fix www to non-www redirect (must be first)
 https://www.sailorsuccess.online/*  https://sailorsuccess.online/:splat  301!
 
