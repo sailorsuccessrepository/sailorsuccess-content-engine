@@ -1,154 +1,139 @@
 ---
-import Header from '../components/Header.astro';
+// Layout.astro - Page layout with sidebar (matches sailorsuccess.online)
+// Used for all content pages: homepage, category pages, article pages
+import BaseLayout from './BaseLayout.astro';
 
 export interface Props {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
+  image?: string;
+  canonicalURL?: string;
+  showSidebar?: boolean;
+  collection?: string;
 }
 
-const { title, description } = Astro.props;
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const {
+  title,
+  description,
+  image,
+  canonicalURL,
+  showSidebar = true,
+  collection = '',
+} = Astro.props;
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SRLHMVN1J3"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Favicons -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <meta name="theme-color" content="#dc2626" />
-
-    <!-- Primary Meta Tags -->
-    <title>{title} | Sailor Success</title>
-    <meta name="title" content={`${title} | Sailor Success`} />
-    <meta name="description" content={description} />
-    <meta name="author" content="Sailor Success" />
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Sailor Success" />
-    <meta property="og:url" content={canonicalURL} />
-    <meta property="og:title" content={`${title} | Sailor Success`} />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content="https://sailorsuccess.online/images/og-default.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:locale" content="en_IN" />
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@sailorsuccess" />
-    <meta name="twitter:url" content={canonicalURL} />
-    <meta name="twitter:title" content={`${title} | Sailor Success`} />
-    <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content="https://sailorsuccess.online/images/og-default.jpg" />
-
-    <!-- Canonical -->
-    <link rel="canonical" href={canonicalURL} />
-
-    <!-- Fonts: Inter + Source Serif -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet" />
-  </head>
-
-  <body class="bg-gray-950 text-gray-100 antialiased" style="font-family: 'Inter', sans-serif;">
-
-    <!-- Fixed Header with hamburger nav -->
-    <Header />
-
-    <!-- Page Content -->
-    <slot />
-
-    <!-- Footer -->
-    <footer class="site-footer">
-      <div class="footer-content">
-        <div class="footer-brand">
-          <a href="/" class="footer-logo">
-            <img src="/images/logo.png" alt="Sailor Success" class="footer-logo-img" width="140" height="40" onerror="this.style.display='none'" />
-          </a>
-          <p class="footer-tagline">Empowering seafarers worldwide with knowledge, tools and career guidance.</p>
-          <div class="footer-social">
-            <a href="https://sailorsuccess.graphy.com/talk/mentor" target="_blank" rel="noopener" class="sailorgpt-footer-btn">
-              🤖 SailorGPT
-            </a>
+<BaseLayout {title} {description} {image} {canonicalURL}>
+  <main>
+    <div class="page-container">
+      {showSidebar && (
+        <aside class="sidebar" id="sidebar">
+          <!-- Search Box -->
+          <div class="search-box" id="sidebarSearch">
+            <input type="search" placeholder="Search articles..." class="search-input" id="searchInput" autocomplete="off" />
+            <div class="search-results" id="searchResults"></div>
           </div>
-        </div>
 
-        <div class="footer-links">
-          <div class="footer-column">
-            <h4>Knowledge</h4>
-            <ul>
-              <li><a href="/learn">Learn</a></li>
-              <li><a href="/careers">Careers</a></li>
-              <li><a href="/rights">Rights</a></li>
-              <li><a href="/encyclopedia">Encyclopedia</a></li>
-              <li><a href="/blog">Blog</a></li>
+          <!-- Browse Topics -->
+          <div class="glass-card">
+            <h3 class="sidebar-heading">Browse Topics</h3>
+            <ul class="topic-nav" role="list">
+              <li><a href="/learn/" class="topic-link">📚 Learn</a></li>
+              <li><a href="/careers/" class="topic-link">⚓ Careers</a></li>
+              <li><a href="/money/" class="topic-link">💰 Money</a></li>
+              <li><a href="/rights/" class="topic-link">⚖️ Rights</a></li>
+              <li><a href="/tools/" class="topic-link">🔧 Tools</a></li>
             </ul>
           </div>
-          <div class="footer-column">
-            <h4>Resources</h4>
-            <ul>
-              <li><a href="/tools">Tools</a></li>
-              <li><a href="/money">Money</a></li>
-              <li><a href="/finance">Finance</a></li>
-              <li><a href="https://sailorsuccess.graphy.com/store" target="_blank" rel="noopener">Courses</a></li>
+
+          <!-- Most Read -->
+          <div class="glass-card" id="mostReadCard">
+            <h3 class="sidebar-heading">Most Read</h3>
+            <ul class="popular-list" role="list" id="mostReadList">
+              <li><a href="/careers/merchant-navy-salary-guide/" class="popular-link">Merchant Navy Salary Guide 2026</a></li>
+              <li><a href="/learn/cdc-application-process-india-2026/" class="popular-link">CDC Application Process India</a></li>
+              <li><a href="/careers/how-to-join-merchant-navy-after-12th/" class="popular-link">How to Join After 12th</a></li>
+              <li><a href="/rights/seafarer-rights-india/" class="popular-link">Seafarer Rights in India</a></li>
+              <li><a href="/tools/sea-time-calculator/" class="popular-link">Sea Time Calculator</a></li>
             </ul>
           </div>
-          <div class="footer-column">
-            <h4>Support</h4>
-            <ul>
-              <li><a href="/about">About</a></li>
-              <li><a href="/contact">Contact</a></li>
-              <li><a href="/contributors">Our Contributors</a></li>
+
+          <!-- Also Read (dynamic - populated by ss-enhance.js) -->
+          <div class="glass-card" id="alsoReadCard">
+            <h3 class="sidebar-heading">Also Read</h3>
+            <ul class="popular-list" role="list" id="alsoReadList">
             </ul>
           </div>
-        </div>
-      </div>
 
-      <div class="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Sailor Success. All rights reserved.</p>
-        <p>Made with ❤️ for seafarers worldwide</p>
-      </div>
-    </footer>
+          <!-- Free Resource CTA -->
+          <div class="glass-card cta-card">
+            <h3 class="cta-card-title">Free Resources</h3>
+            <p class="cta-card-text">Download free study materials, templates, and career guides for seafarers.</p>
+            <a href="https://sailorsuccess.graphy.com/store" class="cta-card-btn" target="_blank" rel="noopener">Browse Courses</a>
+          </div>
 
-    <!-- Floating CTA Stack: Ask SailorGPT + Talk to Chief -->
-    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3 items-end">
-      <!-- Ask SailorGPT -->
-      <a
-        href="https://sailorsuccess.graphy.com/talk/mentor"
-        target="_blank"
-        rel="noopener noreferrer"
-        style="position:relative; display:flex; align-items:center; gap:8px; padding:12px 16px; background:rgba(17,24,39,0.92); backdrop-filter:blur(12px); border:1px solid rgba(239,68,68,0.35); color:#fff; font-size:14px; font-weight:600; border-radius:16px; box-shadow:0 8px 32px rgba(0,0,0,0.4); text-decoration:none; transition:all 0.25s ease;"
-        title="Ask SailorGPT"
-      >
-        <span style="font-size:18px;">🌐</span>
-        <span>Ask SailorGPT</span>
-        <span style="position:absolute;top:-6px;right:-6px;width:20px;height:20px;background:#dc2626;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#fff;border:2px solid #111827;">AI</span>
-      </a>
+          <!-- Why Trust Us -->
+          <div class="glass-card trust-card">
+            <h3 class="sidebar-heading">Why Trust Us</h3>
+            <p class="trust-text">Written by active merchant navy officers with verified maritime experience. All content reviewed by industry professionals.</p>
+            <a href="/contributors/" class="trust-link">Meet our contributors →</a>
+          </div>
+        </aside>
+      )}
 
-      <!-- Talk to Chief (WhatsApp) -->
-      <a
-        href="https://wa.me/919958110235?text=help%20me%20chief"
-        target="_blank"
-        rel="noopener noreferrer"
-        style="display:flex; align-items:center; gap:8px; padding:12px 16px; background:#16a34a; color:#fff; font-size:14px; font-weight:600; border-radius:16px; box-shadow:0 8px 32px rgba(22,163,74,0.35); text-decoration:none; transition:all 0.25s ease;"
-        title="Talk to Chief on WhatsApp"
-      >
-        <span style="font-size:18px;">💬</span>
-        <span>Talk to Chief</span>
-      </a>
+      <main class="main-content" id="mainContent">
+        <slot />
+      </main>
     </div>
+  </main>
 
-    <!-- Search Enhancement + UI Script -->
-    <script src="/ss-enhance.js" defer></script>
-  </body>
-</html>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="/" class="footer-logo">
+            <img src="https://sailorsuccess.online/logo-white.webp" alt="Sailor Success" width="160" height="40" />
+          </a>
+          <p class="footer-tagline">India's Complete Merchant Navy Knowledge Base</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Learn</h4>
+          <ul class="footer-links" role="list">
+            <li><a href="/learn/" class="footer-link">All Guides</a></li>
+            <li><a href="/learn/cdc-application-process-india-2026/" class="footer-link">CDC Process</a></li>
+            <li><a href="/learn/indos-registration-guide/" class="footer-link">INDOS Registration</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Careers</h4>
+          <ul class="footer-links" role="list">
+            <li><a href="/careers/" class="footer-link">Career Guides</a></li>
+            <li><a href="/careers/merchant-navy-salary-guide/" class="footer-link">Salary Guide</a></li>
+            <li><a href="/careers/how-to-join-merchant-navy-after-12th/" class="footer-link">Join After 12th</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Rights & Tools</h4>
+          <ul class="footer-links" role="list">
+            <li><a href="/rights/" class="footer-link">Seafarer Rights</a></li>
+            <li><a href="/tools/" class="footer-link">Online Tools</a></li>
+            <li><a href="/sailorgpt/" class="footer-link">SailorGPT AI</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Company</h4>
+          <ul class="footer-links" role="list">
+            <li><a href="/about/" class="footer-link">About Us</a></li>
+            <li><a href="/contact/" class="footer-link">Contact</a></li>
+            <li><a href="/contributors/" class="footer-link">Contributors</a></li>
+            <li><a href="/privacy/" class="footer-link">Privacy Policy</a></li>
+            <li><a href="/terms/" class="footer-link">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; {new Date().getFullYear()} Sailor Success. All rights reserved.</p>
+        <p class="footer-disclaimer">Content is for informational purposes only. Always verify with official maritime authorities.</p>
+      </div>
+    </div>
+  </footer>
+</BaseLayout>
