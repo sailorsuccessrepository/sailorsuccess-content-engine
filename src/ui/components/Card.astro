@@ -1,0 +1,31 @@
+---
+export interface Props {
+  href?: string;
+  tag?: string;
+  title: string;
+  description?: string;
+  variant?: "article" | "category" | "glass";
+  icon?: string;
+  count?: string;
+}
+const { href, tag, title, description, variant = "article", icon, count } = Astro.props;
+---
+{variant === "article" && href && (
+  <a href={href} class="article-card">
+    {tag && <span class="article-tag">{tag}</span>}
+    <h3>{title}</h3>
+    {description && <p>{description}</p>}
+  </a>
+)}
+{variant === "category" && href && (
+  <a href={href} class="category-card">
+    {icon && <span class="icon">{icon}</span>}
+    <h3>{title}</h3>
+    {count && <span class="count">{count}</span>}
+  </a>
+)}
+{variant === "glass" && (
+  <div class="glass-card">
+    <slot />
+  </div>
+)}

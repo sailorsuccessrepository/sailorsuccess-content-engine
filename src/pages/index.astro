@@ -1,107 +1,89 @@
 ---
-import Layout from '../ui/layouts/Layout.astro';
-import { getCollection } from 'astro:content';
+import Layout from "../ui/layouts/Layout.astro";
+import { getCollection } from "astro:content";
 
-// Get all articles from collections
-const learn = await getCollection('learn');
-const careers = await getCollection('careers');
-const money = await getCollection('money');
-const rights = await getCollection('rights');
-const tools = await getCollection('tools');
-const blog = await getCollection('blog');
+const learn = await getCollection("learn");
+const careers = await getCollection("careers");
+const money = await getCollection("money");
+const rights = await getCollection("rights");
+const tools = await getCollection("tools");
+const blog = await getCollection("blog");
 
 const allArticles = [...learn, ...careers, ...money, ...rights, ...tools, ...blog]
-    .sort((a, b) => {
+  .sort((a, b) => {
     const dateA = (a.data.publishDate ?? a.data.pubDate)?.valueOf() ?? 0;
     const dateB = (b.data.publishDate ?? b.data.pubDate)?.valueOf() ?? 0;
     return dateB - dateA;
   })
-  .slice(0, 9);
+  .slice(0, 6);
+
+const categories = [
+  { href: "/careers/", icon: "🧭", title: "Careers", count: "63 Guides" },
+  { href: "/learn/", icon: "📚", title: "Learn", count: "51 Articles" },
+  { href: "/money/", icon: "💰", title: "Money", count: "25 Resources" },
+  { href: "/rights/", icon: "⚖️", title: "Rights", count: "20 Guides" },
+  { href: "/tools/", icon: "🔧", title: "Tools", count: "15 Tools" },
+  { href: "/sailorgpt/", icon: "🤖", title: "SailorGPT", count: "AI Mentor" },
+];
 ---
+<Layout title="Sailor Success - India's Complete Merchant Navy Knowledge Base 2026" description="Free, practical knowledge from 120+ years of collective maritime experience. Career guides, salary info, rights, and AI mentor for Indian seafarers.">
 
-<Layout 
-  title="Sailor Success - Complete Merchant Navy Guide 2026"
-  description="Everything you need to join and succeed in the Merchant Navy. DNS courses, GME admission, shipping jobs, salaries, and seafarer rights."
->
-  <main class="max-w-7xl mx-auto px-4 py-12">
-    <!-- Hero Section -->
-    <section class="text-center mb-16">
-      <h1 class="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
-        Sailor Success
-      </h1>
-      <p class="text-xl md:text-2xl text-gray-700 mb-4">
-        Complete Merchant Navy Career Guide
-      </p>
-      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-        From DNS/GME admission to shipping company jobs, salaries, and seafarer rights - everything you need to succeed at sea.
-      </p>
-    </section>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-badge">⚓ Trusted by 10,000+ Indian Seafarers</div>
+    <h1>India's Complete Merchant Navy <span class="accent">Encyclopedia</span></h1>
+    <p class="hero-text">Free, practical knowledge from 120+ years of collective maritime experience. Real guides, honest answers, and your 24/7 AI career mentor. No coaching mafia. No fake promises.</p>
+  </section>
 
-    <!-- Category Cards -->
-    <section class="mb-16">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <a href="/learn" class="group p-8 bg-white border-2 border-gray-200 rounded-xl hover:border-blue-500 hover:shadow-xl transition-all">
-          <div class="text-4xl mb-4">📚</div>
-          <h2 class="text-2xl font-bold mb-2 group-hover:text-blue-600">Learn</h2>
-          <p class="text-gray-600">DNS, GME, courses & exams</p>
-        </a>
-        
-        <a href="/careers" class="group p-8 bg-white border-2 border-gray-200 rounded-xl hover:border-blue-500 hover:shadow-xl transition-all">
-          <div class="text-4xl mb-4">🚢</div>
-          <h2 class="text-2xl font-bold mb-2 group-hover:text-blue-600">Careers</h2>
-          <p class="text-gray-600">Jobs, companies & ranks</p>
-        </a>
-        
-        <a href="/money" class="group p-8 bg-white border-2 border-gray-200 rounded-xl hover:border-blue-500 hover:shadow-xl transition-all">
-          <div class="text-4xl mb-4">💰</div>
-          <h2 class="text-2xl font-bold mb-2 group-hover:text-blue-600">Money</h2>
-          <p class="text-gray-600">Salaries, taxes & finances</p>
-        </a>
-        
-        <a href="/rights" class="group p-8 bg-white border-2 border-gray-200 rounded-xl hover:border-blue-500 hover:shadow-xl transition-all">
-          <div class="text-4xl mb-4">⚖️</div>
-          <h2 class="text-2xl font-bold mb-2 group-hover:text-blue-600">Rights</h2>
-          <p class="text-gray-600">Legal, safety & welfare</p>
-        </a>
-        
-        <a href="/tools" class="group p-8 bg-white border-2 border-gray-200 rounded-xl hover:border-blue-500 hover:shadow-xl transition-all">
-          <div class="text-4xl mb-4">🔧</div>
-          <h2 class="text-2xl font-bold mb-2 group-hover:text-blue-600">Tools</h2>
-          <p class="text-gray-600">Calculators & resources</p>
-        </a>
+  <!-- SailorGPT CTA -->
+  <div class="primary-cta">
+    <div class="cta-header">
+      <div class="cta-icon">🤖</div>
+      <h2>Got Questions? Ask SailorGPT</h2>
+    </div>
+    <p class="cta-desc">India's first AI mentor built for seafarers. Career advice, exam prep, company insights, financial planning — instant answers backed by real ship experience.</p>
+    <div class="cta-actions">
+      <a href="https://sailorsuccess.graphy.com/talk/mentor" class="btn-primary-lg" target="_blank" rel="noopener">🤖 Chat with SailorGPT</a>
+      <a href="https://wa.me/919958110235?text=Hi%20Chief%2C%20I%20need%20guidance" class="btn-secondary-lg" target="_blank" rel="noopener">💬 Talk to Chief</a>
+    </div>
+  </div>
 
-        <a href="/finance" class="group p-8 bg-white border-2 border-gray-200 rounded-xl hover:border-blue-500 hover:shadow-xl transition-all">
-          <div class="text-4xl mb-4">💳</div>
-          <h2 class="text-2xl font-bold mb-2 group-hover:text-blue-600">Finance</h2>
-          <p class="text-gray-600">Banking & investments</p>
-        </a>
-      </div>
-    </section>
+  <!-- Latest Guides -->
+  <div class="section-head">
+    <h2>Latest Guides</h2>
+    <p>Fresh content to help you navigate your maritime career</p>
+  </div>
+  <div class="articles-grid">
+    {allArticles.map(article => (
+      <a href={`/${article.collection}/${article.slug}/`} class="article-card">
+        <span class="article-tag">{article.data.category ?? article.collection}</span>
+        <h3>{article.data.title}</h3>
+        <p>{article.data.description}</p>
+      </a>
+    ))}
+  </div>
 
-    <!-- Latest Articles -->
-    <section>
-      <h2 class="text-3xl font-bold mb-8">Latest Articles</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {allArticles.map(article => (
-          <a 
-            href={`/${article.collection}/${article.slug}`}
-            class="group bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-blue-500 hover:shadow-xl transition-all"
-          >
-            <div class="text-sm text-blue-600 font-semibold mb-2 uppercase">
-              {article.collection}
-            </div>
-            <h3 class="text-xl font-bold mb-3 group-hover:text-blue-600 line-clamp-2">
-              {article.data.title}
-            </h3>
-            <p class="text-gray-600 mb-4 line-clamp-2">
-              {article.data.description}
-            </p>
-            <div class="text-sm text-gray-500">
-              {article.data.category}
-            </div>
-          </a>
-        ))}
-      </div>
-    </section>
-  </main>
+  <!-- Explore by Topic -->
+  <div class="section-head">
+    <h2>Explore by Topic</h2>
+    <p>Everything organized so you can actually find it</p>
+  </div>
+  <div class="categories-grid">
+    {categories.map(cat => (
+      <a href={cat.href} class="category-card">
+        <span class="icon">{cat.icon}</span>
+        <h3>{cat.title}</h3>
+        <span class="count">{cat.count}</span>
+      </a>
+    ))}
+  </div>
+
+  <!-- Trust Bar -->
+  <div class="trust-bar">
+    <div class="trust-item"><span class="emoji">🚫</span><div><h4>No Coaching Mafia</h4><p>Free info that institutes charge lakhs for.</p></div></div>
+    <div class="trust-item"><span class="emoji">🚢</span><div><h4>Real Ship Experience</h4><p>120+ years combined sea time.</p></div></div>
+    <div class="trust-item"><span class="emoji">🇮🇳</span><div><h4>India-Focused</h4><p>DG Shipping, Indian institutes, NRE.</p></div></div>
+    <div class="trust-item"><span class="emoji">💬</span><div><h4>Honest Answers</h4><p>No fake motivation. Just truth.</p></div></div>
+  </div>
+
 </Layout>

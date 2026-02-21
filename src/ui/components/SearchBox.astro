@@ -1,169 +1,21 @@
 ---
+export interface Props {
+  placeholder?: string;
+  id?: string;
+}
+const { placeholder = "Search articles...", id = "searchInput" } = Astro.props;
 ---
-
 <div class="search-box">
-  <input 
-    type="text" 
-    id="search-input" 
-    class="search-input px-3 py-2 rounded border border-gray-200 dark:border-gray-700 text-sm w-52 outline-none"
-    placeholder="Search articles..."
-    aria-label="Search articles"
+  <svg class="search-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+    <circle cx="8.5" cy="8.5" r="5.5"/>
+    <path d="M17 17l-4-4"/>
+  </svg>
+  <input
+    type="search"
+    {id}
+    placeholder={placeholder}
+    class="search-input"
+    autocomplete="off"
+    aria-label={placeholder}
   />
-  <div id="search-results" class="search-results"></div>
 </div>
-
-<script>
-  let cache: any[] | null = null;
-  const input = document.getElementById('search-input') as HTMLInputElement;
-  const resultsDiv = document.getElementById('search-results') as HTMLDivElement;
-  
-  input.addEventListener('input', async (e) => {
-    const query = (e.target as HTMLInputElement).value.trim().toLowerCase();
-    
-    if (!query) {
-      resultsDiv.innerHTML = '';
-      return;
-    }
-    
-    // Fetch index once
-    if (!cache) {
-      try {
-        const res = await fetch('/api/search.json?q=');
-        cache = await res.json();
-      } catch (err) {
-        resultsDiv.innerHTML = '<p class="p-2 text-red-500">Search unavailable</p>';
-        return;
-      }
-    }
-    
-    // Filter results
-    const results = (cache || []).filter((item: any) => {
-      const title = item.title?.toLowerCase() || '';
-      const desc = item.excerpt?.toLowerCase() || '';
-      const tags = (item.tags || []).map((t: string) => t.toLowerCase()).join(' ');
-      return title.includes(query) || desc.includes(query) || tags.includes(query);
-    }).slice(0, 8);
-    
-    // Render results
-    if (results.length === 0) {
-      resultsDiv.innerHTML = '<p class="p-2 text-gray-500 dark:text-gray-400">No results</p>';
-    } else {
-      resultsDiv.innerHTML = results.map((r: any) => `
-        <a href="/${r.collection}/${r.slug}" class="search-result-item block p-3 border-b last:border-b-0 hover:bg-gray-100 dark:hover:bg-gray-700 no-underline">
-          <div class="font-medium text-blue-600 dark:text-blue-400">${r.title}</div>
-          <div class="text-sm text-gray-600 dark:text-gray-300">${r.excerpt || r.category}</div>
-        </a>
-      `).join('');
-    }
-  });
-  
-  // Close on escape
-  input.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      resultsDiv.innerHTML = '';
-      input.value = '';
-    }
-  });
-  
-  // Close on blur
-  setTimeout(() => {
-    input.addEventListener('blur', () => {
-      setTimeout(() => resultsDiv.innerHTML = '', 200);
-    });
-  }, 100);
-</script>
-
-<style>
-  .search-box {
-    position: relative;
-    width: 100%;
-    max-width: 320px;
-  }
-
-  .search-input {
-    width: 100%;
-    font-size: 0.95rem;
-    border-radius: 0.5rem;
-    border: 2px solid rgb(229, 231, 235);
-    padding: 0.6rem 1rem;
-    transition: all 0.2s;
-  }
-
-  .search-input:focus {
-    outline: none;
-    border-color: rgb(59, 130, 246);
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-  }
-
-  .dark .search-input {
-    background-color: rgb(31, 41, 55);
-    border-color: rgb(55, 65, 81);
-    color: white;
-  }
-
-  .dark .search-input::placeholder {
-    color: rgb(107, 114, 128);
-  }
-
-  .search-results {
-    position: absolute;
-    top: calc(100% + 0.5rem);
-    left: 0;
-    right: 0;
-    max-height: 400px;
-    overflow-y: auto;
-    z-index: 1000;
-    background: white;
-    border: 2px solid rgb(229, 231, 235);
-    border-radius: 0.75rem;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  }
-
-  .dark .search-results {
-    background-color: rgb(31, 41, 55);
-    border-color: rgb(55, 65, 81);
-  }
-
-  .search-result-item {
-    display: block;
-    transition: background 0.15s;
-    text-decoration: none;
-    padding: 0.75rem 1rem;
-    border-bottom: 1px solid rgb(243, 244, 246);
-  }
-
-  .dark .search-result-item {
-    border-bottom-color: rgb(55, 65, 81);
-  }
-
-  .search-result-item:hover {
-    background-color: rgb(249, 250, 251);
-  }
-
-  .dark .search-result-item:hover {
-    background-color: rgb(55, 65, 81);
-  }
-
-  .search-result-item:last-child {
-    border-bottom: none;
-  }
-
-  .search-result-item div:first-child {
-    font-weight: 600;
-    color: rgb(59, 130, 246);
-  }
-
-  .dark .search-result-item div:first-child {
-    color: rgb(96, 165, 250);
-  }
-
-  .search-result-item div:last-child {
-    font-size: 0.875rem;
-    color: rgb(107, 114, 128);
-    margin-top: 0.25rem;
-  }
-
-  .dark .search-result-item div:last-child {
-    color: rgb(156, 163, 175);
-  }
-</style>

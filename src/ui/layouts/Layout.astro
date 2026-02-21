@@ -1,139 +1,62 @@
 ---
-// Layout.astro - Page layout with sidebar (matches sailorsuccess.online)
-// Used for all content pages: homepage, category pages, article pages
-import BaseLayout from './BaseLayout.astro';
-
+import BaseLayout from "./BaseLayout.astro";
 export interface Props {
   title?: string;
   description?: string;
   image?: string;
   canonicalURL?: string;
   showSidebar?: boolean;
-  collection?: string;
 }
-
-const {
-  title,
-  description,
-  image,
-  canonicalURL,
-  showSidebar = true,
-  collection = '',
-} = Astro.props;
+const { title, description, image, canonicalURL, showSidebar = true } = Astro.props;
 ---
-
 <BaseLayout {title} {description} {image} {canonicalURL}>
-  <main>
-    <div class="page-container">
-      {showSidebar && (
-        <aside class="sidebar" id="sidebar">
-          <!-- Search Box -->
-          <div class="search-box" id="sidebarSearch">
-            <input type="search" placeholder="Search articles..." class="search-input" id="searchInput" autocomplete="off" />
-            <div class="search-results" id="searchResults"></div>
-          </div>
-
-          <!-- Browse Topics -->
-          <div class="glass-card">
-            <h3 class="sidebar-heading">Browse Topics</h3>
-            <ul class="topic-nav" role="list">
-              <li><a href="/learn/" class="topic-link">📚 Learn</a></li>
-              <li><a href="/careers/" class="topic-link">⚓ Careers</a></li>
-              <li><a href="/money/" class="topic-link">💰 Money</a></li>
-              <li><a href="/rights/" class="topic-link">⚖️ Rights</a></li>
-              <li><a href="/tools/" class="topic-link">🔧 Tools</a></li>
-            </ul>
-          </div>
-
-          <!-- Most Read -->
-          <div class="glass-card" id="mostReadCard">
-            <h3 class="sidebar-heading">Most Read</h3>
-            <ul class="popular-list" role="list" id="mostReadList">
-              <li><a href="/careers/merchant-navy-salary-guide/" class="popular-link">Merchant Navy Salary Guide 2026</a></li>
-              <li><a href="/learn/cdc-application-process-india-2026/" class="popular-link">CDC Application Process India</a></li>
-              <li><a href="/careers/how-to-join-merchant-navy-after-12th/" class="popular-link">How to Join After 12th</a></li>
-              <li><a href="/rights/seafarer-rights-india/" class="popular-link">Seafarer Rights in India</a></li>
-              <li><a href="/tools/sea-time-calculator/" class="popular-link">Sea Time Calculator</a></li>
-            </ul>
-          </div>
-
-          <!-- Also Read (dynamic - populated by ss-enhance.js) -->
-          <div class="glass-card" id="alsoReadCard">
-            <h3 class="sidebar-heading">Also Read</h3>
-            <ul class="popular-list" role="list" id="alsoReadList">
-            </ul>
-          </div>
-
-          <!-- Free Resource CTA -->
-          <div class="glass-card cta-card">
-            <h3 class="cta-card-title">Free Resources</h3>
-            <p class="cta-card-text">Download free study materials, templates, and career guides for seafarers.</p>
-            <a href="https://sailorsuccess.graphy.com/store" class="cta-card-btn" target="_blank" rel="noopener">Browse Courses</a>
-          </div>
-
-          <!-- Why Trust Us -->
-          <div class="glass-card trust-card">
-            <h3 class="sidebar-heading">Why Trust Us</h3>
-            <p class="trust-text">Written by active merchant navy officers with verified maritime experience. All content reviewed by industry professionals.</p>
-            <a href="/contributors/" class="trust-link">Meet our contributors →</a>
-          </div>
-        </aside>
-      )}
-
-      <main class="main-content" id="mainContent">
-        <slot />
-      </main>
-    </div>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <a href="/" class="footer-logo">
-            <img src="https://sailorsuccess.online/logo-white.webp" alt="Sailor Success" width="160" height="40" />
-          </a>
-          <p class="footer-tagline">India's Complete Merchant Navy Knowledge Base</p>
+  <div class="page-container">
+    {showSidebar && (
+      <aside class="sidebar" id="sidebar">
+        <div class="search-box">
+          <svg class="search-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M17 17l-4-4"/></svg>
+          <input type="search" placeholder="Search articles..." class="search-input" id="searchInput" autocomplete="off" />
         </div>
-        <div class="footer-col">
-          <h4 class="footer-heading">Learn</h4>
-          <ul class="footer-links" role="list">
-            <li><a href="/learn/" class="footer-link">All Guides</a></li>
-            <li><a href="/learn/cdc-application-process-india-2026/" class="footer-link">CDC Process</a></li>
-            <li><a href="/learn/indos-registration-guide/" class="footer-link">INDOS Registration</a></li>
+        <div class="glass-card">
+          <p class="card-label">Browse Topics</p>
+          <ul class="topic-nav" role="list">
+            <li><a href="/careers/" class="topic-link"><span>🧭</span><span>Careers</span><span class="topic-badge">63</span></a></li>
+            <li><a href="/learn/" class="topic-link"><span>📚</span><span>Learn</span><span class="topic-badge">51</span></a></li>
+            <li><a href="/money/" class="topic-link"><span>💰</span><span>Money</span><span class="topic-badge">25</span></a></li>
+            <li><a href="/rights/" class="topic-link"><span>⚖️</span><span>Rights</span><span class="topic-badge">20</span></a></li>
+            <li><a href="/tools/" class="topic-link"><span>🔧</span><span>Tools</span><span class="topic-badge">15</span></a></li>
           </ul>
         </div>
-        <div class="footer-col">
-          <h4 class="footer-heading">Careers</h4>
-          <ul class="footer-links" role="list">
-            <li><a href="/careers/" class="footer-link">Career Guides</a></li>
-            <li><a href="/careers/merchant-navy-salary-guide/" class="footer-link">Salary Guide</a></li>
-            <li><a href="/careers/how-to-join-merchant-navy-after-12th/" class="footer-link">Join After 12th</a></li>
+        <div class="glass-card">
+          <p class="card-label">Most Read</p>
+          <ul class="popular-list" role="list">
+            <li><a href="/careers/how-to-join-merchant-navy-after-12th/" class="popular-link"><span class="popular-num">01</span><span>How to Join Merchant Navy After 12th</span></a></li>
+            <li><a href="/careers/gme-vs-dns-comparison/" class="popular-link"><span class="popular-num">02</span><span>GME vs DNS: Complete Comparison</span></a></li>
+            <li><a href="/learn/imu-cet-preparation-guide-2026/" class="popular-link"><span class="popular-num">03</span><span>IMU CET 2026 Preparation Guide</span></a></li>
+            <li><a href="/money/merchant-navy-salary-india-2026/" class="popular-link"><span class="popular-num">04</span><span>Merchant Navy Salary Guide 2026</span></a></li>
+            <li><a href="/careers/dg-shipping-approved-institutes-2026/" class="popular-link"><span class="popular-num">05</span><span>DG Approved Institutes List</span></a></li>
+            <li><a href="/careers/maersk-jobs-india-guide-2026/" class="popular-link"><span class="popular-num">06</span><span>Maersk Jobs India Guide</span></a></li>
           </ul>
         </div>
-        <div class="footer-col">
-          <h4 class="footer-heading">Rights & Tools</h4>
-          <ul class="footer-links" role="list">
-            <li><a href="/rights/" class="footer-link">Seafarer Rights</a></li>
-            <li><a href="/tools/" class="footer-link">Online Tools</a></li>
-            <li><a href="/sailorgpt/" class="footer-link">SailorGPT AI</a></li>
-          </ul>
+        <div class="glass-card cta-card">
+          <p class="card-label">Free Resource</p>
+          <h3>2026 Maritime Career Planner</h3>
+          <p>Complete roadmap from Class 12 to your first ship. Timeline, costs &amp; institute list.</p>
+          <a href="https://wa.me/919958110235?text=Hi%20Chief%2C%20I%20want%20the%202026%20Career%20Planner" class="cta-btn" target="_blank" rel="noopener">📥 Download Free</a>
         </div>
-        <div class="footer-col">
-          <h4 class="footer-heading">Company</h4>
-          <ul class="footer-links" role="list">
-            <li><a href="/about/" class="footer-link">About Us</a></li>
-            <li><a href="/contact/" class="footer-link">Contact</a></li>
-            <li><a href="/contributors/" class="footer-link">Contributors</a></li>
-            <li><a href="/privacy/" class="footer-link">Privacy Policy</a></li>
-            <li><a href="/terms/" class="footer-link">Terms of Use</a></li>
-          </ul>
+        <div class="glass-card">
+          <p class="card-label">Why Trust Us</p>
+          <div class="stats-mini">
+            <div class="stat-box"><span class="stat-value">500+</span><span class="stat-name">Articles</span></div>
+            <div class="stat-box"><span class="stat-value">120+</span><span class="stat-name">Years Exp</span></div>
+            <div class="stat-box"><span class="stat-value">24/7</span><span class="stat-name">AI Support</span></div>
+            <div class="stat-box"><span class="stat-value">100%</span><span class="stat-name">Free</span></div>
+          </div>
         </div>
-      </div>
-      <div class="footer-bottom">
-        <p class="footer-copyright">&copy; {new Date().getFullYear()} Sailor Success. All rights reserved.</p>
-        <p class="footer-disclaimer">Content is for informational purposes only. Always verify with official maritime authorities.</p>
-      </div>
-    </div>
-  </footer>
+      </aside>
+    )}
+    <main class="main-content" id="mainContent">
+      <slot />
+    </main>
+  </div>
 </BaseLayout>

@@ -1,0 +1,24 @@
+---
+export interface Props {
+  href?: string;
+  variant?: "primary" | "secondary" | "whatsapp" | "cta";
+  target?: string;
+  rel?: string;
+  type?: "button" | "submit" | "reset";
+  class?: string;
+}
+const { href, variant = "primary", target, rel, type = "button", class: className = "" } = Astro.props;
+const cls = variant === "primary" ? "btn btn-primary"
+          : variant === "secondary" ? "btn btn-secondary"
+          : variant === "whatsapp" ? "btn btn-whatsapp"
+          : "cta-btn";
+---
+{href ? (
+  <a href={href} class={`${cls} ${className}`} target={target} rel={rel}>
+    <slot />
+  </a>
+) : (
+  <button type={type} class={`${cls} ${className}`}>
+    <slot />
+  </button>
+)}

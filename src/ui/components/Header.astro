@@ -1,26 +1,23 @@
 ---
-// Header.astro - Matches sailorsuccess.online pixel-perfect
-// Nav: Learn, Careers, Money, Rights, Tools, SailorGPT (desktop + hamburger)
-// Floaters: SailorGPT + Talk to Chief (handled in Layout)
 const currentPath = Astro.url.pathname;
 ---
-
 <header class="site-header">
   <nav class="container">
     <a href="/" class="logo" aria-label="Sailor Success Home">
-      <img src="https://sailorsuccess.online/logo.webp" alt="Sailor Success" class="logo-img" width="180" height="44" />
+      <img src="https://sailorsuccess.online/images/logo.png" alt="Sailor Success - Empowering Seafarers" class="logo-img" width="180" height="48" />
     </a>
-
     <ul class="nav-links" role="list">
-      <li><a href="/learn/" class={`nav-link ${currentPath.startsWith('/learn') ? 'active' : ''}`}>Learn</a></li>
-      <li><a href="/careers/" class={`nav-link ${currentPath.startsWith('/careers') ? 'active' : ''}`}>Careers</a></li>
-      <li><a href="/money/" class={`nav-link ${currentPath.startsWith('/money') ? 'active' : ''}`}>Money</a></li>
-      <li><a href="/rights/" class={`nav-link ${currentPath.startsWith('/rights') ? 'active' : ''}`}>Rights</a></li>
-      <li><a href="/tools/" class={`nav-link ${currentPath.startsWith('/tools') ? 'active' : ''}`}>Tools</a></li>
-      <li><a href="https://sailorsuccess.graphy.com/store" class="nav-link nav-courses" target="_blank" rel="noopener">Courses</a></li>
-      <li><a href="/sailorgpt/" class="nav-cta">Ask SailorGPT</a></li>
+      <li><a href="/learn/" class={`nav-link ${currentPath.startsWith("/learn") ? "active" : ""}`}>Learn</a></li>
+      <li><a href="/careers/" class={`nav-link ${currentPath.startsWith("/careers") ? "active" : ""}`}>Careers</a></li>
+      <li><a href="/money/" class={`nav-link ${currentPath.startsWith("/money") ? "active" : ""}`}>Money</a></li>
+      <li><a href="/rights/" class={`nav-link ${currentPath.startsWith("/rights") ? "active" : ""}`}>Rights</a></li>
+      <li><a href="/tools/" class={`nav-link ${currentPath.startsWith("/tools") ? "active" : ""}`}>Tools</a></li>
+      <li>
+        <a href="https://sailorsuccess.graphy.com/talk/mentor" class="nav-cta" target="_blank" rel="noopener">
+          🤖 SailorGPT
+        </a>
+      </li>
     </ul>
-
     <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false">
       <span class="hamburger-line"></span>
       <span class="hamburger-line"></span>
@@ -28,62 +25,41 @@ const currentPath = Astro.url.pathname;
     </button>
   </nav>
 </header>
-
-<!-- Mobile Menu Overlay -->
 <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
   <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">&times;</button>
   <ul class="mobile-nav-links" role="list">
-    <li><a href="/learn/" class="mobile-nav-link">Learn</a></li>
-    <li><a href="/careers/" class="mobile-nav-link">Careers</a></li>
-    <li><a href="/money/" class="mobile-nav-link">Money</a></li>
-    <li><a href="/rights/" class="mobile-nav-link">Rights</a></li>
-    <li><a href="/tools/" class="mobile-nav-link">Tools</a></li>
-    <li><a href="/blog/" class="mobile-nav-link">Blog</a></li>
-    <li><a href="/encyclopedia/" class="mobile-nav-link">Encyclopedia</a></li>
-    <li><a href="https://sailorsuccess.graphy.com/store" class="mobile-nav-link" target="_blank" rel="noopener">Courses</a></li>
-    <li><a href="/about/" class="mobile-nav-link">About</a></li>
-    <li><a href="/contact/" class="mobile-nav-link">Contact</a></li>
-    <li><a href="/contributors/" class="mobile-nav-link">Our Contributors</a></li>
+    <li><a href="/learn/" class="mobile-nav-link">📚 Learn</a></li>
+    <li><a href="/careers/" class="mobile-nav-link">🧭 Careers</a></li>
+    <li><a href="/money/" class="mobile-nav-link">💰 Money</a></li>
+    <li><a href="/rights/" class="mobile-nav-link">⚖️ Rights</a></li>
+    <li><a href="/tools/" class="mobile-nav-link">🔧 Tools</a></li>
   </ul>
   <div class="mobile-cta-group">
-    <a href="/sailorgpt/" class="mobile-cta-btn mobile-cta-gpt">Ask SailorGPT</a>
-    <a href="https://wa.me/919958110235?text=help%20me%20chief" class="mobile-cta-btn mobile-cta-chief" target="_blank" rel="noopener">Talk to Chief</a>
+    <a href="https://sailorsuccess.graphy.com/talk/mentor" class="mobile-cta-btn mobile-cta-gpt" target="_blank" rel="noopener">🤖 Ask SailorGPT Free</a>
+    <a href="https://wa.me/919958110235?text=Hi%20Chief%2C%20I%20need%20guidance" class="mobile-cta-btn mobile-cta-chief" target="_blank" rel="noopener">💬 Talk to Chief</a>
   </div>
 </div>
 <div class="mobile-menu-backdrop" id="mobileMenuBackdrop"></div>
-
 <script>
-  // Mobile menu toggle
-  const menuBtn = document.getElementById('mobileMenuBtn');
-  const menu = document.getElementById('mobileMenu');
-  const closeBtn = document.getElementById('mobileMenuClose');
-  const backdrop = document.getElementById('mobileMenuBackdrop');
-
+  const menuBtn = document.getElementById("mobileMenuBtn");
+  const menu = document.getElementById("mobileMenu");
+  const closeBtn = document.getElementById("mobileMenuClose");
+  const backdrop = document.getElementById("mobileMenuBackdrop");
   function openMenu() {
-    menu?.classList.add('open');
-    backdrop?.classList.add('open');
-    menuBtn?.setAttribute('aria-expanded', 'true');
-    document.body.style.overflow = 'hidden';
+    menu?.classList.add("open");
+    backdrop?.classList.add("open");
+    menuBtn?.setAttribute("aria-expanded", "true");
+    document.body.style.overflow = "hidden";
   }
-
   function closeMenu() {
-    menu?.classList.remove('open');
-    backdrop?.classList.remove('open');
-    menuBtn?.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
+    menu?.classList.remove("open");
+    backdrop?.classList.remove("open");
+    menuBtn?.setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "";
   }
-
-  menuBtn?.addEventListener('click', openMenu);
-  closeBtn?.addEventListener('click', closeMenu);
-  backdrop?.addEventListener('click', closeMenu);
-
-  // Close on ESC key
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeMenu();
-  });
-
-  // Close when nav link clicked
-  document.querySelectorAll('.mobile-nav-link, .mobile-cta-btn').forEach(link => {
-    link.addEventListener('click', closeMenu);
-  });
+  menuBtn?.addEventListener("click", openMenu);
+  closeBtn?.addEventListener("click", closeMenu);
+  backdrop?.addEventListener("click", closeMenu);
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeMenu(); });
+  document.querySelectorAll(".mobile-nav-link, .mobile-cta-btn").forEach(l => l.addEventListener("click", closeMenu));
 </script>
