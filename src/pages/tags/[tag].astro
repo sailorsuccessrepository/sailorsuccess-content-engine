@@ -1,19 +1,22 @@
 ---
 import BaseLayout from '../../ui/layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
 
-// Static paths for all known tags
-export function getStaticPaths() {
-  const tags = [
-    'COC','STCW','Certification','Career','GP Rating','Training','Entry Level',
-    'Watchkeeping','DG Shipping','Regulations','India','MMD','Registration',
-    'Documentation','Cadet','Deck','Engine','IMU CET','Entrance Exam','Education',
-    'Salary','Finance','Medical','ENG1','PEME','Health','DNS','Pre-Sea',
-    'BSc','Nautical Science','Sponsorship','Companies','BELT','English',
-    'Firefighting','Safety','PSCRB','Survival','MLC','Rights','Welfare',
-    'Flag State','PSC','Compliance','ISM','SMS','Contract','Legal',
-    'Ranks','Planning','Growth','Ratings','Operations'
-  ];
-  return tags.map(tag => ({ params: { tag } }));
+// Auto-generate tag routes from all content collections
+export async function getStaticPaths() {
+      const collections = ['learn', 'careers', 'blog', 'money', 'rights', 'tools'];
+        const tagSet = new Set();
+
+          for (const col of collections) {
+                try {
+                          const entries = await getCollection(col as any, ({ data }: any) => !data.draft);
+                                entries.forEach((e: any) => {
+                                            (e.data.tags || []).forEach((t: string) => tagSet.add(t));
+                                });
+                } catch (_) {}
+          }
+
+            return Array.from(tagSet).map(tag => ({ params: { tag } }));
 }
 
 const { tag } = Astro.params;
@@ -22,30 +25,46 @@ const description = 'Browse all Sailor Success articles tagged with ' + tag + '.
 ---
 <BaseLayout title={title} description={description}>
   <div class="wok-tag-dedicated-page">
-    <div class="wok-tag-dedicated-header">
-      <div class="wok-tag-dedicated-label">Topic</div>
-      <h1 class="wok-tag-dedicated-title">#{tag}</h1>
-    </div>
-    <div id="wok-tag-articles" class="wok-tag-dedicated-grid">
-      <p style="color:#6B7280">Loading articles...</p>
-    </div>
-  </div>
-  <script is:inline define:vars={{ tag }}>
-    (function() {
-      var container = document.getElementById('wok-tag-articles');
-      if (!container) return;
-      function render() {
-        if (!window.WOK) { setTimeout(render, 100); return; }
-        var articles = window.WOK.articlesByTag[tag] || [];
-        if (!articles.length) {
-          container.innerHTML = '<p style="color:#6B7280;grid-column:1/-1">No articles found for #' + tag + ' yet. Check back soon!</p>';
-          return;
-        }
-        container.innerHTML = articles.map(function(a) {
-          return '<a class="wok-tag-dedicated-card" href="' + a.url + '"><div class="wok-related-card-tag">' + a.tags[0] + '</div><div class="wok-related-card-title">' + a.title + '</div><div class="wok-related-card-read">&#9201; ' + a.readTime + ' read &mdash; ' + a.excerpt + '</div></a>';
-        }).join('');
-      }
-      render();
-    })();
-  </script>
-</BaseLayout>
+      <div class="wok-tag-dedicated-header">
+            <div class="wok-tag-dedicated-label">Topic</div>
+                  <h1 class="wok-tag-dedicated-title">#{tag}</h1>
+                      </div>
+                          <div id="wok-tag-articles" class="wok-tag-dedicated-grid">
+                                <p style="color:#6B7280">Loading articles...</p>
+                                    </div>
+                                      </div>
+                                        <script is:inline define:vars={{ tag }}>
+                                            (function() {
+                                                      var container = document.getElementById('wok-tag-articles');
+                                                            if (!container) return;
+                                                                  function render() {
+                                                                            if (!window.WOK) { setTimeout(render, 100); return; }
+                                                                                    var key = tag.toLowerCase();
+                                                                                            var articles = window.WOK.byTag[key] || [];
+                                                                                                    if (!articles.length) {
+                                                                                                                  container.innerHTML = '<p style="color:#6B7280;grid-column:1/-1">No articles found for #' + tag + ' yet. Check back soon!</p>';
+                                                                                                                            return;
+                                                                                                    }
+                                                                                                            container.innerHTML = articles.map(function(a) {
+                                                                                                                          return '<a class="wok-tag-dedicated-card" href="' + a.url + '">' +
+                                                                                                                                      '<div class="wok-related-card-tag">' + (a.tags[0] || tag) + '</div>' +
+                                                                                                                                                  '<div class="wok-related-card-title">' + a.title + '</div>' +
+                                                                                                                                                              '<div class="wok-related-card-read">' +
+                                                                                                                                                                            (a.readTime ? '&#9201; ' + a.readTime + ' read &mdash; ' : '') +
+                                                                                                                                                                                          (a.excerpt ? a.excerpt.substring(0, 100) + '...' : '') +
+                                                                                                                                                                                                      '</div>' +
+                                                                                                                                                                                                                '</a>';
+                                                                                                            }).join('');
+                                                                  }
+                                                                        render();
+                                            })();
+                                              </script>
+                                              </BaseLayout>
+                                                                                                            })
+                                                                                                    }
+                                                                  }
+                                            })
+                                })
+                }
+          }
+}
