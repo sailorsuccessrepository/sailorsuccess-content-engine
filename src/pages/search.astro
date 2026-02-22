@@ -1,0 +1,73 @@
+---
+import BaseLayout from '../ui/layouts/BaseLayout.astro';
+const query = Astro.url.searchParams.get('q') || '';
+const title = query ? 'Search: ' + query + ' | Sailor Success' : 'Search | Sailor Success';
+const description = 'Search articles, guides and glossary terms on Sailor Success.';
+---
+<BaseLayout title={title} description={description}>
+  <div class="wok-search-page">
+    <div class="wok-search-page-header">
+      <h1 class="wok-search-page-title">Search Sailor Success</h1>
+      <div class="wok-search-page-bar">
+        <span>&#128269;</span>
+        <input
+          class="wok-search-page-input"
+          type="text"
+          id="wok-sp-input"
+          placeholder="Search articles, glossary, topics..."
+          value={query}
+          autocomplete="off"
+        />
+      </div>
+    </div>
+    <div id="wok-sp-results" class="wok-search-page-results">
+      <div class="wok-search-page-count" id="wok-sp-count">
+        {query ? '' : 'Type to search 21 articles and 20 glossary terms...'}
+      </div>
+    </div>
+  </div>
+  <script is:inline>
+    (function() {
+      var WOK_ARTICLES = window.WOK ? window.WOK.articles : [];
+      var WOK_GLOSSARY = window.WOK ? window.WOK.glossary : [];
+      var inp = document.getElementById('wok-sp-input');
+      var results = document.getElementById('wok-sp-results');
+      var count = document.getElementById('wok-sp-count');
+      if (!inp) return;
+      function search(q) {
+        var query = q.trim().toLowerCase();
+        var url = '/search' + (query ? '?q=' + encodeURIComponent(q) : '');
+        history.replaceState({}, '', url);
+        if (!query) { count.textContent = 'Type to search...'; results.querySelectorAll('.wok-search-page-item').forEach(function(el) { el.remove(); }); return; }
+        if (!WOK_ARTICLES.length && window.WOK) { WOK_ARTICLES = window.WOK.articles; WOK_GLOSSARY = window.WOK.glossary; }
+        var arts = WOK_ARTICLES.filter(function(a) { return a.title.toLowerCase().indexOf(query) >= 0 || a.tags.some(function(t) { return t.toLowerCase().indexOf(query) >= 0; }) || a.excerpt.toLowerCase().indexOf(query) >= 0; });
+        var gloss = WOK_GLOSSARY.filter(function(g) { return g.term.toLowerCase().indexOf(query) >= 0 || g.full.toLowerCase().indexOf(query) >= 0 || g.definition.toLowerCase().indexOf(query) >= 0; });
+        var total = arts.length + gloss.length;
+        count.textContent = total + ' result' + (total !== 1 ? 's' : '') + ' for "' + q + '"';
+        results.querySelectorAll('.wok-search-page-item').forEach(function(el) { el.remove(); });
+        arts.forEach(function(a) {
+          var el = document.createElement('a');
+          el.className = 'wok-search-page-item';
+          el.href = a.url;
+          el.innerHTML = '<div class="wok-search-page-item-type">Article &middot; ' + a.tags[0] + '</div><div class="wok-search-page-item-title">' + a.title + '</div><div class="wok-search-page-item-excerpt">' + a.excerpt + '</div>';
+          results.appendChild(el);
+        });
+        gloss.forEach(function(g) {
+          var el = document.createElement('div');
+          el.className = 'wok-search-page-item';
+          el.innerHTML = '<div class="wok-search-page-item-type">Glossary &middot; ' + g.tag + '</div><div class="wok-search-page-item-title">' + g.term + ': ' + g.full + '</div><div class="wok-search-page-item-excerpt">' + g.definition + '</div>';
+          results.appendChild(el);
+        });
+        if (!total) {
+          var noRes = document.createElement('div');
+          noRes.className = 'wok-no-results';
+          noRes.textContent = 'No results found. Try different keywords.';
+          results.appendChild(noRes);
+        }
+      }
+      inp.addEventListener('input', function(e) { search(e.target.value); });
+      var initQ = inp.value;
+      if (initQ) setTimeout(function() { search(initQ); }, 300);
+    })();
+  </script>
+</BaseLayout>
