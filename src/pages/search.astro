@@ -66,8 +66,8 @@ const description = 'Search articles, guides and glossary terms on Sailor Succes
         }
       }
       inp.addEventListener('input', function(e) { search(e.target.value); });
-      var initQ = inp.value;
-      if (initQ) setTimeout(function() { search(initQ); }, 300);
+            var initQ = new URLSearchParams(window.location.search).get('q') || inp.value;
+            if (initQ) { inp.value = initQ; setTimeout(function() { search(initQ); }, 600); }
     })();
   </script>
 </BaseLayout>
