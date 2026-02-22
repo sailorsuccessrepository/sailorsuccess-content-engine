@@ -63,6 +63,7 @@ WOK.glossary.forEach(function(g) { WOK.glossaryByTerm[g.term] = g; });
 WOK.allTags = [];
 WOK.articles.forEach(function(a) { a.tags.forEach(function(t) { if (WOK.allTags.indexOf(t) < 0) WOK.allTags.push(t); }); });
 WOK.allTags.sort();
+window.WOK = WOK;
 
 // ===== SEARCH OVERLAY =====
 function buildSearchOverlay() {
