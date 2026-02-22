@@ -28,7 +28,7 @@ const { title, description, image, canonicalURL, showSidebar = true } = Astro.pr
           </ul>
         </div>
         <div class="glass-card">
-          <p class="card-label">Most Read</p>
+          <p class="card-label">Popular Articles</p>
           <ul class="popular-list" role="list">
             <li><a href="/careers/how-to-join-merchant-navy-after-12th/" class="popular-link"><span class="popular-num">01</span><span>How to Join Merchant Navy After 12th</span></a></li>
             <li><a href="/careers/gme-vs-dns-comparison/" class="popular-link"><span class="popular-num">02</span><span>GME vs DNS: Complete Comparison</span></a></li>
@@ -38,6 +38,10 @@ const { title, description, image, canonicalURL, showSidebar = true } = Astro.pr
             <li><a href="/careers/maersk-jobs-india-guide-2026/" class="popular-link"><span class="popular-num">06</span><span>Maersk Jobs India Guide</span></a></li>
           </ul>
         </div>
+                <div class="glass-card">
+                          <p class="card-label">Browse by Topic</p>
+                                    <div id="wok-tag-cloud" class="wok-tag-cloud-sidebar"></div>
+                                            </div>
         <div class="glass-card cta-card">
           <p class="card-label">Free Resource</p>
           <h3>2026 Maritime Career Planner</h3>
@@ -57,6 +61,8 @@ const { title, description, image, canonicalURL, showSidebar = true } = Astro.pr
     )}
     <main class="main-content" id="mainContent">
       <slot />
+            <div id="wok-related"></div>
+                  <div id="wok-next-read"></div>
     </main>
   </div>
 </BaseLayout>
