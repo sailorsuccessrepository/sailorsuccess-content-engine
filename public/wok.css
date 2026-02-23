@@ -41,7 +41,10 @@
      opacity: 1;
      pointer-events: all;
 }
-.wok-search-box {
+
+/* .wok-search-box AND .wok-search-modal are both used (aliases) */
+.wok-search-box,
+.wok-search-modal {
      background: var(--wok-white);
      border-radius: var(--wok-radius);
      box-shadow: var(--wok-shadow);
@@ -50,10 +53,12 @@
      transform: translateY(-16px);
      transition: transform 0.22s cubic-bezier(.4,0,.2,1);
 }
-.wok-search-overlay.wok-open .wok-search-box {
+.wok-search-overlay.wok-open .wok-search-box,
+.wok-search-overlay.wok-open .wok-search-modal {
      transform: translateY(0);
 }
-.wok-search-header {
+.wok-search-header,
+.wok-search-bar {
      display: flex;
      align-items: center;
      gap: 12px;
@@ -65,7 +70,8 @@
      font-size: 18px;
      flex-shrink: 0;
 }
-.wok-search-input {
+.wok-search-input,
+#wok-search-input {
      flex: 1;
      border: none;
      outline: none;
@@ -74,10 +80,12 @@
      background: transparent;
      font-family: inherit;
 }
-.wok-search-input::placeholder {
+.wok-search-input::placeholder,
+#wok-search-input::placeholder {
      color: var(--wok-muted);
 }
-.wok-search-close {
+.wok-search-close,
+.wok-search-esc {
      background: var(--wok-border);
      border: none;
      border-radius: 6px;
@@ -167,6 +175,8 @@
      gap: 16px;
      font-size: 12px;
      color: var(--wok-muted);
+     align-items: center;
+     flex-wrap: wrap;
 }
 .wok-search-footer kbd {
      background: var(--wok-border);
@@ -174,6 +184,11 @@
      padding: 1px 6px;
      font-family: inherit;
      font-size: 11px;
+}
+.wok-search-shortcut {
+     font-size: 11px;
+     color: var(--wok-muted);
+     margin-left: auto;
 }
 
 /* ============================================================
@@ -466,7 +481,7 @@
      margin-bottom: 10px;
      display: block;
 }
-/* Legacy alias kept for backwards compatibility */
+/* Legacy aliases */
 .wok-related-card-read {
      font-size: 12px;
      color: var(--wok-muted);
@@ -479,7 +494,7 @@
 }
 
 /* ============================================================
-   TAG CHIPS (on related cards + inline)
+   TAG CHIPS (on related cards and inline)
    ============================================================ */
 
 .wok-tag-chip {
@@ -565,7 +580,7 @@
 .wok-next-btn:hover {
      opacity: 0.88;
 }
-/* Legacy: keep direct anchor child styled too */
+/* Legacy: direct anchor child */
 .wok-next-read > a {
      display: flex;
      align-items: center;
@@ -618,7 +633,7 @@
      gap: 6px;
 }
 
-/* Cloud tags rendered by wok.js into #wok-tag-cloud */
+/* .wok-cloud-tag used by wok.js for #wok-tag-cloud */
 .wok-cloud-tag {
      display: inline-block;
      background: rgba(10,37,64,0.07);
@@ -642,8 +657,9 @@
      margin-left: 3px;
 }
 
-/* Legacy pill class kept for backwards compatibility */
+/* Legacy pill class */
 .wok-tag-pill {
+     display: inline-block;
      background: rgba(10,37,64,0.07);
      color: var(--wok-navy);
      border: 1px solid rgba(10,37,64,0.15);
@@ -720,7 +736,8 @@
    ============================================================ */
 
 @media (max-width: 640px) {
-     .wok-search-box { width: 98vw; }
+     .wok-search-box,
+     .wok-search-modal { width: 98vw; }
      .wok-tag-page { width: 100vw; }
      .wok-related-grid { grid-template-columns: 1fr; }
      .wok-next-inner { flex-direction: column; gap: 12px; }
