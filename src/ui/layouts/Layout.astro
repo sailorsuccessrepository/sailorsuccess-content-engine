@@ -13,9 +13,11 @@ const { title, description, image, canonicalURL, showSidebar = true } = Astro.pr
   <div class="page-container">
     {showSidebar && (
       <aside class="sidebar" id="sidebar">
-        <div class="search-box">
+        <!-- Search box — opens WoK search overlay on click/focus -->
+        <div class="search-box" id="wok-sidebar-search-trigger" role="search" tabindex="0" aria-label="Open search">
           <svg class="search-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M17 17l-4-4"/></svg>
-          <input type="search" placeholder="Search articles..." class="search-input" id="searchInput" autocomplete="off" />
+          <span class="search-input" style="pointer-events:none;user-select:none;">Search articles...</span>
+          <kbd style="background:var(--border,#e5e7eb);border-radius:4px;padding:1px 6px;font-size:11px;color:#6b7280;font-family:inherit;">Ctrl+K</kbd>
         </div>
         <div class="glass-card">
           <p class="card-label">Browse Topics</p>
@@ -24,7 +26,7 @@ const { title, description, image, canonicalURL, showSidebar = true } = Astro.pr
             <li><a href="/learn/" class="topic-link"><span>📚</span><span>Learn</span><span class="topic-badge">51</span></a></li>
             <li><a href="/money/" class="topic-link"><span>💰</span><span>Money</span><span class="topic-badge">25</span></a></li>
             <li><a href="/rights/" class="topic-link"><span>⚖️</span><span>Rights</span><span class="topic-badge">20</span></a></li>
-            <li><a href="/tools/" class="topic-link"><span>🔧</span><span>Tools</span><span class="topic-badge">15</span></a></li>
+            <li><a href="/tools/" class="topic-link"><span>`</span><span>Tools</span><span class="topic-badge">15</span></a></li>
           </ul>
         </div>
         <div class="glass-card">
@@ -38,15 +40,15 @@ const { title, description, image, canonicalURL, showSidebar = true } = Astro.pr
             <li><a href="/careers/maersk-jobs-india-guide-2026/" class="popular-link"><span class="popular-num">06</span><span>Maersk Jobs India Guide</span></a></li>
           </ul>
         </div>
-                <div class="glass-card">
-                          <p class="card-label">Browse by Topic</p>
-                                    <div id="wok-tag-cloud" class="wok-tag-cloud-sidebar"></div>
-                                            </div>
+              <div class="glass-card">
+                    <p class="card-label">Browse by Topic</p>
+                    <div id="wok-tag-cloud" class="wok-tag-cloud-sidebar"></div>
+              </div>
         <div class="glass-card cta-card">
           <p class="card-label">Free Resource</p>
           <h3>2026 Maritime Career Planner</h3>
           <p>Complete roadmap from Class 12 to your first ship. Timeline, costs &amp; institute list.</p>
-          <a href="https://wa.me/919958110235?text=Hi%20Chief%2C%20I%20want%20the%202026%20Career%20Planner" class="cta-btn" target="_blank" rel="noopener">📥 Download Free</a>
+          <a href="https://wa.me/919958110235?text=Hi%20Chief%2C%20I%20want%20the%202026%20Career%20Planner" class="cta-btn" target="_blank" rel="noopener">🚢 Download Free</a>
         </div>
         <div class="glass-card">
           <p class="card-label">Why Trust Us</p>
@@ -62,7 +64,35 @@ const { title, description, image, canonicalURL, showSidebar = true } = Astro.pr
     <main class="main-content" id="mainContent">
       <slot />
             <div id="wok-related"></div>
-                  <div id="wok-next-read"></div>
+            <div id="wok-next-read"></div>
     </main>
   </div>
 </BaseLayout>
+
+<script>
+  // Wire sidebar search trigger to open WoK search overlay
+  document.addEventListener('DOMContentLoaded', function() {
+    const trigger = document.getElementById('wok-sidebar-search-trigger');
+    const overlay = document.getElementById('wok-search-overlay');
+    const wokInput = document.getElementById('wok-search-input');
+
+    function openWokSearch() {
+      if (overlay) {
+        overlay.classList.add('wok-open');
+        if (wokInput) {
+          wokInput.focus();
+        }
+      }
+    }
+
+    if (trigger) {
+      trigger.addEventListener('click', openWokSearch);
+      trigger.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openWokSearch();
+        }
+      });
+    }
+  });
+</script>
