@@ -1,11 +1,10 @@
 [build]
   command = "npm run build"
-  publish = "dist"
+    publish = "dist"
 
-[build.environment]
-  NODE_VERSION = "18"
+    [build.environment]
+      NODE_VERSION = "18"
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+      # Redirects are managed in public/_redirects — do NOT add a catch-all here.
+      # The _redirects file includes an explicit /wok-data.json rule before the
+      # SPA fallback (/* /index.html 200), which is required for the WoK engine.
