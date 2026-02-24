@@ -14,7 +14,7 @@
 
 /* ── SITE HEADER & HAMBURGER NAV ── */
 .site-header {
-     position: sticky;
+     position: sticky;h
        top: 0;
          z-index: 1000;
            background: rgba(255, 255, 255, 0.72);
@@ -64,5 +64,6 @@
        .mobile-menu-btn { display: flex; }
        }
        @media (max-width: 640px) {
-         .logo-img { height:
-}
+             .logo-img { height: 36px; }
+              .nav-inner { height: 64px; }
+       }
