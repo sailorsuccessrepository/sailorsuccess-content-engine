@@ -10,11 +10,13 @@ const currentPath = Astro.url.pathname;
       </a>
 
       <ul class="nav-links" role="list">
+        <li><a href="/" class={`nav-link${currentPath === '/' ? ' active' : ''}`}>Home</a></li>
         <li><a href="/learn/" class={`nav-link${currentPath.startsWith('/learn') ? ' active' : ''}`}>Learn</a></li>
         <li><a href="/careers/" class={`nav-link${currentPath.startsWith('/careers') ? ' active' : ''}`}>Careers</a></li>
         <li><a href="/money/" class={`nav-link${currentPath.startsWith('/money') ? ' active' : ''}`}>Money</a></li>
         <li><a href="/rights/" class={`nav-link${currentPath.startsWith('/rights') ? ' active' : ''}`}>Rights</a></li>
         <li><a href="/tools/" class={`nav-link${currentPath.startsWith('/tools') ? ' active' : ''}`}>Tools</a></li>
+        <li><a href="https://sailorsuccess.graphy.com/store" class="nav-link" target="_blank" rel="noopener noreferrer">Courses</a></li>
         <li><a href="https://sailorsuccess.graphy.com/talk/mentor" class="nav-link nav-cta" target="_blank" rel="noopener noreferrer">SailorGPT</a></li>
       </ul>
 
@@ -28,15 +30,24 @@ const currentPath = Astro.url.pathname;
 
   <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation">
     <ul class="mobile-nav-links" role="list">
+      <li><a href="/" class="mobile-nav-link">Home</a></li>
       <li><a href="/learn/" class="mobile-nav-link">Learn</a></li>
       <li><a href="/careers/" class="mobile-nav-link">Careers</a></li>
       <li><a href="/money/" class="mobile-nav-link">Money</a></li>
       <li><a href="/rights/" class="mobile-nav-link">Rights</a></li>
       <li><a href="/tools/" class="mobile-nav-link">Tools</a></li>
+      <li><a href="/imucet101/" class="mobile-nav-link">IMU-CET 101</a></li>
+      <li><a href="/scamshield/" class="mobile-nav-link">Scam Shield</a></li>
+      <li><a href="/finance/" class="mobile-nav-link">Finance Guide</a></li>
+      <li><a href="/resume-interview/" class="mobile-nav-link">Resume &amp; Interviews</a></li>
+      <li><a href="/mn101/" class="mobile-nav-link">MN 101</a></li>
       <li><a href="/about/" class="mobile-nav-link">About</a></li>
       <li><a href="/contact/" class="mobile-nav-link">Contact</a></li>
+      <li><a href="/contributors/" class="mobile-nav-link">Contribute</a></li>
+      <li><a href="/our-contributors/" class="mobile-nav-link">Our Contributors</a></li>
     </ul>
     <div class="mobile-cta-group">
+      <a href="https://sailorsuccess.graphy.com/store" class="mobile-cta mobile-cta-secondary" target="_blank" rel="noopener noreferrer">Browse Courses</a>
       <a href="https://sailorsuccess.graphy.com/talk/mentor" class="mobile-cta mobile-cta-primary" target="_blank" rel="noopener noreferrer">Ask SailorGPT Free</a>
       <a href="https://wa.me/919958110235?text=Hi%20Chief%2C%20I%20need%20guidance" class="mobile-cta mobile-cta-secondary" target="_blank" rel="noopener noreferrer">Talk to Chief</a>
     </div>
@@ -44,7 +55,6 @@ const currentPath = Astro.url.pathname;
 </header>
 
 <style>
-  /* Ensure mobile-menu drops down instead of sliding in from side */
   .site-header { position: relative; }
   .mobile-menu {
     position: absolute !important;
@@ -56,6 +66,8 @@ const currentPath = Astro.url.pathname;
     display: none !important;
     flex-direction: column;
     padding: 1rem 1.5rem 1.5rem;
+    max-height: calc(100vh - 72px);
+    overflow-y: auto;
   }
   .mobile-menu.active {
     display: flex !important;
