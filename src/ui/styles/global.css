@@ -59,5 +59,10 @@
                            .mobile-cta-chief:hover { background: #0A2540; color: #ffffff !important; }
                            .mobile-menu-backdrop { display: none; position: fixed; inset: 0; background: rgba(10, 37, 64, 0.5); z-index: 1050; backdrop-filter: blur(2px); }
                            .mobile-menu-backdrop.open { display: block; }
-@media (max-width: 1024px) { .nav-links { display: none; } .mobile-menu-btn { display: flex; } }
-@media (max-width: 640px) { .logo-img { height: 36px; } .nav-inner { height: 64px; } }
+@media (max-width: 1024px) {
+     .nav-links { display: none; }
+       .mobile-menu-btn { display: flex; }
+       }
+       @media (max-width: 640px) {
+         .logo-img { height:
+}
