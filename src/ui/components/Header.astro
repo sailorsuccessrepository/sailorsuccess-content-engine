@@ -3,29 +3,31 @@ const currentPath = Astro.url.pathname;
 ---
 
 <header class="site-header">
-  <nav class="nav-container">
-    <a href="/" class="logo" aria-label="Sailor Success Home">
-      <img src="https://sailorsuccess.online/images/logo.png" alt="Sailor Success" class="logo-img" width="160" height="44" />
-    </a>
+  <div class="container">
+    <nav class="nav-inner">
+      <a href="/" class="logo" aria-label="Sailor Success Home">
+        <img src="https://sailorsuccess.online/images/logo.png" alt="Sailor Success" class="logo-img" width="160" height="44" />
+      </a>
 
-    <ul class="nav-list" role="list">
-      <li><a href="/learn/" class={`nav-link${currentPath.startsWith('/learn') ? ' active' : ''}`}>Learn</a></li>
-      <li><a href="/careers/" class={`nav-link${currentPath.startsWith('/careers') ? ' active' : ''}`}>Careers</a></li>
-      <li><a href="/money/" class={`nav-link${currentPath.startsWith('/money') ? ' active' : ''}`}>Money</a></li>
-      <li><a href="/rights/" class={`nav-link${currentPath.startsWith('/rights') ? ' active' : ''}`}>Rights</a></li>
-      <li><a href="/tools/" class={`nav-link${currentPath.startsWith('/tools') ? ' active' : ''}`}>Tools</a></li>
-      <li><a href="https://sailorsuccess.graphy.com/talk/mentor" class="nav-cta" target="_blank" rel="noopener noreferrer">SailorGPT</a></li>
-    </ul>
+      <ul class="nav-links" role="list">
+        <li><a href="/learn/" class={`nav-link${currentPath.startsWith('/learn') ? ' active' : ''}`}>Learn</a></li>
+        <li><a href="/careers/" class={`nav-link${currentPath.startsWith('/careers') ? ' active' : ''}`}>Careers</a></li>
+        <li><a href="/money/" class={`nav-link${currentPath.startsWith('/money') ? ' active' : ''}`}>Money</a></li>
+        <li><a href="/rights/" class={`nav-link${currentPath.startsWith('/rights') ? ' active' : ''}`}>Rights</a></li>
+        <li><a href="/tools/" class={`nav-link${currentPath.startsWith('/tools') ? ' active' : ''}`}>Tools</a></li>
+        <li><a href="https://sailorsuccess.graphy.com/talk/mentor" class="nav-link nav-cta" target="_blank" rel="noopener noreferrer">SailorGPT</a></li>
+      </ul>
 
-    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
-  </nav>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </nav>
+  </div>
 
-  <div class="mobile-menu" id="mobileMenu">
-    <ul class="mobile-nav-list" role="list">
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation">
+    <ul class="mobile-nav-links" role="list">
       <li><a href="/learn/" class="mobile-nav-link">Learn</a></li>
       <li><a href="/careers/" class="mobile-nav-link">Careers</a></li>
       <li><a href="/money/" class="mobile-nav-link">Money</a></li>
@@ -35,158 +37,45 @@ const currentPath = Astro.url.pathname;
       <li><a href="/contact/" class="mobile-nav-link">Contact</a></li>
     </ul>
     <div class="mobile-cta-group">
-      <a href="https://sailorsuccess.graphy.com/talk/mentor" class="mobile-cta-btn mobile-cta-gpt" target="_blank" rel="noopener noreferrer">Ask SailorGPT Free</a>
-      <a href="https://wa.me/919958110235?text=Hi%20Chief%2C%20I%20need%20guidance" class="mobile-cta-btn mobile-cta-chief" target="_blank" rel="noopener noreferrer">Talk to Chief</a>
+      <a href="https://sailorsuccess.graphy.com/talk/mentor" class="mobile-cta mobile-cta-primary" target="_blank" rel="noopener noreferrer">Ask SailorGPT Free</a>
+      <a href="https://wa.me/919958110235?text=Hi%20Chief%2C%20I%20need%20guidance" class="mobile-cta mobile-cta-secondary" target="_blank" rel="noopener noreferrer">Talk to Chief</a>
     </div>
   </div>
 </header>
 
 <style>
-  .site-header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: #fff;
-    border-bottom: 1px solid #e5e7eb;
-  }
-
-  .nav-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-    height: 64px;
-  }
-
-  .logo-img { display: block; }
-
-  .nav-list {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .nav-link {
-    display: block;
-    padding: 0.5rem 0.75rem;
-    font-size: 0.95rem;
-    font-weight: 500;
-    color: #374151;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: color 0.15s, background 0.15s;
-  }
-  .nav-link:hover, .nav-link.active { color: #0a2540; background: #f3f4f6; }
-
-  .nav-cta {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.5rem 1rem;
-    background: #c0392b;
-    color: #fff;
-    font-size: 0.9rem;
-    font-weight: 600;
-    border-radius: 8px;
-    text-decoration: none;
-    margin-left: 0.5rem;
-    transition: background 0.15s;
-  }
-  .nav-cta:hover { background: #a93226; }
-
-  .hamburger {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    width: 40px;
-    height: 40px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 4px;
-    border-radius: 6px;
-  }
-  .hamburger:hover { background: #f3f4f6; }
-
-  .bar {
-    display: block;
-    width: 22px;
-    height: 2px;
-    background: #374151;
-    border-radius: 2px;
-    transition: transform 0.25s, opacity 0.25s;
-  }
-  .hamburger.open .bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-  .hamburger.open .bar:nth-child(2) { opacity: 0; }
-  .hamburger.open .bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
+  /* Ensure mobile-menu drops down instead of sliding in from side */
+  .site-header { position: relative; }
   .mobile-menu {
-    display: none;
-    position: absolute;
-    left: 0;
-    right: 0;
-    background: #fff;
-    border-bottom: 1px solid #e5e7eb;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-    padding: 1rem 1.5rem 1.5rem;
-    z-index: 99;
-  }
-  .mobile-menu.open { display: block; }
-
-  .mobile-nav-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  .mobile-nav-link {
-    display: block;
-    padding: 0.75rem 0.5rem;
-    font-size: 1rem;
-    font-weight: 500;
-    color: #374151;
-    text-decoration: none;
-    border-bottom: 1px solid #f3f4f6;
-  }
-  .mobile-nav-link:hover { color: #0a2540; background: #f9fafb; }
-
-  .mobile-cta-group {
-    display: flex;
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    display: none !important;
     flex-direction: column;
-    gap: 0.75rem;
-    margin-top: 1rem;
+    padding: 1rem 1.5rem 1.5rem;
   }
-  .mobile-cta-btn {
-    display: block;
-    text-align: center;
-    padding: 0.75rem 1rem;
-    border-radius: 8px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    text-decoration: none;
+  .mobile-menu.active {
+    display: flex !important;
+    animation: ssMenuSlide 0.2s ease;
   }
-  .mobile-cta-gpt { background: #c0392b; color: #fff; }
-  .mobile-cta-gpt:hover { background: #a93226; }
-  .mobile-cta-chief { background: #fff; color: #0a2540; border: 2px solid #0a2540; }
-  .mobile-cta-chief:hover { background: #f3f4f6; }
-
-  @media (max-width: 768px) {
-    .nav-list { display: none; }
-    .hamburger { display: flex; }
+  @keyframes ssMenuSlide {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
   }
+  .mobile-menu-btn.open .hamburger-line:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .mobile-menu-btn.open .hamburger-line:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  .mobile-menu-btn.open .hamburger-line:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 </style>
 
 <script>
-  const btn = document.getElementById("hamburgerBtn");
+  const btn = document.getElementById("mobileMenuBtn");
   const menu = document.getElementById("mobileMenu");
 
   function closeMenu() {
-    menu?.classList.remove("open");
+    menu?.classList.remove("active");
     btn?.classList.remove("open");
     btn?.setAttribute("aria-expanded", "false");
     btn?.setAttribute("aria-label", "Open menu");
@@ -194,21 +83,21 @@ const currentPath = Astro.url.pathname;
 
   btn?.addEventListener("click", (e) => {
     e.stopPropagation();
-    const isOpen = menu?.classList.toggle("open");
+    const isOpen = menu?.classList.toggle("active");
     btn?.classList.toggle("open", isOpen);
     btn?.setAttribute("aria-expanded", String(isOpen));
     btn?.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
   });
 
   document.addEventListener("click", (e) => {
-    if (menu?.classList.contains("open") && !menu.contains(e.target as Node)) closeMenu();
+    if (menu?.classList.contains("active") && !menu.contains(e.target as Node)) closeMenu();
   });
 
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeMenu();
   });
 
-  document.querySelectorAll(".mobile-nav-link, .mobile-cta-btn").forEach(l =>
+  document.querySelectorAll(".mobile-nav-link, .mobile-cta").forEach(l =>
     l.addEventListener("click", closeMenu)
   );
 </script>
