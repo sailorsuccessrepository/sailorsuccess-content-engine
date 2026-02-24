@@ -67,3 +67,16 @@
              .logo-img { height: 36px; }
               .nav-inner { height: 64px; }
        }
+
+
+@media (max-width: 900px) {
+     .page-container {
+            flex-direction: column-reverse;
+     }
+     .sidebar {
+            order: 2;
+     }
+     .main-content {
+            order: 1;
+     }
+}
