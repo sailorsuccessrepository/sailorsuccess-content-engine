@@ -3,117 +3,212 @@ const currentPath = Astro.url.pathname;
 ---
 
 <header class="site-header">
-  <nav class="container nav-inner">
+  <nav class="nav-container">
     <a href="/" class="logo" aria-label="Sailor Success Home">
       <img src="https://sailorsuccess.online/images/logo.png" alt="Sailor Success" class="logo-img" width="160" height="44" />
     </a>
 
-    <ul class="nav-links" role="list">
-      <li><a href="/scam-shield/" class={`nav-link${currentPath.startsWith("/scam-shield") ? " active" : ""}`}>&#x1F6E1;&#xFE0F; Scam Shield</a></li>
-      <li><a href="https://sailorsuccess.graphy.com/talk/mentor" class="nav-cta" target="_blank" rel="noopener noreferrer">&#x1F916; SailorGPT</a></li>
-      <li><a href="/contributors/" class={`nav-link${currentPath.startsWith("/contributors") ? " active" : ""}`}>Contributors</a></li>
-      <li><a href="/courses/" class={`nav-link${currentPath.startsWith("/courses") ? " active" : ""}`}>Courses</a></li>
+    <ul class="nav-list" role="list">
+      <li><a href="/learn/" class={`nav-link${currentPath.startsWith('/learn') ? ' active' : ''}`}>Learn</a></li>
+      <li><a href="/careers/" class={`nav-link${currentPath.startsWith('/careers') ? ' active' : ''}`}>Careers</a></li>
+      <li><a href="/money/" class={`nav-link${currentPath.startsWith('/money') ? ' active' : ''}`}>Money</a></li>
+      <li><a href="/rights/" class={`nav-link${currentPath.startsWith('/rights') ? ' active' : ''}`}>Rights</a></li>
+      <li><a href="/tools/" class={`nav-link${currentPath.startsWith('/tools') ? ' active' : ''}`}>Tools</a></li>
+      <li><a href="https://sailorsuccess.graphy.com/talk/mentor" class="nav-cta" target="_blank" rel="noopener noreferrer">SailorGPT</a></li>
     </ul>
 
-    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-      <span class="hamburger-line"></span>
-      <span class="hamburger-line"></span>
-      <span class="hamburger-line"></span>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
     </button>
   </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <ul class="mobile-nav-list" role="list">
+      <li><a href="/learn/" class="mobile-nav-link">Learn</a></li>
+      <li><a href="/careers/" class="mobile-nav-link">Careers</a></li>
+      <li><a href="/money/" class="mobile-nav-link">Money</a></li>
+      <li><a href="/rights/" class="mobile-nav-link">Rights</a></li>
+      <li><a href="/tools/" class="mobile-nav-link">Tools</a></li>
+      <li><a href="/about/" class="mobile-nav-link">About</a></li>
+      <li><a href="/contact/" class="mobile-nav-link">Contact</a></li>
+    </ul>
+    <div class="mobile-cta-group">
+      <a href="https://sailorsuccess.graphy.com/talk/mentor" class="mobile-cta-btn mobile-cta-gpt" target="_blank" rel="noopener noreferrer">Ask SailorGPT Free</a>
+      <a href="https://wa.me/919958110235?text=Hi%20Chief%2C%20I%20need%20guidance" class="mobile-cta-btn mobile-cta-chief" target="_blank" rel="noopener noreferrer">Talk to Chief</a>
+    </div>
+  </div>
 </header>
 
-<div class="mob-menu" id="mobileMenu" aria-hidden="true">
-  <button class="mob-close" id="mobileMenuClose" aria-label="Close menu">&times;</button>
-  <ul class="mob-links" role="list">
-    <li><a href="/learn/" class="mob-link">&#x1F4DA; Learn</a></li>
-    <li><a href="/careers/" class="mob-link">&#x1F9ED; Careers</a></li>
-    <li><a href="/money/" class="mob-link">&#x1F4B0; Money</a></li>
-    <li><a href="/rights/" class="mob-link">&#x2696;&#xFE0F; Rights</a></li>
-    <li><a href="/tools/" class="mob-link">&#x1F527; Tools</a></li>
-    <li><a href="/blog/" class="mob-link">&#x1F4DD; Blog</a></li>
-    <li><a href="/encyclopedia/" class="mob-link">&#x1F4D6; Encyclopedia</a></li>
-    <li><a href="/finance/" class="mob-link">&#x1F4C8; Finance</a></li>
-    <li><a href="/resume-interview/" class="mob-link">&#x1F4C4; Resume &amp; Interview</a></li>
-    <li><a href="/scam-shield/" class="mob-link">&#x1F6E1;&#xFE0F; Scam Shield</a></li>
-    <li><a href="/about/" class="mob-link">&#x1F464; About</a></li>
-    <li><a href="/contact/" class="mob-link">&#x2709;&#xFE0F; Contact</a></li>
-  </ul>
-  <div class="mob-cta-group">
-    <a href="https://sailorsuccess.graphy.com/talk/mentor" class="mob-cta mob-cta-gpt" target="_blank" rel="noopener noreferrer">&#x1F916; Ask SailorGPT Free</a>
-    <a href="https://wa.me/919958110235?text=Hi%20Chief%2C%20I%20need%20guidance" class="mob-cta mob-cta-chief" target="_blank" rel="noopener noreferrer">&#x1F4AC; Ask Chief</a>
-  </div>
-</div>
-<div class="mob-backdrop" id="mobileMenuBackdrop" aria-hidden="true"></div>
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #fff;
+    border-bottom: 1px solid #e5e7eb;
+  }
 
-<style is:global>
-/* ── HEADER ── */
-.site-header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(10,37,64,.06);box-shadow:0 1px 3px rgba(10,37,64,.04)}
-.nav-inner{display:flex;justify-content:space-between;align-items:center;height:72px}
-.logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0}
-.logo-img{height:44px;width:auto;display:block}
-.nav-links{display:flex;list-style:none;gap:.25rem;align-items:center;margin:0;padding:0}
-.nav-link{display:block;padding:.5rem .875rem;color:#515154;font-size:.9375rem;font-weight:500;border-radius:6px;text-decoration:none;transition:all .15s ease}
-.nav-link:hover,.nav-link.active{color:#0A2540;background:rgba(10,37,64,.06)}
-.nav-cta{display:block;padding:.5rem 1.125rem;background:#C41E3A;color:#fff!important;font-size:.9375rem;font-weight:600;border-radius:8px;text-decoration:none;transition:all .15s ease}
-.nav-cta:hover{background:#A51830;transform:translateY(-1px)}
-/* ── HAMBURGER ── */
-.mobile-menu-btn{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:40px;height:40px;background:none;border:none;cursor:pointer;padding:4px;border-radius:6px;flex-shrink:0}
-.mobile-menu-btn:hover{background:rgba(10,37,64,.06)}
-.hamburger-line{display:block;width:22px;height:2px;background:#0A2540;border-radius:2px;transition:all .25s ease}
-.mobile-menu-btn.open .hamburger-line:nth-child(1){transform:translateY(7px) rotate(45deg)}
-.mobile-menu-btn.open .hamburger-line:nth-child(2){opacity:0;transform:scaleX(0)}
-.mobile-menu-btn.open .hamburger-line:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-/* ── MOBILE DROPDOWN MENU ── */
-.mob-menu{display:none;position:absolute;top:72px;left:0;right:0;background:#fff;border-top:1px solid rgba(10,37,64,.06);box-shadow:0 8px 24px rgba(10,37,64,.1);z-index:999;max-height:calc(100vh - 72px);overflow-y:auto}
-.mob-menu.open{display:block}
-.mob-close{display:none}
-.mob-links{list-style:none;margin:0;padding:.5rem 0;display:grid;grid-template-columns:1fr 1fr}
-.mob-links li{border-bottom:1px solid rgba(10,37,64,.04)}
-.mob-link{display:block;padding:.75rem 1.25rem;font-size:.9375rem;font-weight:500;color:#0A2540;text-decoration:none;transition:background .15s ease}
-.mob-link:hover{background:rgba(196,30,58,.06);color:#C41E3A}
-.mob-cta-group{display:flex;gap:.75rem;padding:1rem 1.25rem;border-top:1px solid rgba(10,37,64,.06);background:#fafafa}
-.mob-cta{flex:1;display:block;padding:.75rem;text-align:center;border-radius:8px;font-weight:600;font-size:.9rem;text-decoration:none;transition:all .15s ease}
-.mob-cta-gpt{background:#C41E3A;color:#fff!important}
-.mob-cta-gpt:hover{background:#A51830}
-.mob-cta-chief{background:transparent;border:2px solid #0A2540;color:#0A2540!important}
-.mob-cta-chief:hover{background:#0A2540;color:#fff!important}
-.mob-backdrop{display:none;position:fixed;inset:0;background:rgba(10,37,64,.4);z-index:998}
-.mob-backdrop.open{display:block}
-@media(max-width:1024px){
-  .nav-links{display:none}
-  .mobile-menu-btn{display:flex}
-  .mob-menu{top:72px}
-}
-@media(max-width:640px){
-  .logo-img{height:36px}
-  .nav-inner{height:64px}
-  .mob-menu{top:64px}
-  .mob-links{grid-template-columns:1fr}
-}
+  .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    height: 64px;
+  }
+
+  .logo-img { display: block; }
+
+  .nav-list {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #374151;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: color 0.15s, background 0.15s;
+  }
+  .nav-link:hover, .nav-link.active { color: #0a2540; background: #f3f4f6; }
+
+  .nav-cta {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background: #c0392b;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-left: 0.5rem;
+    transition: background 0.15s;
+  }
+  .nav-cta:hover { background: #a93226; }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 6px;
+  }
+  .hamburger:hover { background: #f3f4f6; }
+
+  .bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #374151;
+    border-radius: 2px;
+    transition: transform 0.25s, opacity 0.25s;
+  }
+  .hamburger.open .bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open .bar:nth-child(2) { opacity: 0; }
+  .hamburger.open .bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  .mobile-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-bottom: 1px solid #e5e7eb;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    padding: 1rem 1.5rem 1.5rem;
+    z-index: 99;
+  }
+  .mobile-menu.open { display: block; }
+
+  .mobile-nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .mobile-nav-link {
+    display: block;
+    padding: 0.75rem 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #374151;
+    text-decoration: none;
+    border-bottom: 1px solid #f3f4f6;
+  }
+  .mobile-nav-link:hover { color: #0a2540; background: #f9fafb; }
+
+  .mobile-cta-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+  .mobile-cta-btn {
+    display: block;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .mobile-cta-gpt { background: #c0392b; color: #fff; }
+  .mobile-cta-gpt:hover { background: #a93226; }
+  .mobile-cta-chief { background: #fff; color: #0a2540; border: 2px solid #0a2540; }
+  .mobile-cta-chief:hover { background: #f3f4f6; }
+
+  @media (max-width: 768px) {
+    .nav-list { display: none; }
+    .hamburger { display: flex; }
+  }
 </style>
 
 <script>
-  const btn = document.getElementById("mobileMenuBtn");
+  const btn = document.getElementById("hamburgerBtn");
   const menu = document.getElementById("mobileMenu");
-  const backdrop = document.getElementById("mobileMenuBackdrop");
 
-  function open() {
-    menu?.classList.add("open");
-    backdrop?.classList.add("open");
-    btn?.classList.add("open");
-    btn?.setAttribute("aria-expanded","true");
-    menu?.setAttribute("aria-hidden","false");
-  }
-  function close() {
+  function closeMenu() {
     menu?.classList.remove("open");
-    backdrop?.classList.remove("open");
     btn?.classList.remove("open");
-    btn?.setAttribute("aria-expanded","false");
-    menu?.setAttribute("aria-hidden","true");
+    btn?.setAttribute("aria-expanded", "false");
+    btn?.setAttribute("aria-label", "Open menu");
   }
-  btn?.addEventListener("click", () => menu?.classList.contains("open") ? close() : open());
-  backdrop?.addEventListener("click", close);
-  document.addEventListener("keydown", e => e.key==="Escape" && close());
-  document.querySelectorAll(".mob-link,.mob-cta").forEach(l => l.addEventListener("click", close));
+
+  btn?.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const isOpen = menu?.classList.toggle("open");
+    btn?.classList.toggle("open", isOpen);
+    btn?.setAttribute("aria-expanded", String(isOpen));
+    btn?.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+  });
+
+  document.addEventListener("click", (e) => {
+    if (menu?.classList.contains("open") && !menu.contains(e.target as Node)) closeMenu();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeMenu();
+  });
+
+  document.querySelectorAll(".mobile-nav-link, .mobile-cta-btn").forEach(l =>
+    l.addEventListener("click", closeMenu)
+  );
 </script>
