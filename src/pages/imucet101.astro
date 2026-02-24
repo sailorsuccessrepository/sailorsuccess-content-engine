@@ -1,0 +1,113 @@
+---
+import Layout from '../ui/layouts/Layout.astro';
+const topics = [
+      { icon: '📋', title: 'IMU CET Eligibility', desc: 'Class 12 requirements, Physics/Maths/Chemistry cutoffs, age limits, and physical fitness standards for 2026.' },
+        { icon: '📚', title: 'Exam Pattern & Syllabus', desc: 'Complete syllabus breakdown — Physics, Chemistry, Mathematics, English, General Aptitude. Question count, marking scheme, duration.' },
+          { icon: '🗓️', title: 'Application & Important Dates', desc: 'Registration window, exam dates, admit card download, result declaration — never miss a deadline again.' },
+            { icon: '🏫', title: 'IMU Approved Institutes', desc: 'Complete DGS-approved institute list for DNS, GME, B.Tech (Marine), and other pre-sea programs. Fees and intake data.' },
+              { icon: '🎯', title: 'Preparation Strategy', desc: 'How to crack IMU CET in 3 months — topic-wise priority, mock test schedule, and what most aspirants get wrong.' },
+                { icon: '📊', title: 'Cut-offs & Counselling', desc: 'Branch-wise and institute-wise cut-offs from previous years. Counselling process explained step by step.' },
+];
+const scamWarnings = [
+      'Institutes claiming "guaranteed admission" to IMU programs',
+        'Agents charging fees to "process" your IMU CET application',
+          'Fake "IMU CET coaching" with forged result sheets',
+            'WhatsApp messages claiming early registration with payment',
+              'Calls from "IMU officials" asking for bank details',
+];
+---
+<Layout
+  title="IMU CET 101 — Complete Guide 2026 | Sailor Success"
+    description="Complete IMU CET preparation guide — eligibility, syllabus, exam pattern, cut-offs, and institute list. Built by a Marine Engineer Officer."
+      canonicalURL="https://sailorsuccess.online/imucet101"
+        showSidebar={false}
+        >
+        <div class="container" style="padding-top:3rem;padding-bottom:4rem;">
+
+          <section class="hero">
+              <div class="hero-badge">🎓 Updated for 2026 — By Aseem Rastogi</div>
+                  <h1>IMU CET <span class="accent">101</span></h1>
+                      <p class="hero-text">The only IMU CET guide you need. Eligibility, exam pattern, preparation strategy, cut-offs, and institute list — built by a Marine Engineer Officer who has been mentoring aspirants since 2016.</p>
+                          <div class="cta-actions" style="margin-top:1.5rem;">
+                                <a href="https://sailorsuccess.graphy.com/store" class="btn-primary" target="_blank" rel="noopener noreferrer">
+                                        📚 View IMU CET Courses
+                                              </a>
+                                                    <a href="https://sailorsuccess.graphy.com/talk/mentor" class="btn-secondary" target="_blank" rel="noopener noreferrer">
+                                                            🤖 Ask SailorGPT
+                                                                  </a>
+                                                                        <a href="https://wa.me/919958110235" class="btn-whatsapp btn-secondary" target="_blank" rel="noopener noreferrer">
+                                                                                💬 WhatsApp Chief
+                                                                                      </a>
+                                                                                          </div>
+                                                                                            </section>
+
+                                                                                              <!-- Trust Bar -->
+                                                                                                <div class="trust-bar" style="margin-bottom:3rem;">
+                                                                                                    <div class="trust-item">
+                                                                                                          <span class="emoji">🚫</span>
+                                                                                                                <div><h4>No Coaching Bias</h4><p>We don't sell seats to any institute.</p></div>
+                                                                                                                    </div>
+                                                                                                                        <div class="trust-item">
+                                                                                                                              <span class="emoji">⚓</span>
+                                                                                                                                    <div><h4>By a Sailor</h4><p>Marine Engineer with 21 years experience.</p></div>
+                                                                                                                                        </div>
+                                                                                                                                            <div class="trust-item">
+                                                                                                                                                  <span class="emoji">📅</span>
+                                                                                                                                                        <div><h4>Updated 2026</h4><p>Latest syllabus, pattern, and cut-offs.</p></div>
+                                                                                                                                                            </div>
+                                                                                                                                                                <div class="trust-item">
+                                                                                                                                                                      <span class="emoji">🇮🇳</span>
+                                                                                                                                                                            <div><h4>India-Focused</h4><p>DGS norms, Indian institutes, real data.</p></div>
+                                                                                                                                                                                </div>
+                                                                                                                                                                                  </div>
+
+                                                                                                                                                                                    <!-- Topic Cards -->
+                                                                                                                                                                                      <div class="section-head">
+                                                                                                                                                                                          <h2>Everything About IMU CET</h2>
+                                                                                                                                                                                              <p>Six critical areas every aspirant must know</p>
+                                                                                                                                                                                                </div>
+                                                                                                                                                                                                  <div class="articles-grid" style="margin-bottom:3rem;">
+                                                                                                                                                                                                      {topics.map(t => (
+                                                                                                                                                                                                              <div class="article-card">
+                                                                                                                                                                                                                      <span class="article-tag">{t.icon} IMU CET</span>
+                                                                                                                                                                                                                              <h3>{t.title}</h3>
+                                                                                                                                                                                                                                      <p>{t.desc}</p>
+                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                      ))}
+                                                                                                                                                                                                        </div>
+
+                                                                                                                                                                                                          <!-- Scam Warning -->
+                                                                                                                                                                                                            <div class="primary-cta" style="margin-bottom:2rem;border-left:4px solid var(--red);">
+                                                                                                                                                                                                                <div class="cta-header">
+                                                                                                                                                                                                                      <div class="cta-icon">⚠️</div>
+                                                                                                                                                                                                                            <h2>Scam Alert — Stay Protected</h2>
+                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                    <p class="cta-desc">These are active scams targeting IMU CET aspirants. Never pay anyone for these:</p>
+                                                                                                                                                                                                                                        <ul style="color:var(--text-secondary);line-height:2;padding-left:1.25rem;margin-bottom:1.5rem;">
+                                                                                                                                                                                                                                              {scamWarnings.map(w => <li>{w}</li>)}
+                                                                                                                                                                                                                                                  </ul>
+                                                                                                                                                                                                                                                      <div class="cta-actions">
+                                                                                                                                                                                                                                                            <a href="/scamshield/" class="btn-primary">
+                                                                                                                                                                                                                                                                    🛡️ Full Scam Shield Guide →
+                                                                                                                                                                                                                                                                          </a>
+                                                                                                                                                                                                                                                                                <a href="https://wa.me/919958110235?text=I+want+to+report+a+scam" class="btn-secondary" target="_blank" rel="noopener noreferrer">
+                                                                                                                                                                                                                                                                                        💬 Report a Scam
+                                                                                                                                                                                                                                                                                              </a>
+                                                                                                                                                                                                                                                                                                  </div>
+                                                                                                                                                                                                                                                                                                    </div>
+
+                                                                                                                                                                                                                                                                                                      <!-- SailorGPT CTA -->
+                                                                                                                                                                                                                                                                                                        <div class="glass-card cta-card">
+                                                                                                                                                                                                                                                                                                            <p class="card-label">Free Resource</p>
+                                                                                                                                                                                                                                                                                                                <h3>Ask SailorGPT Your IMU CET Questions</h3>
+                                                                                                                                                                                                                                                                                                                    <p>India's first AI mentor built specifically for maritime careers. Get instant answers on eligibility, preparation, and institute selection.</p>
+                                                                                                                                                                                                                                                                                                                        <a href="https://sailorsuccess.graphy.com/talk/mentor" class="cta-btn" target="_blank" rel="noopener noreferrer">
+                                                                                                                                                                                                                                                                                                                              🤖 Chat with SailorGPT Free
+                                                                                                                                                                                                                                                                                                                                  </a>
+                                                                                                                                                                                                                                                                                                                                    </div>
+
+                                                                                                                                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                                                                                                                    </Layout>
+                                                                                                                                                                                                      ))}
+]
+]

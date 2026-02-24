@@ -1,0 +1,56 @@
+---
+import Layout from '../../ui/layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const allEntries = await getCollection('encyclopedia');
+const sorted = allEntries.sort((a, b) => a.data.title.localeCompare(b.data.title));
+const categories = ['Engineering','Navigation','Regulations','Deck','Engine','Career'];
+---
+<Layout
+  title="Maritime Encyclopedia — India's Merchant Navy Knowledge Base | Sailor Success"
+    description="India's first comprehensive Merchant Navy encyclopedia. Terminology, regulations, and knowledge for Indian seafarers."
+      canonicalURL="https://sailorsuccess.online/encyclopedia"
+      >
+      <div class="hero" style="padding-bottom:1rem;">
+        <div class="hero-badge">📖 India's First Maritime Encyclopedia</div>
+          <h1>Maritime <span class="accent">Encyclopedia</span></h1>
+            <p class="hero-text">India's first comprehensive Merchant Navy knowledge base. Terminology, regulations, and practical knowledge for Indian seafarers — built from real sea experience.</p>
+            </div>
+
+            <!-- Category Pills -->
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:2rem;">
+              {categories.map(cat => (
+                    <a href={`/encyclopedia/?category=${cat.toLowerCase()}`} class="article-tag" style="text-decoration:none;padding:6px 14px;border-radius:100px;border:1px solid var(--red-soft);cursor:pointer;">
+                          {cat}
+                              </a>
+              ))}
+              </div>
+
+              {sorted.length > 0 ? (
+                  <div class="articles-grid">
+                      {sorted.map(entry => (
+                              <a href={`/encyclopedia/${entry.slug}/`} class="article-card" style="text-decoration:none;">
+                                      <span class="article-tag">{entry.data.category}</span>
+                                              <h3>{entry.data.title}</h3>
+                                                      <p>{entry.data.description}</p>
+                                                            </a>
+                      ))}
+                        </div>
+              ) : (
+                  <div class="primary-cta">
+                      <div class="cta-header">
+                            <div class="cta-icon">📖</div>
+                                  <h2>Encyclopedia Growing</h2>
+                                      </div>
+                                          <p class="cta-desc">New entries are added regularly. Meanwhile, SailorGPT can define and explain any maritime term instantly.</p>
+                                              <div class="cta-actions">
+                                                    <a href="https://sailorsuccess.graphy.com/talk/mentor" class="btn-primary" target="_blank" rel="noopener noreferrer">🤖 Ask SailorGPT</a>
+                                                          <a href="https://wa.me/919958110235?text=Notify+me+Encyclopedia" class="btn-secondary" target="_blank" rel="noopener noreferrer">💬 Notify Me</a>
+                                                              </div>
+                                                                </div>
+              )}
+              </Layout>
+              )
+                      ))}
+              )}
+              ))}

@@ -1,19 +1,68 @@
 ---
-import { getCollection } from 'astro:content';
-import Layout from '../../ui/layouts/Layout.astro';
+import { getCollection, getEntry } from 'astro:content';
+import BaseLayout from '../../ui/layouts/BaseLayout.astro';
 
 export async function getStaticPaths() {
-  const blogEntries = await getCollection('blog');
-  return blogEntries.map(entry => ({
-    params: { slug: entry.slug },
-    props: { entry },
-  }));
+    const posts = await getCollection('blog');
+      return posts.map(post => ({
+            params: { slug: post.slug },
+                props: { post },
+      }));
 }
 
-const { entry } = Astro.props;
-const { Content } = await entry.render();
+const { post } = Astro.props;
+const { Content } = await post.render();
+const pubDate = post.data.pubDate ?? post.data.publishDate;
 ---
+<BaseLayout
+  title={`${post.data.title} | Sailor Success Blog`}
+    description={post.data.description}
+      canonicalURL={`https://sailorsuccess.online/blog/${post.slug}/`}
+      >
+      <div class="container" style="padding-top:2rem;padding-bottom:4rem;max-width:780px;">
 
-<Layout title={entry.data.title} description={entry.data.description}>
-  <Content />
-</Layout>
+        <!-- Breadcrumb -->
+          <nav style="font-size:0.875rem;color:var(--text-muted);margin-bottom:1.5rem;">
+              <a href="/" style="color:var(--text-muted);text-decoration:none;">Home</a>
+                  <span style="margin:0 0.5rem;">›</span>
+                      <a href="/blog/" style="color:var(--text-muted);text-decoration:none;">Blog</a>
+                          <span style="margin:0 0.5rem;">›</span>
+                              <span style="color:var(--text-primary);">{post.data.title}</span>
+                                </nav>
+
+                                  <!-- Article Header -->
+                                    <header style="margin-bottom:2rem;">
+                                        <span class="article-tag">{post.data.category}</span>
+                                            <h1 style="font-family:var(--font-heading);font-size:clamp(1.75rem,4vw,2.5rem);line-height:1.2;color:var(--navy);margin:0.75rem 0 1rem;">{post.data.title}</h1>
+                                                {pubDate && (
+                                                        <p style="color:var(--text-muted);font-size:0.9375rem;">
+                                                                By {post.data.author ?? 'Aseem Rastogi'} · {pubDate.toLocaleDateString('en-IN', {year:'numeric',month:'long',day:'numeric'})}
+                                                                      </p>
+                                                )}
+                                                  </header>
+
+                                                    <!-- Article Content -->
+                                                      <article class="content" style="font-size:1.0625rem;line-height:1.8;color:var(--text-primary);">
+                                                          <Content />
+                                                            </article>
+
+                                                              <!-- Bottom CTA -->
+                                                                <div class="primary-cta" style="margin-top:3rem;">
+                                                                    <div class="cta-header">
+                                                                          <div class="cta-icon">🤖</div>
+                                                                                <h2>Found This Helpful?</h2>
+                                                                                    </div>
+                                                                                        <p class="cta-desc">Ask SailorGPT for personalized guidance based on your rank, experience, and specific situation.</p>
+                                                                                            <div class="cta-actions">
+                                                                                                  <a href="https://sailorsuccess.graphy.com/talk/mentor" class="btn-primary" target="_blank" rel="noopener noreferrer">
+                                                                                                          🤖 Ask SailorGPT
+                                                                                                                </a>
+                                                                                                                      <a href="/blog/" class="btn-secondary">← Back to Blog</a>
+                                                                                                                          </div>
+                                                                                                                            </div>
+
+                                                                                                                            </div>
+                                                                                                                            </BaseLayout>
+                                                )}
+      }))
+}

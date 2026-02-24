@@ -1,0 +1,89 @@
+---
+import Layout from '../ui/layouts/Layout.astro';
+const topics = [
+      { icon: '📄', title: 'How to Write a Seafarer Resume', desc: 'Rank-wise resume templates for deck, engine, and ETO. What shipping company HR actually looks for — from someone who has been on both sides of the table.' },
+        { icon: '📋', title: 'CDC & Document Checklist', desc: 'Complete pre-joining document checklist — CDC, INDOS, STCW certificates, medical, joining letter, and flag state requirements.' },
+          { icon: '🎤', title: 'Pre-Sea Interview Questions', desc: 'Actual questions asked in pre-sea interviews for DNS, GME, and ETO programs. With model answers and what examiners want to hear.' },
+            { icon: '⚙️', title: 'Rank-Wise Competency Questions', desc: 'Technical oral examination questions by rank — Deck Officer, Engineer Officer, and ETO. Examiner-style Q&A with reasoning.' },
+              { icon: '🏢', title: 'What Shipping Companies Look For', desc: 'HR filters, technical screening, personality assessment, and the real criteria that determine who gets hired and who doesn\'t.' },
+                { icon: '📜', title: 'Contract Red Flags', desc: 'Joining letter terms that should stop you from signing. Bond clauses, penalty structures, and non-standard terms that can trap you.' },
+];
+---
+<Layout
+  title="Resume & Interview Prep for Merchant Navy | Sailor Success"
+    description="Seafarer resume templates, CDC checklist, interview questions by rank. Get hired at sea with Sailor Success."
+      canonicalURL="https://sailorsuccess.online/resume-interview"
+        showSidebar={false}
+        >
+        <div class="container" style="padding-top:3rem;padding-bottom:4rem;">
+
+          <section class="hero">
+              <div class="hero-badge">💼 Built by an Interviewer & Marine Engineer</div>
+                  <h1>Get <span class="accent">Hired at Sea</span></h1>
+                      <p class="hero-text">Resume, CDC checklist, and interview prep built specifically for Merchant Navy. Aseem Rastogi has been on both sides of the hiring table — as a seafarer and as an interviewer.</p>
+                          <div class="cta-actions" style="margin-top:1.5rem;">
+                                <a href="https://sailorsuccess.graphy.com/talk/mentor" class="btn-primary" target="_blank" rel="noopener noreferrer">
+                                        🤖 Practice with SailorGPT
+                                              </a>
+                                                    <a href="https://wa.me/919958110235?text=Notify+me+Resume+Guide" class="btn-secondary" target="_blank" rel="noopener noreferrer">
+                                                            💬 Get Notified on WhatsApp
+                                                                  </a>
+                                                                      </div>
+                                                                        </section>
+
+                                                                          <!-- Topic Cards -->
+                                                                            <div class="section-head">
+                                                                                <h2>Resume & Interview Topics</h2>
+                                                                                    <p>Six areas that determine whether you get hired or rejected</p>
+                                                                                      </div>
+                                                                                        <div class="articles-grid" style="margin-bottom:3rem;">
+                                                                                            {topics.map(t => (
+                                                                                                      <div class="article-card">
+                                                                                                              <span class="article-tag">{t.icon} Career</span>
+                                                                                                                      <h3>{t.title}</h3>
+                                                                                                                              <p>{t.desc}</p>
+                                                                                                                                    </div>
+                                                                                            ))}
+                                                                                              </div>
+
+                                                                                                <!-- Coming Soon -->
+                                                                                                  <div class="primary-cta" style="margin-bottom:2rem;">
+                                                                                                      <div class="cta-header">
+                                                                                                            <div class="cta-icon">🚀</div>
+                                                                                                                  <h2>Full Guides Launching Soon</h2>
+                                                                                                                      </div>
+                                                                                                                          <p class="cta-desc">Rank-wise resume templates, mock interview question banks, and contract review checklists — launching as full articles with downloadable resources.</p>
+                                                                                                                              <div class="cta-actions">
+                                                                                                                                    <a href="https://sailorsuccess.graphy.com/talk/mentor" class="btn-primary" target="_blank" rel="noopener noreferrer">
+                                                                                                                                            🤖 Practice with SailorGPT Now
+                                                                                                                                                  </a>
+                                                                                                                                                        <a href="https://wa.me/919958110235?text=Notify+me+Resume+Guide" class="btn-whatsapp btn-secondary" target="_blank" rel="noopener noreferrer">
+                                                                                                                                                                💬 Notify Me on WhatsApp
+                                                                                                                                                                      </a>
+                                                                                                                                                                          </div>
+                                                                                                                                                                            </div>
+
+                                                                                                                                                                              <!-- Trust Bar -->
+                                                                                                                                                                                <div class="trust-bar">
+                                                                                                                                                                                    <div class="trust-item">
+                                                                                                                                                                                          <span class="emoji">🎤</span>
+                                                                                                                                                                                                <div><h4>By an Interviewer</h4><p>Aseem has conducted interviews as well as cleared them.</p></div>
+                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                        <div class="trust-item">
+                                                                                                                                                                                                              <span class="emoji">⚓</span>
+                                                                                                                                                                                                                    <div><h4>Rank-Specific</h4><p>Different templates and questions for deck, engine, and ETO.</p></div>
+                                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                                            <div class="trust-item">
+                                                                                                                                                                                                                                  <span class="emoji">🇮🇳</span>
+                                                                                                                                                                                                                                        <div><h4>India-Focused</h4><p>Indian shipping companies, DGS documents, Indian CDC.</p></div>
+                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                                <div class="trust-item">
+                                                                                                                                                                                                                                                      <span class="emoji">🤖</span>
+                                                                                                                                                                                                                                                            <div><h4>AI Practice</h4><p>SailorGPT simulates real interview scenarios 24/7.</p></div>
+                                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                                  </div>
+
+                                                                                                                                                                                                                                                                  </div>
+                                                                                                                                                                                                                                                                  </Layout>
+                                                                                            ))}
+]

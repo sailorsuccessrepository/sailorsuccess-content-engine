@@ -1,0 +1,76 @@
+---
+import Layout from '../../ui/layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('blog');
+const sorted = allPosts.sort((a, b) => {
+      const dateA = (a.data.pubDate ?? a.data.publishDate)?.valueOf() ?? 0;
+        const dateB = (b.data.pubDate ?? b.data.publishDate)?.valueOf() ?? 0;
+          return dateB - dateA;
+});
+const featured = sorted.filter(p => p.data.featured);
+const rest = sorted.filter(p => !p.data.featured);
+const categories = ['learn','careers','money','rights','tools'];
+---
+<Layout
+  title="The Sailor Success Blog | Practical Guides for Indian Seafarers"
+    description="Practical guides for Indian seafarers since 2013. Career advice, financial planning, rights, and maritime knowledge from Aseem Rastogi."
+      canonicalURL="https://sailorsuccess.online/blog"
+      >
+      <div class="hero" style="padding-bottom:1rem;">
+        <div class="hero-badge">✍️ Blogging Since 2013</div>
+          <h1>The Sailor Success <span class="accent">Blog</span></h1>
+            <p class="hero-text">Practical guides for Indian seafarers. No coaching institute ads. No fake motivation. Just honest, useful content from someone who has actually done the job.</p>
+            </div>
+
+            {featured.length > 0 && (
+                  <div style="margin-bottom:2rem;">
+                      <div class="section-head"><h2>Featured</h2></div>
+                          {featured.map(post => (
+                                  <a href={`/blog/${post.slug}/`} class="article-card" style="display:block;text-decoration:none;margin-bottom:1rem;">
+                                          <span class="article-tag">{post.data.category ?? 'Featured'}</span>
+                                                  <h3>{post.data.title}</h3>
+                                                          <p>{post.data.description}</p>
+                                                                  <span style="font-size:0.8125rem;color:var(--text-muted);">{post.data.pubDate?.toLocaleDateString('en-IN', {year:'numeric',month:'long',day:'numeric'})}</span>
+                                                                        </a>
+                          ))}
+                            </div>
+            )}
+
+            <div class="section-head">
+              <h2>All Posts</h2>
+                <p>Browse by category or read everything</p>
+                </div>
+
+                <div class="articles-grid">
+                  {sorted.map(post => (
+                        <a href={`/blog/${post.slug}/`} class="article-card" style="text-decoration:none;">
+                              <span class="article-tag">{post.data.category ?? post.collection}</span>
+                                    <h3>{post.data.title}</h3>
+                                          <p>{post.data.description}</p>
+                                                <span style="font-size:0.8125rem;color:var(--text-muted);margin-top:auto;">
+                                                        {post.data.pubDate?.toLocaleDateString('en-IN', {year:'numeric',month:'long',day:'numeric'})}
+                                                              </span>
+                                                                  </a>
+                  ))}
+                  </div>
+
+                  {sorted.length === 0 && (
+                      <div class="primary-cta">
+                          <div class="cta-header">
+                                <div class="cta-icon">✍️</div>
+                                      <h2>Articles Coming Soon</h2>
+                                          </div>
+                                              <p class="cta-desc">In-depth guides on IMU CET, seafarer finance, career planning, and maritime rights — launching regularly.</p>
+                                                  <div class="cta-actions">
+                                                        <a href="https://sailorsuccess.graphy.com/talk/mentor" class="btn-primary" target="_blank" rel="noopener noreferrer">🤖 Ask SailorGPT Now</a>
+                                                              <a href="https://wa.me/919958110235?text=Notify+me+new+blog+posts" class="btn-secondary" target="_blank" rel="noopener noreferrer">💬 Get Notified on WhatsApp</a>
+                                                                  </div>
+                                                                    </div>
+                  )}
+                  </Layout>
+                  )}
+                  ))}
+                          ))}
+            )}
+})

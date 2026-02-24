@@ -1,164 +1,137 @@
 ---
 import Layout from '../ui/layouts/Layout.astro';
-
-const problems = [
-  {
-    icon: '⏳',
-    title: 'Experience Wasted',
-    description: '20 years of sea wisdom retires and vanishes forever.',
-    color: 'border-red-500'
-  },
-  {
-    icon: '🕵️',
-    title: 'Freshers Clueless',
-    description: 'No real guidance, just generic internet advice and marketing noise.',
-    color: 'border-gray-500'
-  },
-  {
-    icon: '🏗️',
-    title: 'SailorGPT Bridges',
-    description: '120 years of collective experience, accessible 24/7.',
-    color: 'border-red-400'
-  }
-];
-
-const paths = [
-  {
-    title: 'For Maritime Legends',
-    subtitle: 'Share your wisdom',
-    items: [
-      'Contribute case studies and real incidents',
-      'Review technical guides for accuracy',
-      'Mentor the next generation of seafarers',
-      'Build a legacy that lives in SailorGPT'
-    ],
-    cta: 'Contribute Your Wisdom',
-    link: 'https://docs.google.com/forms/d/e/1FAIpQLScQXMHYgM3yRZC7ZifBdovWoE2TCqKUVhcCVj2hBiGhXg/viewform',
-    color: 'red'
-  },
-  {
-    title: 'For Young Seafarers',
-    subtitle: 'Learn from the best',
-    items: [
-      'Access examiner-style reasoning',
-      'Get answers to complex shipboard issues',
-      'Avoid expensive career mistakes',
-      '24/7 AI mentor trained on real sea time'
-    ],
-    cta: 'Ask SailorGPT',
-    link: 'https://sailorsuccess.graphy.com/talk/mentor',
-    color: 'gray'
-  }
-];
 ---
+<Layout
+  title="Contribute to SailorGPT | Sailor Success"
+    description="Join India's maritime legends in training SailorGPT. Share your sea experience and mentor the next generation of seafarers."
+      canonicalURL="https://sailorsuccess.online/sailor-contributor"
+        showSidebar={false}
+        >
+        <div class="container" style="padding-top:3rem;padding-bottom:4rem;">
 
-<Layout title="Contributors | Sailor Success" description="Join India's maritime legends in training SailorGPT. Share your sea experience and mentor the next generation.">
-  <!-- Hero Section -->
-  <section class="relative pt-24 pb-16 overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 text-center relative z-10">
-      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 text-sm font-medium mb-6">
-        <span class="relative flex h-2 w-2">
-          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-          <span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
-        </span>
-        Trusted by 10,000+ Indian Seafarers
-      </div>
-      
-      <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-6">
-        SailorGPT: Your <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-rose-400">Second Brain</span> at Sea
-      </h1>
-      
-      <p class="text-xl text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed">
-        Hundreds of years of collective experience from maritime legends, delivered to young seafarers through India's first focused AI mentor.
-      </p>
-      
-      <div class="flex flex-wrap justify-center gap-4">
-        <a href="#contribute" class="px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-bold rounded-2xl transition-all shadow-xl shadow-red-900/20 hover:-translate-y-1">
-          Contribute Your Wisdom
-        </a>
-        <a href="https://sailorsuccess.graphy.com/talk/mentor" target="_blank" class="px-8 py-4 bg-gray-800 hover:bg-gray-700 text-white font-bold rounded-2xl transition-all border border-gray-700 hover:-translate-y-1">
-          Ask SailorGPT
-        </a>
-      </div>
-    </div>
-    
-    <!-- Background Decor -->
-    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-0 opacity-20 pointer-events-none">
-      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-red-600/30 rounded-full blur-[120px]"></div>
-    </div>
-  </section>
+          <!-- Hero -->
+            <section class="hero">
+                <div class="hero-badge">
+                      <span style="display:inline-flex;align-items:center;gap:6px;">
+                              <span style="width:8px;height:8px;border-radius:50%;background:var(--red);display:inline-block;animation:pulse 2s infinite;"></span>
+                                      Trusted by 10,000+ Indian Seafarers
+                                            </span>
+                                                </div>
+                                                    <h1>SailorGPT: Your <span class="accent">Second Brain</span> at Sea</h1>
+                                                        <p class="hero-text">Hundreds of years of collective experience from maritime legends, delivered to young seafarers through India's first focused AI mentor.</p>
+                                                            <div class="cta-actions" style="margin-top:1.5rem;">
+                                                                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSenhCumULBiu6UksFbM0VbBYC-oyfn5lyphXQsSoUAHyi-n5Q/viewform" class="btn-primary" target="_blank" rel="noopener noreferrer">
+                                                                          Contribute Your Wisdom
+                                                                                </a>
+                                                                                      <a href="https://sailorsuccess.graphy.com/talk/mentor" class="btn-secondary" target="_blank" rel="noopener noreferrer">
+                                                                                              Ask SailorGPT
+                                                                                                    </a>
+                                                                                                        </div>
+                                                                                                          </section>
 
-  <!-- The Problem -->
-  <section class="py-20 border-y border-white/5 bg-gray-950/50">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">The Maritime Knowledge Gap</h2>
-        <p class="text-gray-400">A vicious cycle that SailorGPT is here to break.</p>
-      </div>
-      
-      <div class="grid md:grid-cols-3 gap-8">
-        {problems.map(p => (
-          <div class={`p-8 rounded-3xl bg-gray-900/40 backdrop-blur-xl border-l-4 ${p.color} border-t border-r border-b border-white/5 shadow-xl transition-all hover:-translate-y-2`}>
-            <div class="text-4xl mb-4">{p.icon}</div>
-            <h3 class="text-xl font-bold text-white mb-3">{p.title}</h3>
-            <p class="text-gray-400 leading-relaxed">{p.description}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
+                                                                                                            <!-- The Maritime Knowledge Gap -->
+                                                                                                              <div class="section-head">
+                                                                                                                  <h2>The Maritime Knowledge Gap</h2>
+                                                                                                                      <p>A vicious cycle that SailorGPT is here to break</p>
+                                                                                                                        </div>
+                                                                                                                          <div class="articles-grid" style="margin-bottom:3rem;">
+                                                                                                                              <div class="article-card">
+                                                                                                                                    <span class="article-tag">⏳ Problem 1</span>
+                                                                                                                                          <h3>Experience Wasted</h3>
+                                                                                                                                                <p>20+ years of hard-earned sea wisdom retires and vanishes forever. Every Chief Engineer who signs off for the last time takes irreplaceable knowledge with them.</p>
+                                                                                                                                                    </div>
+                                                                                                                                                        <div class="article-card">
+                                                                                                                                                              <span class="article-tag">🕵️ Problem 2</span>
+                                                                                                                                                                    <h3>Freshers Clueless</h3>
+                                                                                                                                                                          <p>No real guidance, just generic internet advice and marketing noise from coaching institutes. Young seafarers make expensive, career-altering mistakes that veterans would never make.</p>
+                                                                                                                                                                              </div>
+                                                                                                                                                                                  <div class="article-card">
+                                                                                                                                                                                        <span class="article-tag">🏗️ Solution</span>
+                                                                                                                                                                                              <h3>SailorGPT Bridges the Gap</h3>
+                                                                                                                                                                                                    <p>120+ years of collective experience, accessible 24/7. Real knowledge from real seafarers — Captains, Chief Engineers, and ETOs — delivered the moment a young seafarer needs it.</p>
+                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                          </div>
 
-  <!-- Experience Stats -->
-  <section class="py-20 relative">
-    <div class="max-w-4xl mx-auto px-4">
-      <div class="p-10 rounded-[2.5rem] bg-gradient-to-br from-red-600 to-rose-700 text-center shadow-2xl shadow-red-900/40">
-        <h3 class="text-3xl md:text-4xl font-black text-white mb-4">120+ Years of Collective Wisdom</h3>
-        <p class="text-red-100 text-lg leading-relaxed">
-          From Chief Engineers who survived engine room fires to Captains who navigated pirate waters. Their wisdom lives on in SailorGPT to protect and guide you.
-        </p>
-      </div>
-    </div>
-  </section>
+                                                                                                                                                                                                            <!-- Stats -->
+                                                                                                                                                                                                              <div class="primary-cta" style="margin-bottom:2rem;background:var(--red-gradient);">
+                                                                                                                                                                                                                  <div style="text-align:center;">
+                                                                                                                                                                                                                        <p class="card-label" style="color:rgba(255,255,255,0.8);">The Numbers</p>
+                                                                                                                                                                                                                              <h2 style="color:#fff;font-size:2.5rem;margin:0 0 1rem;">120+ Years of Collective Wisdom</h2>
+                                                                                                                                                                                                                                    <p style="color:rgba(255,255,255,0.9);font-size:1.125rem;max-width:600px;margin:0 auto;line-height:1.7;">From Chief Engineers who survived engine room fires to Captains who navigated pirate waters. Their wisdom lives on in SailorGPT to protect and guide the next generation.</p>
+                                                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                                                          </div>
 
-  <!-- Choose Your Path -->
-  <section id="contribute" class="py-20">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Choose Your Path</h2>
-        <p class="text-gray-400 text-lg">Whether you are a legend or a learner, you belong here.</p>
-      </div>
-      
-      <div class="grid md:grid-cols-2 gap-10">
-        {paths.map(path => (
-          <div class={`p-10 rounded-[2rem] bg-gray-900/60 backdrop-blur-2xl border ${path.color === 'red' ? 'border-red-500/30' : 'border-white/10'} shadow-2xl flex flex-col`}>
-            <div class="mb-8">
-              <h3 class="text-2xl font-bold text-white mb-1">{path.title}</h3>
-              <p class={`text-sm font-semibold uppercase tracking-widest ${path.color === 'red' ? 'text-red-400' : 'text-gray-400'}`}>{path.subtitle}</p>
-            </div>
-            
-            <ul class="space-y-4 mb-10 flex-grow">
-              {path.items.map(item => (
-                <li class="flex items-start gap-3 text-gray-300">
-                  <span class={path.color === 'red' ? 'text-red-500' : 'text-gray-500'}>✓</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-            
-            <a 
-              href={path.link} 
-              target="_blank"
-              class={`w-full py-4 text-center font-bold rounded-2xl transition-all ${
-                path.color === 'red' 
-                ? 'bg-red-600 hover:bg-red-700 text-white shadow-lg shadow-red-900/20' 
-                : 'bg-white/5 hover:bg-white/10 text-white border border-white/10'
-              }`}
-            >
-              {path.cta}
-            </a>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-</Layout>
+                                                                                                                                                                                                                                            <!-- Choose Your Path -->
+                                                                                                                                                                                                                                              <div class="section-head">
+                                                                                                                                                                                                                                                  <h2>Choose Your Path</h2>
+                                                                                                                                                                                                                                                      <p>Whether you are a legend or a learner, you belong here</p>
+                                                                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                                                                          <div class="articles-grid" style="margin-bottom:3rem;">
+                                                                                                                                                                                                                                                              <div class="article-card" style="border-color:var(--red);">
+                                                                                                                                                                                                                                                                    <span class="article-tag">🏅 For Maritime Legends</span>
+                                                                                                                                                                                                                                                                          <h3>Share Your Wisdom</h3>
+                                                                                                                                                                                                                                                                                <ul style="color:var(--text-secondary);line-height:2;padding-left:1.25rem;margin-bottom:1.5rem;">
+                                                                                                                                                                                                                                                                                        <li>Contribute case studies and real incidents</li>
+                                                                                                                                                                                                                                                                                                <li>Review technical guides for accuracy</li>
+                                                                                                                                                                                                                                                                                                        <li>Mentor the next generation of seafarers</li>
+                                                                                                                                                                                                                                                                                                                <li>Build a legacy that lives in SailorGPT</li>
+                                                                                                                                                                                                                                                                                                                      </ul>
+                                                                                                                                                                                                                                                                                                                            <div style="margin-bottom:1.5rem;">
+                                                                                                                                                                                                                                                                                                                                    <img
+                                                                                                                                                                                                                                                                                                                                              src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https://docs.google.com/forms/d/e/1FAIpQLSenhCumULBiu6UksFbM0VbBYC-oyfn5lyphXQsSoUAHyi-n5Q/viewform"
+                                                                                                                                                                                                                                                                                                                                                        alt="Scan to Contribute"
+                                                                                                                                                                                                                                                                                                                                                                  style="border-radius:8px;border:2px solid var(--red-soft);"
+                                                                                                                                                                                                                                                                                                                                                                            width="160" height="160"
+                                                                                                                                                                                                                                                                                                                                                                                      loading="lazy"
+                                                                                                                                                                                                                                                                                                                                                                                              />
+                                                                                                                                                                                                                                                                                                                                                                                                      <p style="font-size:0.8125rem;color:var(--text-muted);margin-top:0.5rem;">Scan to open contribution form</p>
+                                                                                                                                                                                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSenhCumULBiu6UksFbM0VbBYC-oyfn5lyphXQsSoUAHyi-n5Q/viewform" class="btn-primary" target="_blank" rel="noopener noreferrer">
+                                                                                                                                                                                                                                                                                                                                                                                                                          Contribute Your Wisdom →
+                                                                                                                                                                                                                                                                                                                                                                                                                                </a>
+                                                                                                                                                                                                                                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                        <div class="article-card">
+                                                                                                                                                                                                                                                                                                                                                                                                                                              <span class="article-tag">🎓 For Young Seafarers</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                    <h3>Learn From the Best</h3>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                          <ul style="color:var(--text-secondary);line-height:2;padding-left:1.25rem;margin-bottom:1.5rem;">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                  <li>Access examiner-style reasoning</li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <li>Get answers to complex shipboard issues</li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  <li>Avoid expensive career mistakes</li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <li>24/7 AI mentor trained on real sea time</li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <a href="https://sailorsuccess.graphy.com/talk/mentor" class="btn-secondary" target="_blank" rel="noopener noreferrer" style="margin-top:auto;">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Ask SailorGPT →
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </a>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          </div>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <!-- Trust Bar -->
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              <div class="trust-bar">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  <div class="trust-item">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <span class="emoji">🚢</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              <div><h4>12+ Contributors</h4><p>Active and retired seafarers sharing knowledge.</p></div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <div class="trust-item">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <span class="emoji">⏱️</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  <div><h4>120+ Years Combined</h4><p>Collective sea time across all departments.</p></div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <div class="trust-item">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <span class="emoji">⚙️</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <div><h4>3 Departments</h4><p>Deck, Engine, and Electrical — all covered.</p></div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              <div class="trust-item">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <span class="emoji">🤖</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <div><h4>24/7 Available</h4><p>SailorGPT never sleeps, never charges extra.</p></div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <style>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  @keyframes pulse {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        0%, 100% { opacity: 1; }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            50% { opacity: 0.5; }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  </style>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  </Layout>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  }

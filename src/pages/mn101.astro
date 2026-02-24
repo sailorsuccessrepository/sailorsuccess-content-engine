@@ -1,0 +1,89 @@
+---
+import Layout from '../ui/layouts/Layout.astro';
+const coming = [
+      { icon: '⚓', title: 'Ship Ranks & Hierarchy', desc: 'Who is who onboard — from Master to GP Rating. Deck, Engine, and Electrical departments explained.' },
+        { icon: '🌊', title: 'Life at Sea (Reality vs Myths)', desc: 'What life actually looks like on a merchant vessel. The Instagram version vs the real version.' },
+          { icon: '🎓', title: 'Pre-Sea vs Post-Sea Routes', desc: 'DNS vs GME vs ETO vs Rating pathways. Which route is right for you based on your background and goals.' },
+            { icon: '💰', title: 'What You\'ll Actually Earn', desc: 'Honest, rank-wise salary data from people who are actually sailing. No inflated numbers.' },
+              { icon: '📅', title: 'Day 1 to Deep Sea Timeline', desc: 'From Class 12 to your first voyage — the complete timeline with milestones, costs, and realistic expectations.' },
+                { icon: '🚢', title: 'Ship Types & What You\'ll Work On', desc: 'Bulk carriers, tankers, container ships, LNG — what each type means for your daily work and career.' },
+];
+---
+<Layout
+  title="Merchant Navy 101 — Complete Beginner's Guide | Sailor Success"
+    description="Ranks, salary, routes, life at sea — everything a beginner needs to know about Merchant Navy careers in India."
+      canonicalURL="https://sailorsuccess.online/mn101"
+        showSidebar={false}
+        >
+        <div class="container" style="padding-top:3rem;padding-bottom:4rem;">
+
+          <section class="hero">
+              <div class="hero-badge">⚓ For Complete Beginners — No Jargon</div>
+                  <h1>Merchant Navy <span class="accent">101</span></h1>
+                      <p class="hero-text">The complete beginner's guide to India's most misunderstood career. Everything you need before you talk to any institute, agent, or coaching centre.</p>
+                          <div class="cta-actions" style="margin-top:1.5rem;">
+                                <a href="https://sailorsuccess.graphy.com/talk/mentor" class="btn-primary" target="_blank" rel="noopener noreferrer">
+                                        🤖 Ask SailorGPT Now
+                                              </a>
+                                                    <a href="https://wa.me/919958110235?text=Notify+me+MN101" class="btn-secondary" target="_blank" rel="noopener noreferrer">
+                                                            💬 Notify Me When It Launches
+                                                                  </a>
+                                                                      </div>
+                                                                        </section>
+
+                                                                          <!-- What's Coming -->
+                                                                            <div class="section-head">
+                                                                                <h2>What's Coming in MN 101</h2>
+                                                                                    <p>Six complete guides — launching soon</p>
+                                                                                      </div>
+                                                                                        <div class="articles-grid" style="margin-bottom:3rem;">
+                                                                                            {coming.map(c => (
+                                                                                                      <div class="article-card">
+                                                                                                              <span class="article-tag">{c.icon} MN 101</span>
+                                                                                                                      <h3>{c.title}</h3>
+                                                                                                                              <p>{c.desc}</p>
+                                                                                                                                    </div>
+                                                                                            ))}
+                                                                                              </div>
+
+                                                                                                <!-- Coming Soon CTA -->
+                                                                                                  <div class="primary-cta" style="margin-bottom:2rem;">
+                                                                                                      <div class="cta-header">
+                                                                                                            <div class="cta-icon">🚀</div>
+                                                                                                                  <h2>Launching Soon — Be First to Know</h2>
+                                                                                                                      </div>
+                                                                                                                          <p class="cta-desc">Complete MN 101 guides are in development. Meanwhile, SailorGPT can answer all your beginner questions right now — free.</p>
+                                                                                                                              <div class="cta-actions">
+                                                                                                                                    <a href="https://sailorsuccess.graphy.com/talk/mentor" class="btn-primary" target="_blank" rel="noopener noreferrer">
+                                                                                                                                            🤖 Ask SailorGPT Your Questions
+                                                                                                                                                  </a>
+                                                                                                                                                        <a href="https://wa.me/919958110235?text=Notify+me+MN101" class="btn-whatsapp btn-secondary" target="_blank" rel="noopener noreferrer">
+                                                                                                                                                                💬 Get Notified on WhatsApp
+                                                                                                                                                                      </a>
+                                                                                                                                                                          </div>
+                                                                                                                                                                            </div>
+
+                                                                                                                                                                              <!-- Trust Bar -->
+                                                                                                                                                                                <div class="trust-bar">
+                                                                                                                                                                                    <div class="trust-item">
+                                                                                                                                                                                          <span class="emoji">🚫</span>
+                                                                                                                                                                                                <div><h4>No Institute Bias</h4><p>Honest information with zero coaching mafia influence.</p></div>
+                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                        <div class="trust-item">
+                                                                                                                                                                                                              <span class="emoji">⚓</span>
+                                                                                                                                                                                                                    <div><h4>By a Sailor</h4><p>Written by someone who has actually done the job for 16 years.</p></div>
+                                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                                            <div class="trust-item">
+                                                                                                                                                                                                                                  <span class="emoji">📊</span>
+                                                                                                                                                                                                                                        <div><h4>Real Numbers</h4><p>Actual salary data, actual timelines, actual costs.</p></div>
+                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                                <div class="trust-item">
+                                                                                                                                                                                                                                                      <span class="emoji">🤖</span>
+                                                                                                                                                                                                                                                            <div><h4>Ask Anything</h4><p>SailorGPT answers beginner questions 24/7 for free.</p></div>
+                                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                                  </div>
+
+                                                                                                                                                                                                                                                                  </div>
+                                                                                                                                                                                                                                                                  </Layout>
+                                                                                            ))}
+]

@@ -1,19 +1,68 @@
 ---
 import { getCollection } from 'astro:content';
-import Layout from '../../ui/layouts/Layout.astro';
+import BaseLayout from '../../ui/layouts/BaseLayout.astro';
 
 export async function getStaticPaths() {
-  const encyclopediaEntries = await getCollection('encyclopedia');
-  return encyclopediaEntries.map(entry => ({
-    params: { slug: entry.slug },
-    props: { entry },
-  }));
+    const entries = await getCollection('encyclopedia');
+      return entries.map(entry => ({
+            params: { slug: entry.slug },
+                props: { entry },
+      }));
 }
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+const lastUpdated = entry.data.lastUpdated;
 ---
+<BaseLayout
+  title={`${entry.data.title} | Maritime Encyclopedia | Sailor Success`}
+    description={entry.data.description}
+      canonicalURL={`https://sailorsuccess.online/encyclopedia/${entry.slug}/`}
+      >
+      <div class="container" style="padding-top:2rem;padding-bottom:4rem;max-width:780px;">
 
-<Layout title={entry.data.title} description={entry.data.description}>
-  <Content />
-</Layout>
+        <!-- Breadcrumb -->
+          <nav style="font-size:0.875rem;color:var(--text-muted);margin-bottom:1.5rem;">
+              <a href="/" style="color:var(--text-muted);text-decoration:none;">Home</a>
+                  <span style="margin:0 0.5rem;">›</span>
+                      <a href="/encyclopedia/" style="color:var(--text-muted);text-decoration:none;">Encyclopedia</a>
+                          <span style="margin:0 0.5rem;">›</span>
+                              <span style="color:var(--text-primary);">{entry.data.title}</span>
+                                </nav>
+
+                                  <!-- Header -->
+                                    <header style="margin-bottom:2rem;">
+                                        <span class="article-tag">{entry.data.category}</span>
+                                            <h1 style="font-family:var(--font-heading);font-size:clamp(1.75rem,4vw,2.5rem);line-height:1.2;color:var(--navy);margin:0.75rem 0 0.5rem;">{entry.data.title}</h1>
+                                                {lastUpdated && (
+                                                        <p style="font-size:0.875rem;color:var(--text-muted);">
+                                                                Last updated: {lastUpdated.toLocaleDateString('en-IN', {year:'numeric',month:'long',day:'numeric'})}
+                                                                      </p>
+                                                )}
+                                                  </header>
+
+                                                    <!-- Content -->
+                                                      <article class="content" style="font-size:1.0625rem;line-height:1.8;color:var(--text-primary);">
+                                                          <Content />
+                                                            </article>
+
+                                                              <!-- Bottom CTA -->
+                                                                <div class="primary-cta" style="margin-top:3rem;">
+                                                                    <div class="cta-header">
+                                                                          <div class="cta-icon">🤖</div>
+                                                                                <h2>Ask SailorGPT About This Topic</h2>
+                                                                                    </div>
+                                                                                        <p class="cta-desc">Get deeper explanations, real-world examples, and personalized guidance on any maritime topic.</p>
+                                                                                            <div class="cta-actions">
+                                                                                                  <a href="https://sailorsuccess.graphy.com/talk/mentor" class="btn-primary" target="_blank" rel="noopener noreferrer">
+                                                                                                          🤖 Ask SailorGPT
+                                                                                                                </a>
+                                                                                                                      <a href="/encyclopedia/" class="btn-secondary">← Back to Encyclopedia</a>
+                                                                                                                          </div>
+                                                                                                                            </div>
+
+                                                                                                                            </div>
+                                                                                                                            </BaseLayout>
+                                                )}
+      }))
+}
