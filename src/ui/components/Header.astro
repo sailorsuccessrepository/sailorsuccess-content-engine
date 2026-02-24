@@ -17,6 +17,20 @@ const currentPath = Astro.url.pathname;
         <li><a href="/rights/" class={`nav-link${currentPath.startsWith('/rights') ? ' active' : ''}`}>Rights</a></li>
         <li><a href="/tools/" class={`nav-link${currentPath.startsWith('/tools') ? ' active' : ''}`}>Tools</a></li>
         <li><a href="https://sailorsuccess.graphy.com/store" class="nav-link" target="_blank" rel="noopener noreferrer">Courses</a></li>
+          <li class="nav-dropdown">
+            <a href="#" class="nav-link" aria-haspopup="true">More ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="/imucet101/">IMU-CET 101</a></li>
+              <li><a href="/scamshield/">Scam Shield</a></li>
+              <li><a href="/finance/">Finance Guide</a></li>
+              <li><a href="/resume-interview/">Resume & Interviews</a></li>
+              <li><a href="/mn101/">MN 101</a></li>
+              <li><a href="/contributors/">Contribute</a></li>
+              <li><a href="/our-contributors/">Our Contributors</a></li>
+              <li><a href="/about/">About</a></li>
+              <li><a href="/contact/">Contact</a></li>
+            </ul>
+          </li>
         <li><a href="https://sailorsuccess.graphy.com/talk/mentor" class="nav-link nav-cta" target="_blank" rel="noopener noreferrer">SailorGPT</a></li>
       </ul>
 
