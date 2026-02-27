@@ -9,31 +9,17 @@ const currentPath = Astro.url.pathname;
         <img src="https://sailorsuccess.online/images/logo.png" alt="Sailor Success" class="logo-img" width="160" height="44" />
       </a>
 
+      <!-- Desktop nav: Home + 5 key pages alphabetical + SailorGPT CTA -->
       <ul class="nav-links" role="list">
         <li><a href="/" class={`nav-link${currentPath === '/' ? ' active' : ''}`}>Home</a></li>
-        <li><a href="/learn/" class={`nav-link${currentPath.startsWith('/learn') ? ' active' : ''}`}>Learn</a></li>
-        <li><a href="/careers/" class={`nav-link${currentPath.startsWith('/careers') ? ' active' : ''}`}>Careers</a></li>
-        <li><a href="/money/" class={`nav-link${currentPath.startsWith('/money') ? ' active' : ''}`}>Money</a></li>
-        <li><a href="/rights/" class={`nav-link${currentPath.startsWith('/rights') ? ' active' : ''}`}>Rights</a></li>
-        <li><a href="/tools/" class={`nav-link${currentPath.startsWith('/tools') ? ' active' : ''}`}>Tools</a></li>
+        <li><a href="/contact/" class={`nav-link${currentPath.startsWith('/contact') ? ' active' : ''}`}>Contact</a></li>
         <li><a href="https://sailorsuccess.graphy.com/store" class="nav-link" target="_blank" rel="noopener noreferrer">Courses</a></li>
-          <li class="nav-dropdown">
-            <a href="#" class="nav-link" aria-haspopup="true">More ▾</a>
-            <ul class="dropdown-menu">
-              <li><a href="/imucet101/">IMU-CET 101</a></li>
-              <li><a href="/scamshield/">Scam Shield</a></li>
-              <li><a href="/finance/">Finance Guide</a></li>
-              <li><a href="/resume-interview/">Resume & Interviews</a></li>
-              <li><a href="/mn101/">MN 101</a></li>
-              <li><a href="/contributors/">Contribute</a></li>
-              <li><a href="/our-contributors/">Our Contributors</a></li>
-              <li><a href="/about/">About</a></li>
-              <li><a href="/contact/">Contact</a></li>
-            </ul>
-          </li>
-        <li><a href="https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar" class="nav-link nav-cta" target="_blank" rel="noopener noreferrer">SailorGPT</a></li>
+        <li><a href="/our-contributors/" class={`nav-link${currentPath.startsWith('/our-contributors') ? ' active' : ''}`}>Our Contributors</a></li>
+        <li><a href="/scamshield/" class={`nav-link${currentPath.startsWith('/scamshield') ? ' active' : ''}`}>Scam Shield</a></li>
+        <li><a href="https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar" class="nav-link nav-cta" target="_blank" rel="noopener noreferrer">🤖 SailorGPT</a></li>
       </ul>
 
+      <!-- Hamburger button -->
       <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
@@ -42,23 +28,25 @@ const currentPath = Astro.url.pathname;
     </nav>
   </div>
 
+  <!-- Mobile + More menu (all links, alphabetical) -->
   <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation">
     <ul class="mobile-nav-links" role="list">
-      <li><a href="/" class="mobile-nav-link">Home</a></li>
-      <li><a href="/learn/" class="mobile-nav-link">Learn</a></li>
-      <li><a href="/careers/" class="mobile-nav-link">Careers</a></li>
-      <li><a href="/money/" class="mobile-nav-link">Money</a></li>
-      <li><a href="/rights/" class="mobile-nav-link">Rights</a></li>
-      <li><a href="/tools/" class="mobile-nav-link">Tools</a></li>
-      <li><a href="/imucet101/" class="mobile-nav-link">IMU-CET 101</a></li>
-      <li><a href="/scamshield/" class="mobile-nav-link">Scam Shield</a></li>
-      <li><a href="/finance/" class="mobile-nav-link">Finance Guide</a></li>
-      <li><a href="/resume-interview/" class="mobile-nav-link">Resume &amp; Interviews</a></li>
-      <li><a href="/mn101/" class="mobile-nav-link">MN 101</a></li>
       <li><a href="/about/" class="mobile-nav-link">About</a></li>
+      <li><a href="/careers/" class="mobile-nav-link">Careers</a></li>
       <li><a href="/contact/" class="mobile-nav-link">Contact</a></li>
       <li><a href="/contributors/" class="mobile-nav-link">Contribute</a></li>
+      <li><a href="https://sailorsuccess.graphy.com/store" class="mobile-nav-link" target="_blank" rel="noopener noreferrer">Courses</a></li>
+      <li><a href="/finance/" class="mobile-nav-link">Finance Guide</a></li>
+      <li><a href="/" class="mobile-nav-link">Home</a></li>
+      <li><a href="/imucet101/" class="mobile-nav-link">IMU-CET 101</a></li>
+      <li><a href="/learn/" class="mobile-nav-link">Learn</a></li>
+      <li><a href="/mn101/" class="mobile-nav-link">MN 101</a></li>
+      <li><a href="/money/" class="mobile-nav-link">Money</a></li>
       <li><a href="/our-contributors/" class="mobile-nav-link">Our Contributors</a></li>
+      <li><a href="/resume-interview/" class="mobile-nav-link">Resume &amp; Interviews</a></li>
+      <li><a href="/rights/" class="mobile-nav-link">Rights</a></li>
+      <li><a href="/scamshield/" class="mobile-nav-link">Scam Shield</a></li>
+      <li><a href="/tools/" class="mobile-nav-link">Tools</a></li>
     </ul>
   </div>
 </header>
@@ -77,6 +65,10 @@ const currentPath = Astro.url.pathname;
     padding: 1rem 1.5rem 1.5rem;
     max-height: calc(100vh - 72px);
     overflow-y: auto;
+    background: #fff;
+    border-top: 1px solid rgba(10,37,64,0.05);
+    box-shadow: 0 8px 24px rgba(10,37,64,0.08);
+    z-index: 999;
   }
   .mobile-menu.active {
     display: flex !important;
@@ -105,7 +97,7 @@ const currentPath = Astro.url.pathname;
   btn?.addEventListener("click", (e) => {
     e.stopPropagation();
     const isOpen = menu?.classList.toggle("active");
-    btn?.classList.toggle("open", isOpen);
+    btn?.classList.toggle("open", isOpen ?? false);
     btn?.setAttribute("aria-expanded", String(isOpen));
     btn?.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
   });
@@ -118,7 +110,7 @@ const currentPath = Astro.url.pathname;
     if (e.key === "Escape") closeMenu();
   });
 
-  document.querySelectorAll(".mobile-nav-link, .mobile-cta").forEach(l =>
+  document.querySelectorAll(".mobile-nav-link").forEach(l =>
     l.addEventListener("click", closeMenu)
   );
 </script>
