@@ -276,4 +276,4 @@ If you have an engineering diploma and the sea calls you, TME could be your answ
 
 ---
 
-**Have specific questions about TME?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor) - Get personalized guidance on institute selection, admission process, and career planning. Available 24/7.
+**Have specific questions about TME?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar) - Get personalized guidance on institute selection, admission process, and career planning. Available 24/7.

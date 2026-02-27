@@ -411,4 +411,4 @@ The path from Cadet to Captain typically takes 12-18 years. Plan ahead, stay foc
 
 ---
 
-**Planning your Deck Officer career?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor) - Get personalized guidance on training, companies, and career progression from experienced maritime professionals.
+**Planning your Deck Officer career?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar) - Get personalized guidance on training, companies, and career progression from experienced maritime professionals.

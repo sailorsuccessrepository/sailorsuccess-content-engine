@@ -356,7 +356,7 @@ Some flag states permit:
 
 Understanding and enforcing your work hour rights is essential for your safety and career. SailorGPT can help you understand your rights and navigate difficult situations.
 
-**[Chat with SailorGPT for Work Hour Guidance →](https://sailorsuccess.graphy.com/talk/mentor)**
+**[Chat with SailorGPT for Work Hour Guidance →](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar)**
 
 ## Conclusion
 
@@ -373,4 +373,4 @@ Your safety depends on adequate rest. Know your rights and protect them.
 
 ---
 
-*Facing work hour issues onboard? SailorGPT provides guidance on your rights under MLC 2006 and how to address violations safely. [Get Help →](https://sailorsuccess.graphy.com/talk/mentor)*
+*Facing work hour issues onboard? SailorGPT provides guidance on your rights under MLC 2006 and how to address violations safely. [Get Help →](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar)*

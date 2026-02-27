@@ -379,7 +379,7 @@ Most ships have basic gym equipment:
 
 **SailorGPT** can help with personalized fitness advice, diet tips for seafarers, and workout routines you can follow.
 
-[**Ask SailorGPT for Fitness Guidance →**](https://sailorsuccess.graphy.com/talk/mentor)
+[**Ask SailorGPT for Fitness Guidance →**](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar)
 
 ## Prepare Comprehensively
 

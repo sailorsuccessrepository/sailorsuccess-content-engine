@@ -417,4 +417,4 @@ With 1 hour daily for 2 months, scoring 15+ marks is achievable.
 
 ---
 
-**GK doubts?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor) - Get maritime awareness updates and current affairs help for IMU-CET preparation.
+**GK doubts?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar) - Get maritime awareness updates and current affairs help for IMU-CET preparation.

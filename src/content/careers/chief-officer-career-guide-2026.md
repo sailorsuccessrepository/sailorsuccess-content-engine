@@ -226,7 +226,7 @@ Yes, this is the natural progression. After 36 months as Chief Officer and passi
 
 The Chief Officer position is the final stepping stone before command. With proper preparation, technical excellence, and leadership development, you can transition smoothly to Master.
 
-**Need guidance on your path to Chief Officer?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor) for personalized career advice based on 16+ years of maritime experience.
+**Need guidance on your path to Chief Officer?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar) for personalized career advice based on 16+ years of maritime experience.
 
 *Related Articles:*
 - [Master Mariner Captain Guide 2026](/careers/master-mariner-captain-guide-2026)

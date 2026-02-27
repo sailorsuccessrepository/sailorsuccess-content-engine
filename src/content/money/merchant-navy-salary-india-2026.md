@@ -288,4 +288,4 @@ The numbers in this guide are realistic 2026 figures based on industry data. You
 
 ---
 
-**Want personalized salary guidance for your situation?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor) - Get answers about specific companies, negotiations, and career planning. Available 24/7.
+**Want personalized salary guidance for your situation?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar) - Get answers about specific companies, negotiations, and career planning. Available 24/7.

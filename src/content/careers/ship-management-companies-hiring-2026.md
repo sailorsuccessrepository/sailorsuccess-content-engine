@@ -593,7 +593,7 @@ SailorGPT can help you:
 - Understand salary negotiations
 - Navigate application processes
 
-**[Chat with SailorGPT for Company Guidance →](https://sailorsuccess.graphy.com/talk/mentor)**
+**[Chat with SailorGPT for Company Guidance →](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar)**
 
 ## Conclusion
 
@@ -610,4 +610,4 @@ Your maritime career success starts with the right company choice.
 
 ---
 
-*Need help choosing the best ship management company for your profile? SailorGPT provides personalized guidance based on your experience and career goals. [Get Started →](https://sailorsuccess.graphy.com/talk/mentor)*
+*Need help choosing the best ship management company for your profile? SailorGPT provides personalized guidance based on your experience and career goals. [Get Started →](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar)*

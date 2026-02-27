@@ -401,4 +401,4 @@ Choose wisely based on your situation.
 
 ---
 
-**Questions about joining after 10th?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor) - Get institute recommendations, fee comparisons, and career guidance specific to 10th pass candidates.
+**Questions about joining after 10th?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar) - Get institute recommendations, fee comparisons, and career guidance specific to 10th pass candidates.

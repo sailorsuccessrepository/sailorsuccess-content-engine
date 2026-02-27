@@ -311,7 +311,7 @@ Yes, if you qualify as NRI and salary is earned for services rendered outside In
 
 Proper banking setup is foundational to managing your seafaring income efficiently. Take time to set up the right accounts and optimize your financial management.
 
-**Need help with banking and financial planning?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor) for personalized advice on managing your seafarer finances.
+**Need help with banking and financial planning?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar) for personalized advice on managing your seafarer finances.
 
 *Related Articles:*
 - [Tax Planning for Seafarers 2026](/money/tax-planning-indian-seafarers-2026)

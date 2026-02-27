@@ -407,7 +407,7 @@ Confused about which tanker type suits you best? SailorGPT can analyze your expe
 - **Salary negotiation** with tanker-specific market data
 - **Interview preparation** with technical question practice
 
-Start your tanker career consultation: [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor)
+Start your tanker career consultation: [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar)
 
 ---
 

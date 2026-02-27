@@ -345,4 +345,4 @@ The global shipping industry needs qualified deck officers. With proper preparat
 
 ---
 
-**Planning to apply for DNS?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor) - Get personalized guidance on college selection, preparation strategy, and career planning.
+**Planning to apply for DNS?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar) - Get personalized guidance on college selection, preparation strategy, and career planning.

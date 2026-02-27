@@ -304,7 +304,7 @@ They should be. Always get complete package details in writing before signing.
 
 Understanding your complete compensation package ensures you're not leaving money on the table. Negotiate wisely and keep records of all entitlements.
 
-**Need help understanding your compensation?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor) for personalized advice on salary negotiations and benefit calculations.
+**Need help understanding your compensation?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar) for personalized advice on salary negotiations and benefit calculations.
 
 *Related Articles:*
 - [Merchant Navy Salary Guide 2026](/money/merchant-navy-salary-india-2026)

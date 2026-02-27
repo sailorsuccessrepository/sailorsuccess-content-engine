@@ -189,7 +189,7 @@ Typically 3-4 months leave after 6-8 months contract. Leave policies vary by com
 
 The Third Officer position is your entry into the prestigious world of navigation officers. With dedication, continuous learning, and proper guidance, you can build a successful career leading to Master Mariner.
 
-**Need personalized career guidance?** Chat with [SailorGPT](https://sailorsuccess.graphy.com/talk/mentor) - your AI mentor with 16+ years of maritime experience. Get instant answers about Third Officer careers, exam preparation, and company selection.
+**Need personalized career guidance?** Chat with [SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar) - your AI mentor with 16+ years of maritime experience. Get instant answers about Third Officer careers, exam preparation, and company selection.
 
 *Related Articles:*
 - [Second Officer Career Guide 2026](/careers/second-officer-career-guide-2026)

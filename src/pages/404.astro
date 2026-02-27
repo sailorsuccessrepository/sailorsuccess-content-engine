@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../ui/layouts/BaseLayout.astro';
+---
+<BaseLayout title="Page Not Found | Sailor Success" description="The page you're looking for doesn't exist. Find maritime career guides, exam prep, and salary info at Sailor Success.">
+  <div class="container" style="padding: 6rem 1.5rem; text-align: center; min-height: 60vh; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <div style="font-size: 4rem; margin-bottom: 1rem;">⚓</div>
+    <h1 style="font-family: var(--font-heading); font-size: clamp(2rem,5vw,3rem); color: var(--navy); margin-bottom: 1rem;">Page Not Found</h1>
+    <p style="font-size: 1.125rem; color: var(--text-secondary); max-width: 500px; margin: 0 auto 2rem;">
+      Looks like this page drifted off course. Let's get you back to safe waters.
+    </p>
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+      <a href="/" class="btn btn-primary">🏠 Back to Home</a>
+      <a href="/careers/" class="btn btn-secondary">🧭 Career Guides</a>
+      <a href="https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar" class="btn btn-secondary" target="_blank" rel="noopener">🤖 Ask SailorGPT</a>
+    </div>
+  </div>
+</BaseLayout>

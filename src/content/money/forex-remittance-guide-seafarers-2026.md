@@ -395,7 +395,7 @@ SailorGPT helps you:
 - Navigate banking options
 - Plan family finances
 
-**[Chat with SailorGPT for Forex Guidance →](https://sailorsuccess.graphy.com/talk/mentor)**
+**[Chat with SailorGPT for Forex Guidance →](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar)**
 
 ## Conclusion
 
@@ -412,4 +412,4 @@ Your earnings deserve to reach home efficiently. Optimize every transfer.
 
 ---
 
-*Need personalized forex and remittance advice? SailorGPT understands seafarer financial needs and can guide you to better decisions. [Start Optimizing →](https://sailorsuccess.graphy.com/talk/mentor)*
+*Need personalized forex and remittance advice? SailorGPT understands seafarer financial needs and can guide you to better decisions. [Start Optimizing →](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar)*

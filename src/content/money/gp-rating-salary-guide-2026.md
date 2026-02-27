@@ -295,4 +295,4 @@ For Class 10 pass candidates, GP Rating provides fastest route to international 
 
 ---
 
-**Want personalized salary guidance?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor) - Get accurate salary estimates based on your qualifications and target companies.
+**Want personalized salary guidance?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar) - Get accurate salary estimates based on your qualifications and target companies.

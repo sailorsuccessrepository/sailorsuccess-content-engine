@@ -222,7 +222,7 @@ Yes, through GME (Graduate Marine Engineering) course approved by DG Shipping.
 
 The Fourth Engineer position offers an exciting entry into marine engineering with excellent growth prospects. With dedication and continuous learning, you can rise to Chief Engineer within 10-12 years.
 
-**Need personalized guidance?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor) - get expert advice on marine engineering careers, exam preparation, and company selection.
+**Need personalized guidance?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar) - get expert advice on marine engineering careers, exam preparation, and company selection.
 
 *Related Articles:*
 - [Marine Engineer Career Path 2026](/careers/marine-engineer-career-path-2026)

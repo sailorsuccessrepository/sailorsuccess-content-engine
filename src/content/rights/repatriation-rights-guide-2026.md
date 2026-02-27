@@ -320,7 +320,7 @@ In some cases you can extend the contract by mutual agreement, but you cannot be
 
 Understanding repatriation rights protects you from exploitation. Never accept excuses for delayed repatriation beyond legal limits.
 
-**Need help with repatriation issues or seafarer rights?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor) for guidance on maritime labor rights and legal support.
+**Need help with repatriation issues or seafarer rights?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar) for guidance on maritime labor rights and legal support.
 
 *Related Articles:*
 - [MLC 2006 Seafarer Rights Guide](/rights/mlc-2006-seafarer-rights-guide)

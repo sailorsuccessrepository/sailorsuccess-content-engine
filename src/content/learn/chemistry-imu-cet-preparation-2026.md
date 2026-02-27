@@ -461,4 +461,4 @@ With 2-3 hours daily for 3 months, scoring 20+ marks is achievable.
 
 ---
 
-**Chemistry doubts?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor) - Get instant explanations and problem-solving help for IMU-CET chemistry.
+**Chemistry doubts?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar) - Get instant explanations and problem-solving help for IMU-CET chemistry.

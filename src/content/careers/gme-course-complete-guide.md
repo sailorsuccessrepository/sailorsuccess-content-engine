@@ -457,4 +457,4 @@ Remember that every successful captain and chief engineer once stood where you a
 
 ---
 
-**Need personalized career guidance for your merchant navy journey?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor) - India's first AI mentor for seafarers providing 24/7 expert advice on courses, examinations, regulations, career planning, and all merchant navy queries based on latest DG Shipping guidelines and industry practices.
+**Need personalized career guidance for your merchant navy journey?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar) - India's first AI mentor for seafarers providing 24/7 expert advice on courses, examinations, regulations, career planning, and all merchant navy queries based on latest DG Shipping guidelines and industry practices.

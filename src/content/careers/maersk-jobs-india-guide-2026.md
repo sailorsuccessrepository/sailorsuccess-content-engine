@@ -240,4 +240,4 @@ Preparing for Maersk requires demonstrating not just technical competency but le
 
 ---
 
-**Planning to apply to Maersk?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor) - Get personalized guidance on application strategy, interview preparation, and career planning.
+**Planning to apply to Maersk?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar) - Get personalized guidance on application strategy, interview preparation, and career planning.

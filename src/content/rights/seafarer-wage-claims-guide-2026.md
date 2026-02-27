@@ -467,7 +467,7 @@ SailorGPT helps you:
 - Navigate recovery procedures
 - Connect with support organizations
 
-**[Chat with SailorGPT for Wage Recovery Guidance →](https://sailorsuccess.graphy.com/talk/mentor)**
+**[Chat with SailorGPT for Wage Recovery Guidance →](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar)**
 
 ## Conclusion
 
@@ -484,4 +484,4 @@ Your labor has value. Ensure you receive every rupee you're owed.
 
 ---
 
-*Facing wage recovery issues? SailorGPT provides guidance on documentation, procedures, and your rights under Indian and international maritime law. [Get Help Now →](https://sailorsuccess.graphy.com/talk/mentor)*
+*Facing wage recovery issues? SailorGPT provides guidance on documentation, procedures, and your rights under Indian and international maritime law. [Get Help Now →](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar)*

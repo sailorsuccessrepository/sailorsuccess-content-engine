@@ -362,7 +362,7 @@ This guide covers everything you need to know about building a career on LNG ves
 
 Transitioning to LNG requires strategic planning and the right training investments. SailorGPT can help you navigate this specialized career path.
 
-**[Chat with SailorGPT for LNG Career Guidance →](https://sailorsuccess.graphy.com/talk/mentor)**
+**[Chat with SailorGPT for LNG Career Guidance →](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar)**
 
 ## Conclusion
 
@@ -379,4 +379,4 @@ Your LNG career can start today with the right preparation.
 
 ---
 
-*Planning your transition to LNG vessels? SailorGPT provides personalized guidance for building your gas carrier career. [Start Planning →](https://sailorsuccess.graphy.com/talk/mentor)*
+*Planning your transition to LNG vessels? SailorGPT provides personalized guidance for building your gas carrier career. [Start Planning →](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar)*

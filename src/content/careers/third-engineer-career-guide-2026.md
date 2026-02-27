@@ -231,7 +231,7 @@ Yes, auxiliary machinery management is crucial for ship operations. Generator fa
 
 Third Engineer is a pivotal position where you transition from learning to leading. Master this role, and you're well-positioned for rapid advancement to Second Engineer and beyond.
 
-**Get expert guidance on your marine engineering career.** [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor) for personalized advice on exam preparation, company selection, and career planning.
+**Get expert guidance on your marine engineering career.** [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar) for personalized advice on exam preparation, company selection, and career planning.
 
 *Related Articles:*
 - [Fourth Engineer Career Guide 2026](/careers/fourth-engineer-career-guide-2026)

@@ -265,7 +265,7 @@ Usually 2-4 weeks after completing documentation and courses.
 
 Synergy Marine offers excellent growth opportunities for dedicated seafarers. With their large fleet and professional management, you can build a rewarding maritime career.
 
-**Need guidance on applying to Synergy Marine?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor) for interview preparation and career advice.
+**Need guidance on applying to Synergy Marine?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar) for interview preparation and career advice.
 
 *Related Articles:*
 - [Top Shipping Companies India 2026](/careers/top-shipping-companies-india-2026)

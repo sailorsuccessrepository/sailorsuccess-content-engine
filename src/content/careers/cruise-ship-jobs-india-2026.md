@@ -360,4 +360,4 @@ Cruise ship careers offer unique opportunities for Indian seafarers and hospital
 
 ---
 
-**Want personalized guidance on cruise careers?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor) - India's first AI mentor for seafarers. Get help with cruise line applications and career planning.
+**Want personalized guidance on cruise careers?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar) - India's first AI mentor for seafarers. Get help with cruise line applications and career planning.

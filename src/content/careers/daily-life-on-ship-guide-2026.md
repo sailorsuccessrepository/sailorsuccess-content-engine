@@ -259,4 +259,4 @@ If you're considering this career, go in with realistic expectations. The first 
 
 ---
 
-**Have questions about ship life?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor) - Get honest answers about what to expect from seafarers who've lived it.
+**Have questions about ship life?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar) - Get honest answers about what to expect from seafarers who've lived it.

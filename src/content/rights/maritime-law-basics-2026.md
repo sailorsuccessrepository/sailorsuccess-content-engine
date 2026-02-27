@@ -384,7 +384,7 @@ When company fails to:
 
 Chat with **SailorGPT** for initial guidance on maritime law issues, rights violations, and next steps.
 
-[**Ask SailorGPT Your Legal Question →**](https://sailorsuccess.graphy.com/talk/mentor)
+[**Ask SailorGPT Your Legal Question →**](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar)
 
 *Note: For complex legal matters, always consult a maritime lawyer.*
 

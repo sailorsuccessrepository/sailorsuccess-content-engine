@@ -270,7 +270,7 @@ readTime: "15 min read"
 - Exam preparation
 - Career guidance
 
-[**Prepare for SIRE with SailorGPT →**](https://sailorsuccess.graphy.com/talk/mentor)
+[**Prepare for SIRE with SailorGPT →**](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar)
 
 ---
 

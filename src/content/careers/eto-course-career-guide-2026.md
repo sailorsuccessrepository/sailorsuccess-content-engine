@@ -249,7 +249,7 @@ Planning your ETO career? SailorGPT provides:
 - **Salary benchmarking** data
 - **Career planning** guidance
 
-Get personalized advice: [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor)
+Get personalized advice: [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar)
 
 ---
 

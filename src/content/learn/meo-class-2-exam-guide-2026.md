@@ -367,7 +367,7 @@ Stuck on a concept or need practice questions? SailorGPT provides:
 - **Oral exam simulation** with follow-up questions
 - **Doubt clearing** available 24/7
 
-Get exam-ready with expert guidance: [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor)
+Get exam-ready with expert guidance: [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar)
 
 ---
 

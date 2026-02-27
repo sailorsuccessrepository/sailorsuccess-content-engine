@@ -307,4 +307,4 @@ The sea doesn't care about your degree—it cares about your dedication.
 
 ---
 
-**Questions about GP Rating?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor) - Get instant guidance on institutes, admission, and career planning. Available 24/7.
+**Questions about GP Rating?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar) - Get instant guidance on institutes, admission, and career planning. Available 24/7.

@@ -427,7 +427,7 @@ SailorGPT helps you:
 - Plan withdrawal strategies
 - Navigate NRI taxation
 
-**[Chat with SailorGPT for Retirement Planning →](https://sailorsuccess.graphy.com/talk/mentor)**
+**[Chat with SailorGPT for Retirement Planning →](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar)**
 
 ## Conclusion
 
@@ -444,4 +444,4 @@ Your future security depends on decisions made today. Start building your retire
 
 ---
 
-*Need personalized retirement planning guidance? SailorGPT understands the unique financial challenges of seafaring careers. [Get Started →](https://sailorsuccess.graphy.com/talk/mentor)*
+*Need personalized retirement planning guidance? SailorGPT understands the unique financial challenges of seafaring careers. [Get Started →](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar)*

@@ -507,7 +507,7 @@ SailorGPT provides:
 - Doubt resolution
 - Personalized study plans
 
-**[Chat with SailorGPT for COC Preparation →](https://sailorsuccess.graphy.com/talk/mentor)**
+**[Chat with SailorGPT for COC Preparation →](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar)**
 
 ## Conclusion
 
@@ -524,4 +524,4 @@ Your COC is not just a certificate—it's proof of your professional competence 
 
 ---
 
-*Need personalized COC preparation guidance? SailorGPT understands DG Shipping examination patterns and helps you prepare effectively. [Start Preparing →](https://sailorsuccess.graphy.com/talk/mentor)*
+*Need personalized COC preparation guidance? SailorGPT understands DG Shipping examination patterns and helps you prepare effectively. [Start Preparing →](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar)*

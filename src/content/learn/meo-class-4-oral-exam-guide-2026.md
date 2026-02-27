@@ -457,7 +457,7 @@ Preparing for MEO Class 4 oral examination alone can be overwhelming. SailorGPT 
 - **Instant Doubt Clearing**: Get answers to technical queries
 - **Experience Insights**: Learn from others' experiences
 
-**[Chat with SailorGPT for MEO 4 Oral Preparation →](https://sailorsuccess.graphy.com/talk/mentor)**
+**[Chat with SailorGPT for MEO 4 Oral Preparation →](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar)**
 
 ## Conclusion
 
@@ -476,4 +476,4 @@ With systematic preparation and the right guidance, you can clear your oral exam
 
 ---
 
-*Need personalized MEO Class 4 oral preparation guidance? SailorGPT understands the Indian maritime examination system and provides targeted preparation support. [Start Preparing Now →](https://sailorsuccess.graphy.com/talk/mentor)*
+*Need personalized MEO Class 4 oral preparation guidance? SailorGPT understands the Indian maritime examination system and provides targeted preparation support. [Start Preparing Now →](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar)*

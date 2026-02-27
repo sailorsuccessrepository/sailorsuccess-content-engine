@@ -325,4 +325,4 @@ The maritime industry needs competent officers. With the right training from an 
 
 ---
 
-**Confused about which institute to choose?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor) - Get personalized advice based on your location, budget, and career goals. Available 24/7.
+**Confused about which institute to choose?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar) - Get personalized advice based on your location, budget, and career goals. Available 24/7.

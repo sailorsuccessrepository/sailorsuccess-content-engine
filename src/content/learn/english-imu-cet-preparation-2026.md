@@ -462,4 +462,4 @@ With 1-2 hours daily for 2 months, scoring 40+ marks is easily achievable.
 
 ---
 
-**English doubts?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor) - Get instant grammar explanations and vocabulary help for IMU-CET preparation.
+**English doubts?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar) - Get instant grammar explanations and vocabulary help for IMU-CET preparation.

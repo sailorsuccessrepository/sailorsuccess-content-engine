@@ -396,6 +396,6 @@ You're not alone. Help is available 24/7.
 
 ---
 
-**Need someone to talk to?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor) - Available 24/7 for career guidance, practical advice, and pointing you to the right resources. Not a replacement for professional mental health support, but a starting point.
+**Need someone to talk to?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar) - Available 24/7 for career guidance, practical advice, and pointing you to the right resources. Not a replacement for professional mental health support, but a starting point.
 
 **Immediate Crisis:** ISWAN SeafarerHelp +44 20 7323 2737 (24/7, Free)

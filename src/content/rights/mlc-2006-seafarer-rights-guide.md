@@ -372,4 +372,4 @@ The maritime industry needs seafarers. You have value. Don't accept substandard 
 
 ---
 
-**Questions about your rights?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor) - Get instant guidance on MLC 2006 rights, complaint procedures, and handling workplace issues. Available 24/7.
+**Questions about your rights?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar) - Get instant guidance on MLC 2006 rights, complaint procedures, and handling workplace issues. Available 24/7.

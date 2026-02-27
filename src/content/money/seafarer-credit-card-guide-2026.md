@@ -255,7 +255,7 @@ readTime: "12 min read"
 
 **SailorGPT** can recommend cards based on your rank, spending patterns, and bank relationships.
 
-[**Get Card Recommendations from SailorGPT →**](https://sailorsuccess.graphy.com/talk/mentor)
+[**Get Card Recommendations from SailorGPT →**](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar)
 
 ## Complete Financial Planning
 

@@ -329,4 +329,4 @@ The company wants to hire you. Your job is to show them why they should.
 
 ---
 
-**Need interview preparation help?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor) - Practice mock interviews, get company-specific tips, and build confidence. Available 24/7.
+**Need interview preparation help?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar) - Practice mock interviews, get company-specific tips, and build confidence. Available 24/7.

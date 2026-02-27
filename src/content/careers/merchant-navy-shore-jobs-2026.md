@@ -295,7 +295,7 @@ readTime: "15 min read"
 - Interview guidance
 - Industry insights
 
-[**Plan Your Shore Career with SailorGPT →**](https://sailorsuccess.graphy.com/talk/mentor)
+[**Plan Your Shore Career with SailorGPT →**](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar)
 
 ## Resume & Interview Help
 

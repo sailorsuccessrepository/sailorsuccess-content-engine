@@ -310,7 +310,7 @@ Yes, Indian Master FG certificate is recognized worldwide under STCW Convention.
 
 Master FG represents years of dedication and learning. With proper preparation and the right mindset, you can achieve this prestigious qualification and take command of vessels sailing the world's oceans.
 
-**Need expert guidance for Master FG preparation?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor) for comprehensive exam strategies and command career advice.
+**Need expert guidance for Master FG preparation?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar) for comprehensive exam strategies and command career advice.
 
 *Related Articles:*
 - [Master Mariner Captain Guide 2026](/careers/master-mariner-captain-guide-2026)

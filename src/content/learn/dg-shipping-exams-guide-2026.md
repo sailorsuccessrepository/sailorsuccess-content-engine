@@ -439,4 +439,4 @@ Your certificates determine your rank and salary. Invest time in proper preparat
 
 ---
 
-**Need exam guidance?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor) - Get subject-wise preparation tips, book recommendations, and oral exam coaching from experienced seafarers.
+**Need exam guidance?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar) - Get subject-wise preparation tips, book recommendations, and oral exam coaching from experienced seafarers.

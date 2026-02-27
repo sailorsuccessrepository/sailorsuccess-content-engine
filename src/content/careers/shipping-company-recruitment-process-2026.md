@@ -361,4 +361,4 @@ Choose companies based on career growth potential, not just immediate salary. Yo
 
 ---
 
-**Need recruitment guidance?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor) - Get personalized advice on company selection and interview preparation.
+**Need recruitment guidance?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar) - Get personalized advice on company selection and interview preparation.

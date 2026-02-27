@@ -475,4 +475,4 @@ STCW certificates are non-negotiable. Plan, budget, and keep them current.
 
 ---
 
-**Questions about STCW?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor) - Get guidance on which certificates you need, best institutes, and renewal timing.
+**Questions about STCW?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar) - Get guidance on which certificates you need, best institutes, and renewal timing.

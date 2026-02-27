@@ -431,4 +431,4 @@ Tanker careers offer Indian seafarers premium earning potential with specialized
 
 ---
 
-**Need guidance on tanker career path?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor) - India's first AI mentor for seafarers. Get personalized advice on tanker certifications and career planning.
+**Need guidance on tanker career path?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar) - India's first AI mentor for seafarers. Get personalized advice on tanker certifications and career planning.

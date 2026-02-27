@@ -258,7 +258,7 @@ Typically 2-6 weeks from application to deployment.
 
 BSM offers stable employment with one of the world's largest ship managers. With a diverse fleet and professional management, BSM provides excellent career opportunities for ambitious seafarers.
 
-**Need help with your BSM application?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor) for interview preparation and career guidance.
+**Need help with your BSM application?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar) for interview preparation and career guidance.
 
 *Related Articles:*
 - [Top Shipping Companies India 2026](/careers/top-shipping-companies-india-2026)

@@ -282,7 +282,7 @@ Confused about your residential status or tax planning? SailorGPT can help:
 - **ITR form selection** guidance
 - **Investment advice** for NRI seafarers
 
-Get personalized tax guidance: [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor)
+Get personalized tax guidance: [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar)
 
 ---
 

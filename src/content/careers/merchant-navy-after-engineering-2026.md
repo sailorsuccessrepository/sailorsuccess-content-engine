@@ -317,4 +317,4 @@ The key is choosing the right institute, preparing thoroughly, and understanding
 
 ---
 
-**Ready to start your maritime journey?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor) - Get personalized guidance on GME institutes, application process, and career planning from India's first AI mentor for seafarers.
+**Ready to start your maritime journey?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar) - Get personalized guidance on GME institutes, application process, and career planning from India's first AI mentor for seafarers.

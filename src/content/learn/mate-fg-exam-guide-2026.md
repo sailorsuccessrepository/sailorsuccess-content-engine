@@ -306,7 +306,7 @@ Not mandatory, but helpful for structured preparation. Self-study with good book
 
 Mate FG is the gateway to your deck officer career. Thorough preparation ensures you clear the examination confidently and begin your journey as a navigating officer.
 
-**Need personalized guidance for Mate FG preparation?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor) for exam tips, study strategies, and book recommendations.
+**Need personalized guidance for Mate FG preparation?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar) for exam tips, study strategies, and book recommendations.
 
 *Related Articles:*
 - [IMU-CET Preparation Guide 2026](/learn/imu-cet-preparation-guide-2026)

@@ -443,7 +443,7 @@ SailorGPT provides:
 - Interview preparation
 - Visa guidance
 
-**[Chat with SailorGPT for Cruise Career Guidance →](https://sailorsuccess.graphy.com/talk/mentor)**
+**[Chat with SailorGPT for Cruise Career Guidance →](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar)**
 
 ## Conclusion
 
@@ -460,4 +460,4 @@ Your dream of cooking while sailing the world's oceans can become reality. Start
 
 ---
 
-*Interested in cruise ship chef careers? SailorGPT provides personalized guidance based on your culinary background and career goals. [Start Planning →](https://sailorsuccess.graphy.com/talk/mentor)*
+*Interested in cruise ship chef careers? SailorGPT provides personalized guidance based on your culinary background and career goals. [Start Planning →](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar)*

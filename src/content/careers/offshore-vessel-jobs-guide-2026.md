@@ -391,7 +391,7 @@ Planning your offshore career transition? SailorGPT provides personalized guidan
 - **Salary negotiation strategies** for offshore contracts
 - **Document preparation** for offshore applications
 
-Get expert advice instantly: [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor)
+Get expert advice instantly: [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar)
 
 ---
 

@@ -331,4 +331,4 @@ Offshore maritime careers offer Indian seafarers exceptional earning potential b
 
 ---
 
-**Want personalized guidance on offshore careers?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor) - India's first AI mentor for seafarers. Get help with certification planning and offshore company applications.
+**Want personalized guidance on offshore careers?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar) - India's first AI mentor for seafarers. Get help with certification planning and offshore company applications.

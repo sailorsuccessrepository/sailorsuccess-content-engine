@@ -437,4 +437,4 @@ Your performance as a cadet determines your career trajectory. Make every day co
 
 ---
 
-**Preparing for deck cadet training?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor) - Get guidance from experienced deck officers on training preparation and career planning.
+**Preparing for deck cadet training?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar) - Get guidance from experienced deck officers on training preparation and career planning.

@@ -282,7 +282,7 @@ Signed: C/O Name
 - Operational scenarios
 - Document guidance
 
-[**Ask SailorGPT Your BWMS Questions →**](https://sailorsuccess.graphy.com/talk/mentor)
+[**Ask SailorGPT Your BWMS Questions →**](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar)
 
 ---
 

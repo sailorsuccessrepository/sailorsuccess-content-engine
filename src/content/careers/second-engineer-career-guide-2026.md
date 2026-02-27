@@ -246,7 +246,7 @@ Managing main engine performance while handling team responsibilities and meetin
 
 The Second Engineer position prepares you for command of the engine department. Master this role through technical excellence and leadership development to reach Chief Engineer.
 
-**Need guidance on MEO Class 2 preparation or career advancement?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor) for personalized advice from 16+ years of maritime experience.
+**Need guidance on MEO Class 2 preparation or career advancement?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar) for personalized advice from 16+ years of maritime experience.
 
 *Related Articles:*
 - [Chief Engineer Career Guide 2026](/careers/chief-engineer-career-guide-2026)

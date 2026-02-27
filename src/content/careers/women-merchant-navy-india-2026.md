@@ -412,4 +412,4 @@ If you have the interest and determination, don't let gender stop you. The sea w
 
 ---
 
-**Questions about women in Merchant Navy?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor) - Get specific guidance on companies hiring women, best institutes, and practical advice from our mentors.
+**Questions about women in Merchant Navy?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar) - Get specific guidance on companies hiring women, best institutes, and practical advice from our mentors.

@@ -276,4 +276,4 @@ The key to joining Anglo-Eastern lies in thorough preparation covering your tech
 
 ---
 
-**Want personalized guidance for Anglo-Eastern application?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor) - Get expert advice on your specific situation, interview preparation, and career planning.
+**Want personalized guidance for Anglo-Eastern application?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar) - Get expert advice on your specific situation, interview preparation, and career planning.

@@ -297,7 +297,7 @@ Not sure about a contract term? SailorGPT can help:
 - **Negotiation strategies** for better terms
 - **Rights clarification** under MLC 2006
 
-Get contract guidance: [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor)
+Get contract guidance: [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar)
 
 ---
 

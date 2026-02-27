@@ -317,4 +317,4 @@ Don't let the good times at sea fool you. Plan for the shore life from day one.
 
 ---
 
-**Need retirement planning help?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor) - Get personalized financial guidance for your maritime career.
+**Need retirement planning help?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar) - Get personalized financial guidance for your maritime career.

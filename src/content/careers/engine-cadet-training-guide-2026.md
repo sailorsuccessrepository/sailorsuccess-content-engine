@@ -375,4 +375,4 @@ Your performance as cadet sets the foundation for your entire marine engineering
 
 ---
 
-**Preparing for shipboard training?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor) - Get guidance from experienced marine engineers on training preparation and career planning.
+**Preparing for shipboard training?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar) - Get guidance from experienced marine engineers on training preparation and career planning.

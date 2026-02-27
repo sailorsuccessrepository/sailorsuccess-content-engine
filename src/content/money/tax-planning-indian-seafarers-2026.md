@@ -267,4 +267,4 @@ The money you save in taxes can fund your family's future. Don't leave it on the
 
 ---
 
-**Need tax planning advice?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/talk/mentor) - Get guidance on NRI status, documentation, and connecting with maritime-specialized CAs. Available 24/7.
+**Need tax planning advice?** [Chat with SailorGPT](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar) - Get guidance on NRI status, documentation, and connecting with maritime-specialized CAs. Available 24/7.

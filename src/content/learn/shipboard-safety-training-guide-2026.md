@@ -441,7 +441,7 @@ SailorGPT provides:
 - Examination preparation
 - Career safety advice
 
-**[Chat with SailorGPT for Safety Training Guidance →](https://sailorsuccess.graphy.com/talk/mentor)**
+**[Chat with SailorGPT for Safety Training Guidance →](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar)**
 
 ## Conclusion
 
@@ -458,4 +458,4 @@ Your safety and that of your shipmates depends on your preparedness. Take safety
 
 ---
 
-*Need help preparing for safety examinations or understanding shipboard procedures? SailorGPT provides comprehensive guidance on maritime safety. [Start Learning →](https://sailorsuccess.graphy.com/talk/mentor)*
+*Need help preparing for safety examinations or understanding shipboard procedures? SailorGPT provides comprehensive guidance on maritime safety. [Start Learning →](https://sailorsuccess.graphy.com/t/p/checkout/V4/avatar/68e5d00cca4dc933ce6ebf6f/p8?callback_url=/t/u/ai/avatar)*
