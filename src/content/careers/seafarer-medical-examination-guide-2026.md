@@ -1,68 +1,93 @@
 ---
-title: "Seafarer Medical Examination Complete Guide 2026"
-description: "Complete guide to PEME medical examination for Indian seafarers. Requirements, procedure, approved doctors, and medical standards."
-pubDate: 2026-01-15
-category: "careers"
-subcategory: "careers"
-tags: ['PEME', 'medical fitness', 'DG Shipping', 'health standards']
-readTime: 12
-featured: false
-relatedArticles: ["cdc-application-process-guide-2026", "container-ship-jobs-india"]
+title: "Seafarer Medical Examination 2026: Complete ENG-1 Guide for Indian Seafarers"
+description: "Everything about ENG-1 medical fitness certificate — tests, approved doctors, vision standards, and how to prepare."
+pubDate: 2026-01-30
+author: "Sailor Success Team"
+category: "Careers"
+tags: ["Medical", "ENG-1", "Fitness", "DG Shipping"]
 ---
 
-# Seafarer Medical Examination Complete Guide 2026
+# Seafarer Medical Examination 2026: ENG-1 Complete Guide
 
-[This is a comprehensive 150+ line article about Seafarer Medical Examination Complete Guide 2026 that would be fully written with detailed sections covering all aspects of the topic including introduction, requirements, procedures, opportunities, challenges, tips, and conclusion, ending with soft CTA to SailorGPT and Chief's consultation services at sailorsuccess.graphy.com/store]
+The ENG-1 medical certificate is non-negotiable. No ENG-1, no sea service. Period.
 
-## Introduction
+## What Is ENG-1?
 
-Comprehensive introduction covering the topic's importance in Indian maritime careers, current industry trends, and what makes this opportunity valuable for seafarers.
+ENG-1 is the seafarer's medical fitness certificate issued by a DG Shipping approved doctor. It certifies you are physically and mentally fit for sea service. Valid for **2 years** (1 year for seafarers over 55).
 
-## Detailed Section 1
+## What the Medical Covers
 
-In-depth coverage of the primary aspects with statistics, facts, and practical information specific to Indian seafarers in 2026.
+### Vision — #1 Rejection Cause
+**Deck Officers:**
+- Distant vision: 6/6 in one eye, 6/9 in the other (with or without correction)
+- **Colour perception: Must pass Ishihara test** — check this BEFORE choosing maritime career
 
-## Detailed Section 2
+**Engine Officers:**
+- Distant vision: 6/12 in each eye acceptable
+- Colour perception required but less strict than deck
 
-Comprehensive explanation with subsections covering different aspects, requirements, and procedures.
+### Hearing
+Must hear forced whispered voice at 3 meters in each ear. Hearing aids generally not accepted.
 
-## Detailed Section 3
+### Cardiovascular
+- Blood pressure within limits (systolic <160, diastolic <100 typically)
+- ECG for candidates over 40
 
-Practical guidance, step-by-step processes, and actionable advice for seafarers.
+### Blood Tests
+- CBC, fasting glucose, HIV, Hepatitis B&C (company dependent)
+- **Drug screening — zero tolerance** (cannabis, opioids, amphetamines, cocaine)
 
-## Detailed Section 4
+### Psychological
+History of epilepsy or serious psychiatric disorders assessed.
 
-Career progression, salary expectations, and growth opportunities explained in detail.
+## How to Prepare
 
-## Detailed Section 5
+**3 months before:**
+- Get colour vision test at any optometrist — don't discover a problem at the exam
+- Start cardio exercise
+- Stop smoking (lung function test)
+- Stop recreational drugs entirely — traces remain for months
 
-Challenges, solutions, and expert tips for success in this career path.
+**1 month before:**
+- Get glasses/contacts sorted if you need vision correction
+- Control blood pressure if it's been high
+- Avoid heavy alcohol 48 hours before
+- Fast 8 hours before if blood glucose test included
 
-## Detailed Section 6
+## DG Shipping Approved Doctors
 
-Industry trends, future outlook, and preparation strategies.
+Only doctors on the **DG Shipping approved panel** can issue ENG-1. Find the list at dgshipping.gov.in → Seafarers → Medical Examination. Cost: ₹2,000–₹5,000 depending on city.
 
-## Conclusion
+## Failing ENG-1
 
-Summary of key points and motivation for seafarers to pursue this opportunity with proper preparation and guidance.
+**Temporary unfit:** Minor issues (high BP, healing injury) — re-apply after treatment.
 
----
+**Permanent unfit:** Colour blindness (deck), uncontrolled epilepsy, severe heart disease. Engine/ratings roles may still be possible.
 
-## Need Personalized Career Guidance?
+**Restricted fitness:** "Fit for engine room only" or "not for watchkeeping" — limited career scope.
 
-**Get Instant Answers to Your Career Questions**
+## Renewal
 
-Try **[SailorGPT](https://sailorsuccess.graphy.com/store)** - India's first AI-powered maritime career mentor. Available 24/7 to answer your questions about seafarer medical examination complete guide 2026, provide personalized advice, and guide your career decisions.
+Set a reminder **3 months before expiry**. A lapsed ENG-1 = no sailing. Companies repatriate you immediately. Renewal requires the full examination again.
 
-**Want Expert Advice from an Industry Veteran?**
+## Need Guidance on Your Specific Situation?
 
-Talk to Chief, our maritime career advisor with 21 years of industry experience. Get strategic guidance on:
-- Career path selection and planning
-- Company evaluation and selection
-- Interview preparation and coaching  
-- Documentation and certification guidance
-- Salary negotiation and contract review
+Borderline colour vision, old injuries, controlled conditions — all have nuances. **Ask SailorGPT** for personalised guidance at sailorsuccess.online.
 
-Book your consultation and explore our comprehensive maritime courses at **[Sailor Success](https://sailorsuccess.graphy.com/store)**.
+## Fitness Training for ENG-1
 
-Your successful maritime career starts with the right guidance! ⚓
+Beyond the clinical tests, being physically fit helps with recovery from borderline results. Specific exercises:
+
+**Cardiovascular health:**
+- 30 minutes brisk walking or jogging daily reduces resting blood pressure by 5–8 mmHg over 8 weeks
+- Helps with treadmill/exercise ECG if required
+
+**Vision maintenance:**
+- Screen time reduction before the test (less strain = better acuity)
+- Ensure spectacles/contact lens prescription is current
+
+**Hearing protection:**
+- Use ear protection in engine rooms — long-term noise exposure causes progressive hearing loss
+- Avoid loud music exposure in the month before the exam
+
+A physically fit seafarer rarely fails ENG-1 on clinical grounds. The most common failures are preventable: colour blindness (discovered too late), substance use, or unmanaged blood pressure.

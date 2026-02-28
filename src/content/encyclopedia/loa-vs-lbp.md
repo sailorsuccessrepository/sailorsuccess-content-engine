@@ -1,4 +1,5 @@
 ---
+noindex: true
 title: "LOA vs LBP - Maritime Terms Explained"
 description: "Length overall versus length between perpendiculars - Clear distinction for exam success"
 pubDate: 2026-02-20

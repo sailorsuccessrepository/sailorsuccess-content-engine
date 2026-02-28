@@ -1,4 +1,5 @@
 ---
+noindex: true
 title: "Pitch - Ship Motion Analysis"
 description: "Up and down motion about transverse axis - Understanding ship dynamics for safe operations"
 pubDate: 2026-02-20

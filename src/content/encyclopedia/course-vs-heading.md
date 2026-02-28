@@ -1,4 +1,5 @@
 ---
+noindex: true
 title: "Course vs Heading - Maritime Terms Explained"
 description: "Intended direction versus actual direction - Clear distinction for exam success"
 pubDate: 2026-02-20

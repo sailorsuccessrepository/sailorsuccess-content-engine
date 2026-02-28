@@ -1,4 +1,5 @@
 ---
+noindex: true
 title: "Beam vs Breadth - Maritime Terms Explained"
 description: "Maximum width versus general width term - Clear distinction for exam success"
 pubDate: 2026-02-20

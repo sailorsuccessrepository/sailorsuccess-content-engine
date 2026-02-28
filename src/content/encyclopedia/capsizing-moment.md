@@ -1,4 +1,5 @@
 ---
+noindex: true
 title: "Capsizing Moment - Ship Motion Analysis"
 description: "Moment causing ship to overturn - Understanding ship dynamics for safe operations"
 pubDate: 2026-02-20

@@ -1,4 +1,5 @@
 ---
+noindex: true
 title: "Heave - Ship Motion Analysis"
 description: "Vertical up down linear motion - Understanding ship dynamics for safe operations"
 pubDate: 2026-02-20

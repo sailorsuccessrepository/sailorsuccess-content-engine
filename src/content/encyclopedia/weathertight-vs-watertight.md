@@ -1,4 +1,5 @@
 ---
+noindex: true
 title: "Weathertight vs Watertight - Maritime Terms Explained"
 description: "Doors preventing water ingress above versus below waterline - Clear distinction for exam success"
 pubDate: 2026-02-20

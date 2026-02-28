@@ -1,4 +1,5 @@
 ---
+noindex: true
 title: "Surge - Ship Motion Analysis"
 description: "Forward backward linear motion - Understanding ship dynamics for safe operations"
 pubDate: 2026-02-20

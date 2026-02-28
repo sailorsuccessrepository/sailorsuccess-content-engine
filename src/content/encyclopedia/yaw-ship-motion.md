@@ -1,4 +1,5 @@
 ---
+noindex: true
 title: "Yaw - Ship Motion Analysis"
 description: "Rotating motion about vertical axis - Understanding ship dynamics for safe operations"
 pubDate: 2026-02-20

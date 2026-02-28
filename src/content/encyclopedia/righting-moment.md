@@ -1,4 +1,5 @@
 ---
+noindex: true
 title: "Righting Moment - Ship Motion Analysis"
 description: "Moment returning ship to upright position - Understanding ship dynamics for safe operations"
 pubDate: 2026-02-20

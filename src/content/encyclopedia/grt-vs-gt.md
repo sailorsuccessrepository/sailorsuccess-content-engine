@@ -1,4 +1,5 @@
 ---
+noindex: true
 title: "GRT vs GT - Maritime Terms Explained"
 description: "Old versus new tonnage measurement system - Clear distinction for exam success"
 pubDate: 2026-02-20

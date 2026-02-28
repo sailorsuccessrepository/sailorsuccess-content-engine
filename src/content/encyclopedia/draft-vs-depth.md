@@ -1,4 +1,5 @@
 ---
+noindex: true
 title: "Draft vs Depth - Maritime Terms Explained"
 description: "Ship immersion versus available water depth - Clear distinction for exam success"
 pubDate: 2026-02-20

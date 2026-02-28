@@ -1,4 +1,5 @@
 ---
+noindex: true
 title: "Free Surface Effect - Ship Motion Analysis"
 description: "Stability reduction from liquid movement in tanks - Understanding ship dynamics for safe operations"
 pubDate: 2026-02-20

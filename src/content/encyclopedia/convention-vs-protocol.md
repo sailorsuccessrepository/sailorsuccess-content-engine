@@ -1,4 +1,5 @@
 ---
+noindex: true
 title: "Convention vs Protocol - Maritime Terms Explained"
 description: "Primary treaty versus amendment document - Clear distinction for exam success"
 pubDate: 2026-02-20

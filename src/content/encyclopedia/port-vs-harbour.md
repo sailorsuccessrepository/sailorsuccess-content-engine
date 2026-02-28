@@ -1,4 +1,5 @@
 ---
+noindex: true
 title: "Port vs Harbour - Maritime Terms Explained"
 description: "Facility with services versus natural shelter - Clear distinction for exam success"
 pubDate: 2026-02-20

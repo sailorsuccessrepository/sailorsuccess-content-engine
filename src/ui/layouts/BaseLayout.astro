@@ -9,6 +9,7 @@ export interface Props {
     image?: string;
     canonicalURL?: string;
     schema?: string;
+    noindex?: boolean;
 }
 
 const {
@@ -17,6 +18,7 @@ const {
     image = 'https://sailorsuccess.online/og-image.webp',
     canonicalURL = Astro.url.href,
     schema,
+    noindex = false,
 } = Astro.props;
 ---
 <!DOCTYPE html>
@@ -28,6 +30,7 @@ const {
         <title>{title}</title>
           <meta name="description" content={description} />
             <link rel="canonical" href={canonicalURL} />
+{noindex && <meta name="robots" content="noindex, nofollow" />}
               <meta property="og:type" content="website" />
                 <meta property="og:title" content={title} />
                   <meta property="og:description" content={description} />

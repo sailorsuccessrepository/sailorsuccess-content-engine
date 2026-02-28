@@ -1,4 +1,5 @@
 ---
+noindex: true
 title: "Angle of Loll - Ship Motion Analysis"
 description: "Equilibrium angle when zero metacentric height - Understanding ship dynamics for safe operations"
 pubDate: 2026-02-20

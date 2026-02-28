@@ -13,11 +13,13 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 const lastUpdated = entry.data.lastUpdated;
+const noindex = entry.data.noindex || false;
 ---
 <BaseLayout
   title={`${entry.data.title} | Maritime Encyclopedia | Sailor Success`}
     description={entry.data.description}
       canonicalURL={`https://sailorsuccess.online/encyclopedia/${entry.slug}/`}
+      noindex={noindex}
       >
       <div class="container" style="padding-top:2rem;padding-bottom:4rem;max-width:780px;">
 

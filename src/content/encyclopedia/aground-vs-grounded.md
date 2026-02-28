@@ -1,4 +1,5 @@
 ---
+noindex: true
 title: "Aground vs Grounded - Maritime Terms Explained"
 description: "Accidental versus intentional bottom contact - Clear distinction for exam success"
 pubDate: 2026-02-20

@@ -1,4 +1,5 @@
 ---
+noindex: true
 title: "Gross vs Net Tonnage - Maritime Terms Explained"
 description: "Total volume versus cargo volume measurement - Clear distinction for exam success"
 pubDate: 2026-02-20

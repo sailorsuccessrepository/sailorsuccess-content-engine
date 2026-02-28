@@ -1,4 +1,5 @@
 ---
+noindex: true
 title: "Knot vs Nautical Mile - Maritime Terms Explained"
 description: "Speed unit versus distance unit - Clear distinction for exam success"
 pubDate: 2026-02-20

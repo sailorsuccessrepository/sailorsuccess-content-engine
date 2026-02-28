@@ -1,4 +1,5 @@
 ---
+noindex: true
 title: "Berth vs Pier - Maritime Terms Explained"
 description: "Mooring location versus structure - Clear distinction for exam success"
 pubDate: 2026-02-20

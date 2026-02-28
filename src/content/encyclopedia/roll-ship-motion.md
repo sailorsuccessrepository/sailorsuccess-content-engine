@@ -1,4 +1,5 @@
 ---
+noindex: true
 title: "Roll - Ship Motion Analysis"
 description: "Tilting side to side motion about longitudinal axis - Understanding ship dynamics for safe operations"
 pubDate: 2026-02-20

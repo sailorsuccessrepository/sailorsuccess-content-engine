@@ -1,4 +1,5 @@
 ---
+noindex: true
 title: "Sailing vs Steaming - Maritime Terms Explained"
 description: "Under sail power versus engine power - Clear distinction for exam success"
 pubDate: 2026-02-20

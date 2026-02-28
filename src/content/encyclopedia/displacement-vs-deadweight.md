@@ -1,4 +1,5 @@
 ---
+noindex: true
 title: "Displacement vs Deadweight - Maritime Terms Explained"
 description: "Total weight versus cargo capacity - Clear distinction for exam success"
 pubDate: 2026-02-20

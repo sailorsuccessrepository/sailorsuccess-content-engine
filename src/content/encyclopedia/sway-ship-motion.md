@@ -1,4 +1,5 @@
 ---
+noindex: true
 title: "Sway - Ship Motion Analysis"
 description: "Side to side sliding linear motion - Understanding ship dynamics for safe operations"
 pubDate: 2026-02-20

@@ -1,4 +1,5 @@
 ---
+noindex: true
 title: "Speed vs Velocity - Maritime Terms Explained"
 description: "Rate of motion versus rate with direction - Clear distinction for exam success"
 pubDate: 2026-02-20
