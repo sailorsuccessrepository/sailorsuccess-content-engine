@@ -5,16 +5,18 @@ import '../styles/global.css';
 
 export interface Props {
     title?: string;
-      description?: string;
-        image?: string;
-          canonicalURL?: string;
+    description?: string;
+    image?: string;
+    canonicalURL?: string;
+    schema?: string;
 }
 
 const {
     title = "Sailor Success | India's Complete Merchant Navy Knowledge Base",
-      description = 'Complete guide for Indian merchant navy seafarers. Career guidance, rights, salary info, and maritime knowledge.',
-        image = 'https://sailorsuccess.online/og-image.webp',
-          canonicalURL = Astro.url.href,
+    description = 'Complete guide for Indian merchant navy seafarers. Career guidance, rights, salary info, and maritime knowledge.',
+    image = 'https://sailorsuccess.online/og-image.webp',
+    canonicalURL = Astro.url.href,
+    schema,
 } = Astro.props;
 ---
 <!DOCTYPE html>
@@ -39,6 +41,7 @@ const {
                                   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
                                     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet" />
                                       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+{schema && <script type="application/ld+json" set:html={schema} />}
                                         <!-- Web of Knowledge CSS -->
                                           <link rel="stylesheet" href="/wok.css" />
                                           </head>
