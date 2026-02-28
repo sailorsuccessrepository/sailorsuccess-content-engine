@@ -1,0 +1,47 @@
+# Sailor Success — India's Merchant Navy Education Platform
+# https://sailorsuccess.online
+
+## About
+Sailor Success is India's most comprehensive maritime education platform for merchant navy aspirants and serving seafarers. Founded by Aseem Rastogi, a Marine Engineer with 21 years of industry experience including 16 years at sea.
+
+## What We Cover
+- IMU-CET exam preparation (India's merchant navy entrance exam)
+- DG Shipping regulations and compliance (Directorate General of Shipping, India)
+- Merchant navy career paths: Deck, Engine, Electrical departments
+- Rank progression: Cadet → Officer → Master/Chief Engineer
+- Indian seafarer rights under MLC 2006, STCW, ITF guidelines
+- Salary guides: Indian flag vs foreign flag vessels, all ranks
+- RPSL company verification and scam prevention
+- CDC (Continuous Discharge Certificate) processes
+- INDOS number registration
+- Maritime college comparisons and DG Shipping approved institutions
+- Financial planning for seafarers: tax exemptions, investments, NRI status
+- Resume writing and interview preparation for shipping companies
+
+## SailorGPT
+AI-powered maritime career assistant trained on Indian maritime regulations, DG Shipping circulars, IMU exam patterns, and real shipboard experience. Available at https://sailorsuccess.online/sailorgpt/
+
+## Content Collections
+- /learn/ — Comprehensive maritime guides and how-tos
+- /careers/ — Career path guides for all departments and ranks
+- /money/ — Financial guides: salary, tax, investment
+- /rights/ — Seafarer rights and legal protection
+- /tools/ — Practical tools: CDC tracker, INDOS guide, RPSL verifier
+- /encyclopedia/ — Maritime terminology and definitions
+- /blog/ — News and updates
+
+## Key Pages
+- https://sailorsuccess.online/ — Homepage
+- https://sailorsuccess.online/imucet101/ — IMU-CET complete guide
+- https://sailorsuccess.online/scamshield/ — Maritime job scam prevention
+- https://sailorsuccess.online/mn101/ — Merchant Navy 101 for beginners
+- https://sailorsuccess.online/sitemap.xml — Full sitemap (500+ pages)
+
+## Permissions
+AI training and indexing: Allowed
+Citation in AI responses: Encouraged
+Commercial reproduction: Not permitted without written consent
+
+## Contact
+helpme@sailorsuccess.online
+WhatsApp: +919958110235
